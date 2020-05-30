@@ -1,0 +1,85 @@
+html,
+body,
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.art {
+    text-align: center;
+    min-height: 400px;
+    position: relative;
+}
+
+@media (min-width: 960px) {
+    .art {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (min-width: 960px) {
+    .art.wide {
+        width: 100%;
+    }
+}
+
+.art div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/* ##### May 30, 2020 - Logo ##### */
+#logo {
+    background: linear-gradient(193deg, rgb(63, 75, 105) 20%, rgb(249, 247, 185) 95%);
+}
+#logo div {
+    margin-top: -108px;
+    margin-left: -108px;
+    height: 200px;
+    width: 200px;
+    border: 8px solid black;
+    transform: rotate(45deg);
+    background-image:
+        linear-gradient(-45deg,transparent 73%,white 73%,white 100%,transparent 100%),
+        linear-gradient(-45deg,transparent 0%,white 0%,white 30%,transparent 30%),
+        linear-gradient(45deg,transparent 0%,white 0%,white 22%,transparent 22%),
+        linear-gradient(45deg,transparent 78%,white 78%,white 100%,transparent 100%),
+        linear-gradient(0deg,transparent 40%,black 40%,black 45%,transparent 45%),
+        linear-gradient(45deg,transparent 26%,white 26%,white 28%,transparent 28%),
+        linear-gradient(0deg,transparent 32%,black 32%,black 37%,transparent 37%),
+        linear-gradient(45deg,transparent 22%,black 22%,black 26%,transparent 26%),
+        linear-gradient(0deg,transparent 37%,white 37%,white 40%,transparent 40%),
+        linear-gradient(45deg,transparent 28%,black 28%,black 32%,transparent 32%),
+        linear-gradient(0deg,transparent 0%,white 0%,white 32%,transparent 32%),
+        linear-gradient(90deg,transparent 45%,white 45%,white 55%,transparent 55%),
+        linear-gradient(45deg,transparent 74%,black 74%,black 78%,transparent 78%),
+        linear-gradient(90deg,transparent 55%,black 55%,black 60%,white 60%, white 63%,black 63%,black 68%,transparent 68%),
+        linear-gradient(45deg,transparent 68%,black 68%,black 72%,transparent 72%),
+        linear-gradient(0deg,transparent 45%,white 45%,white 100%,transparent 100%),
+        linear-gradient(90deg,transparent 63%,white 63%,white 68%,transparent 68%),
+        linear-gradient(45deg,transparent 68%,black 68%,black 72%,transparent 72%),
+        linear-gradient(45deg,transparent 74%,black 74%,black 78%,transparent 78%);
+}
+#logo div::before,
+#logo div::after {
+    content: "";
+    position: inherit;
+    background-color:white;
+}
+#logo div::before {
+    height: 55%;
+    width: 55%;
+    margin-left: -50%;
+}
+#logo div::after {
+    height: 30%;
+    width: 30%;
+    margin-left: 18%;
+    margin-top: 54%;
+}
