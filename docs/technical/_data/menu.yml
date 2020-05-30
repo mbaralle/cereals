@@ -1,0 +1,12 @@
+- title: M³ ADR
+  code: adr
+  link: adr
+  pages:
+    - title: Introduction
+      link:
+    - title: API Mappings
+      link: api-mappings
+    - title: Data
+      link: data
+    - title: Configuration
+      link: configuration
