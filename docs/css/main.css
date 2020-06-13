@@ -9,6 +9,36 @@ div {
     vertical-align: baseline;
 }
 
+header {
+    background: linear-gradient(30deg, violet, skyblue, khaki, salmon);
+    text-align: center;
+    font-family: 'MuseoModerno', cursive;
+    padding: 5px;
+}
+
+#header-title-container {
+    padding: 5px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    opacity: .7;
+}
+
+#header-logo img {
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+}
+
+.header-link img {
+    height: 20px;
+    width: 20px;
+}
+
 .art {
     text-align: center;
     min-height: 400px;
@@ -35,10 +65,10 @@ div {
 }
 
 /* ##### May 30, 2020 - Logo ##### */
-#logo {
+.art#logo {
     background: linear-gradient(193deg, rgb(63, 75, 105) 20%, rgb(249, 247, 185) 95%);
 }
-#logo div {
+.art#logo div {
     margin-top: -108px;
     margin-left: -108px;
     height: 200px;
@@ -66,18 +96,18 @@ div {
         linear-gradient(45deg,transparent 68%,black 68%,black 72%,transparent 72%),
         linear-gradient(45deg,transparent 74%,black 74%,black 78%,transparent 78%);
 }
-#logo div::before,
-#logo div::after {
+.art#logo div::before,
+.art#logo div::after {
     content: "";
     position: inherit;
     background-color:white;
 }
-#logo div::before {
+.art#logo div::before {
     height: 55%;
     width: 55%;
     margin-left: -50%;
 }
-#logo div::after {
+.art#logo div::after {
     height: 30%;
     width: 30%;
     margin-left: 18%;
