@@ -64,6 +64,51 @@ header a:hover {
     top: 50%;
 }
 
+/* ##### June 15, 2020 - Hoverboard ##### */
+.art#hoverboard {
+    background: linear-gradient(165deg, rgb(16, 115, 55) 3%, rgb(244, 100, 238) 98%);
+}
+.art#hoverboard div {
+    width: 312px;
+    height: 67px;
+    margin-top: -37.5px;
+    margin-left: -160px;
+    border-radius: 50px 10px 10px 50px;
+    border: 4px solid #fa517e;
+    background-color: pink;
+    background-image:
+    linear-gradient(90deg, transparent 92%, rgba(50,50,50,.05) 95%),
+
+    linear-gradient(60deg, transparent 93.5%, white 93.5%, white 95%, #ffd000 95%, #ffd000 99%, transparent 99%),
+    linear-gradient(55deg, transparent 49.5%, white 49.5%, white 51%, #ffd000 51%, #ffd000 55%, transparent 55%, transparent 56%, #ffd000 56%, #ffd000 60%, white 60%, white 61.5%, transparent 61.5%),
+    
+    linear-gradient(-45deg, transparent 65.5%, white 65.5%, white 67%, #fa517e 67%, #fa517e 71%, transparent 71%, transparent 72%, #fa517e 72%, #fa517e 76%, white 76%, white 77.5%, transparent 77.5%),
+    linear-gradient(-45deg, transparent 22.5%, white 22.5%, white 24%, #fa517e 24%, #fa517e 28%, transparent 28%, transparent 29%, #fa517e 29%, #fa517e 33%, white 33%, white 34.5%, transparent 34.5%),
+    linear-gradient(55deg, transparent 2.5%, #ffd000 2.5%, #ffd000 6.5%, white 6.5%, white 8%, transparent 8%),
+    
+    linear-gradient(35deg, transparent 80%, #85b64a 80%, #85b64a 83%, transparent 83%),
+    linear-gradient(-35deg, pink 50%, transparent 50%),
+    linear-gradient(25deg, pink 30%, #85b64a 30%, #85b64a 34%, transparent 34%),
+    linear-gradient(-35deg, transparent 50%, #85b64a 50%, #85b64a 53%, transparent 53%);
+    
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
+        transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+        transform: translatey(0px);
+    }
+}
+
 /* ##### May 30, 2020 - Logo ##### */
 .art#logo {
     background: linear-gradient(193deg, rgb(63, 75, 105) 20%, rgb(249, 247, 185) 95%);
@@ -76,25 +121,25 @@ header a:hover {
     border: 8px solid black;
     transform: rotate(45deg);
     background-image:
-        linear-gradient(-45deg,transparent 73%,white 73%,white 100%,transparent 100%),
-        linear-gradient(-45deg,transparent 0%,white 0%,white 30%,transparent 30%),
-        linear-gradient(45deg,transparent 0%,white 0%,white 22%,transparent 22%),
-        linear-gradient(45deg,transparent 78%,white 78%,white 100%,transparent 100%),
-        linear-gradient(0deg,transparent 40%,black 40%,black 45%,transparent 45%),
-        linear-gradient(45deg,transparent 26%,white 26%,white 28%,transparent 28%),
-        linear-gradient(0deg,transparent 32%,black 32%,black 37%,transparent 37%),
-        linear-gradient(45deg,transparent 22%,black 22%,black 26%,transparent 26%),
-        linear-gradient(0deg,transparent 37%,white 37%,white 40%,transparent 40%),
-        linear-gradient(45deg,transparent 28%,black 28%,black 32%,transparent 32%),
-        linear-gradient(0deg,transparent 0%,white 0%,white 32%,transparent 32%),
-        linear-gradient(90deg,transparent 45%,white 45%,white 55%,transparent 55%),
-        linear-gradient(45deg,transparent 74%,black 74%,black 78%,transparent 78%),
-        linear-gradient(90deg,transparent 55%,black 55%,black 60%,white 60%, white 63%,black 63%,black 68%,transparent 68%),
-        linear-gradient(45deg,transparent 68%,black 68%,black 72%,transparent 72%),
-        linear-gradient(0deg,transparent 45%,white 45%,white 100%,transparent 100%),
-        linear-gradient(90deg,transparent 63%,white 63%,white 68%,transparent 68%),
-        linear-gradient(45deg,transparent 68%,black 68%,black 72%,transparent 72%),
-        linear-gradient(45deg,transparent 74%,black 74%,black 78%,transparent 78%);
+    linear-gradient(-45deg,transparent 73%,white 73%,white 100%,transparent 100%),
+    linear-gradient(-45deg,transparent 0%,white 0%,white 30%,transparent 30%),
+    linear-gradient(45deg,transparent 0%,white 0%,white 22%,transparent 22%),
+    linear-gradient(45deg,transparent 78%,white 78%,white 100%,transparent 100%),
+    linear-gradient(0deg,transparent 40%,black 40%,black 45%,transparent 45%),
+    linear-gradient(45deg,transparent 26%,white 26%,white 28%,transparent 28%),
+    linear-gradient(0deg,transparent 32%,black 32%,black 37%,transparent 37%),
+    linear-gradient(45deg,transparent 22%,black 22%,black 26%,transparent 26%),
+    linear-gradient(0deg,transparent 37%,white 37%,white 40%,transparent 40%),
+    linear-gradient(45deg,transparent 28%,black 28%,black 32%,transparent 32%),
+    linear-gradient(0deg,transparent 0%,white 0%,white 32%,transparent 32%),
+    linear-gradient(90deg,transparent 45%,white 45%,white 55%,transparent 55%),
+    linear-gradient(45deg,transparent 74%,black 74%,black 78%,transparent 78%),
+    linear-gradient(90deg,transparent 55%,black 55%,black 60%,white 60%, white 63%,black 63%,black 68%,transparent 68%),
+    linear-gradient(45deg,transparent 68%,black 68%,black 72%,transparent 72%),
+    linear-gradient(0deg,transparent 45%,white 45%,white 100%,transparent 100%),
+    linear-gradient(90deg,transparent 63%,white 63%,white 68%,transparent 68%),
+    linear-gradient(45deg,transparent 68%,black 68%,black 72%,transparent 72%),
+    linear-gradient(45deg,transparent 74%,black 74%,black 78%,transparent 78%);
 }
 .art#logo div::before,
 .art#logo div::after {
