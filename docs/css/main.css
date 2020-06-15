@@ -55,7 +55,7 @@ header a:hover {
         height: 32px;
         width: 32px;
     }
-
+    
     .header-link img {
         height: 20px;
         width: 20px;
@@ -65,7 +65,7 @@ header a:hover {
         float: left;
         width: 50%;
     }
-
+    
     .art.wide {
         width: 100%;
     }
@@ -75,6 +75,89 @@ header a:hover {
     position: absolute;
     left: 50%;
     top: 50%;
+}
+
+/* ##### June 15, 2020 - Black Lives Matter ##### */
+.art#blm {
+    background: #926557;
+    background-image:
+    linear-gradient(90deg,
+    #dabaab 16.67%,
+    #c29e8f 16.67%, #c29e8f 33.33%,
+    #aa8173 33.33%, #aa8173 50%,
+    #926557 50%, #926557 66.67%,
+    #79483b 66.67%, #79483b 83.33%,
+    #612b1f 83.33%);
+}
+.art#blm div:hover {
+    opacity: .85;
+}
+.art#blm div {
+    width: 300px;
+    height: 300px;
+    margin-top: -70px;
+    margin-left: -160px;
+    border-radius: 50%;
+    border: 10px solid white;
+    background-color: #333;
+    overflow: hidden;
+}
+.art#blm div::before {
+    content: "";
+    position: inherit;
+    width: 210px;
+    height: 350px;
+    margin-top: -10px;
+    margin-left: -105px;
+    border-radius: 50% 50% 0 0;
+    background-color: black;
+    background-image:
+    linear-gradient(40deg, transparent 76%, #333 76%),
+    linear-gradient(-55deg, transparent 79%, #333 79%),
+    linear-gradient(-45deg, transparent 80%, #333 80%),
+    
+    radial-gradient(circle at 38% 12.8%, black 7%, transparent 7%),
+    radial-gradient(ellipse at 41% -21.5%, transparent 24.5%, white 24.5%, white 25%, transparent 25%),
+    
+    radial-gradient(ellipse at 64.7% 41.5%, black 15.8%, transparent 15.8%),
+    radial-gradient(circle at 97% 42%, #333 15%, transparent 15%),
+    radial-gradient(circle at 72.5% 28%, black 10%, transparent 10%),
+    
+    linear-gradient(-80deg, #333 26.7%, transparent 26.7%),
+    linear-gradient(25deg, transparent 70.8%, black 70.8%),
+    
+    radial-gradient(ellipse at 31% 24.5%, black 5%, transparent 5%),
+    radial-gradient(circle at 20% 29%, black 8%, transparent 8%),
+    radial-gradient(circle at 31% 31%, transparent 1%, white 1%, white 2%, transparent 2%),
+    radial-gradient(circle at 44% 24%, transparent 10%, white 10%, white 11%, transparent 11%),
+    
+    linear-gradient(25deg, transparent 59.2%, white 59.2%, white 60%, black 60%, black 70%, white 70%, white 70.8%, black 70.8%),
+    
+    linear-gradient(85deg, transparent 54.04%, black 54.04%,black 67%, #333 67%),
+    
+    linear-gradient(65deg, transparent 51%, white 51%, white 52%, transparent 52%),
+    
+    linear-gradient(-80deg, transparent 45%, white 45%, white 46%, transparent 46%),
+    linear-gradient(-80deg, transparent 35%, black 35%, black 63%, transparent 63%),
+    linear-gradient(60deg, #333 38%, transparent 38%)
+    ;
+}
+.art#blm div::after {
+    content: "";
+    position: inherit;
+    width: 60px;
+    height: 75px;
+    margin-top: 73px;
+    margin-left: 7.5px;
+    transform: rotate(40deg);
+    border-top-right-radius: 5px;
+    border-left: 3px solid white;
+    background-image:
+    radial-gradient(circle at 30% 198%, black 50%,white 50%, white 52%, transparent 52%),
+    linear-gradient(-75deg, transparent 11.6%, white 11.6%, white 16%, transparent 16%),
+    linear-gradient(90deg, transparent 47%, white 47%, white 53%, transparent 53%),
+    linear-gradient(10deg, transparent 17%, black 17%)
+    ;
 }
 
 /* ##### June 15, 2020 - Hoverboard ##### */
@@ -91,7 +174,7 @@ header a:hover {
     background-color: pink;
     background-image:
     linear-gradient(90deg, transparent 92%, rgba(50,50,50,.05) 95%),
-
+    
     linear-gradient(60deg, transparent 93.5%, white 93.5%, white 95%, #ffd000 95%, #ffd000 99%, transparent 99%),
     linear-gradient(55deg, transparent 49.5%, white 49.5%, white 51%, #ffd000 51%, #ffd000 55%, transparent 55%, transparent 56%, #ffd000 56%, #ffd000 60%, white 60%, white 61.5%, transparent 61.5%),
     
