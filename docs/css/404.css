@@ -1,0 +1,100 @@
+html,
+body,
+div {
+    user-select: none;
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    background: #6d3f93;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(129deg, rgb(109, 63, 147) 23%, rgb(235, 131, 147) 96%);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(129deg, rgb(109, 63, 147) 23%, rgb(235, 131, 147) 96%);
+    
+    background-attachment: fixed;
+    height: 100vh;
+    
+    text-align: center;
+}
+
+#header-title-container {
+    font-family: 'MuseoModerno', cursive;
+    padding: 5px;
+    font-size: 200%;
+    
+    margin: 0;
+    padding: 50px;
+}
+#header-logo img {
+    height: 64px;
+    width: 64px;
+    vertical-align: middle;
+}
+#header-title-container a {
+    text-decoration: none;
+}
+
+main {
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+#error-container {
+    font-weight: bold;
+    color: azure;
+}
+
+#error-404 {
+    font-size: 25vh;
+}
+#error-message {
+    margin: 10px;
+    font-size: 2.5vh;
+    letter-spacing: 1vw;
+}
+#error-message::before,
+#error-message::after {
+    content: " ◬ ";
+}
+
+#links-container {
+    margin-top: 50px;
+}
+#links-container div {
+    display: inline-block;
+    margin: 20px;
+    
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    
+    
+    font-style: italic;
+    color: greenyellow;
+    background-color: black;
+}
+#links-container div:hover {
+    opacity: .8;
+}
+#links-container div::before {
+    content: "→ ";
+}
+#links-container div::after {
+    content: " ←";
+}
+
+#links-container a {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#links-container a:nth-child(2) {
+    font-size: 62.5%;
+}
