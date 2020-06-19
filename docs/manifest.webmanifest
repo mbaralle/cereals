@@ -1,0 +1,24 @@
+{
+    "name": "CSS ART",
+    "short_name": "CSS ART",
+    "description": "A CSS project by Matthieu Baralle",
+    "start_url": "https://css.art.mbaralle.dev",
+    "display": "standalone",
+    "orientation": "any",
+    "lang": "en",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/img/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/icons/android-chrome-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff"
+}
