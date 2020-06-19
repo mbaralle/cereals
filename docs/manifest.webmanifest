@@ -85,8 +85,8 @@
             "sizes": "76x76"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "background_color": "none",
     "url": "https://css.art.mbaralle.dev/",
     "screenshots": [],
     "generated": "true"
