@@ -61,5 +61,13 @@
             <div></div>
         </div>
     </main>
+    <script type="module">
+        // This is the service worker with the Cache-first network
+        
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+    </script>
 </body>
 </html>
