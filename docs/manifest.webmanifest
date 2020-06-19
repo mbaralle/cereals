@@ -9,85 +9,85 @@
     "scope": "/",
     "icons": [
         {
-            "src": "https://css.art.mbaralle.dev/favicon-44x44.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-44x44.png",
             "sizes": "44x44"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-48x48.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-48x48.png",
             "sizes": "48x48"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-1240x600.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-1240x600.png",
             "sizes": "1240x600"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-300x300.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-300x300.png",
             "sizes": "300x300"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-150x150.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-150x150.png",
             "sizes": "150x150"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-88x88.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-88x88.png",
             "sizes": "88x88"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-24x24.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-24x24.png",
             "sizes": "24x24"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-50x50.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-50x50.png",
             "sizes": "50x50"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-620x300.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-620x300.png",
             "sizes": "620x300"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-192x192.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-192x192.png",
             "sizes": "192x192"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-144x144.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-144x144.png",
             "sizes": "144x144"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-96x96.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-96x96.png",
             "sizes": "96x96"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-72x72.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-72x72.png",
             "sizes": "72x72"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-36x36.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-36x36.png",
             "sizes": "36x36"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-1024x1024.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-1024x1024.png",
             "sizes": "1024x1024"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-180x180.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-180x180.png",
             "sizes": "180x180"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-152x152.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-152x152.png",
             "sizes": "152x152"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-120x120.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-120x120.png",
             "sizes": "120x120"
         },
         {
-            "src": "https://css.art.mbaralle.dev/favicon-76x76.png",
+            "src": "https://css.art.mbaralle.dev/favicon/favicon-76x76.png",
             "sizes": "76x76"
         }
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "url": "https://css.art.mbaralle.dev",
+    "url": "https://css.art.mbaralle.dev/",
     "screenshots": [],
-    "generated": ""
+    "generated": "true"
 }
