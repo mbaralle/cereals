@@ -44,6 +44,7 @@ header a:hover {
     text-align: center;
     min-height: 400px;
     position: relative;
+    overflow: hidden;
 }
 
 @media (min-width: 960px) {
@@ -75,6 +76,113 @@ header a:hover {
     position: absolute;
     left: 50%;
     top: 50%;
+}
+
+/* ##### June 27, 2020 - Baseball ##### */
+.art#baseball {
+    background:
+    radial-gradient(circle at top right, rgba(255,255,255,.3) 10%, transparent 30%),
+    radial-gradient(circle at top left, rgba(255,255,255,.3) 10%, transparent 30%),
+    radial-gradient(circle at bottom left, #CC6657 15%, transparent 55%),
+    #8EB052;
+}
+.art#baseball div {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    background:
+    radial-gradient(circle at 135% 50%, transparent 49.5%, darkred 50.5%, transparent 51.5%),
+    radial-gradient(circle at -35% 50%, transparent 49.5%, darkred 50.5%, transparent 51.5%),
+    white;
+    overflow: hidden;
+    box-shadow: 0px 50px 20px rgba(0,0,0,.3);
+    animation: baseball 3.5s infinite linear;
+}
+@keyframes baseball {
+    0% {
+        transform: translateY(-75vh) scaleX(.1) scaleY(.1);
+        box-shadow: 0px 75vh 300px rgba(0,0,0,.15);
+    }
+    20% {
+        transform: translateX(2vw) translateY(50px) rotate(-5deg) scaleY(.9);
+        box-shadow: 0px 50px 20px rgba(0,0,0,.3);
+    }
+    25% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    30% {
+        transform: translateX(-2vw) translateY(50px) rotate(5deg) scaleY(.9);
+    }
+    35% {
+        transform: translateX(0) translateY(25px) rotate(0deg);
+    }
+    40% {
+        transform: translateX(2vw) translateY(50px) rotate(-5deg) scaleY(.9);
+    }
+    45% {
+        transform: translateX(-2vw) translateY(35px);
+    }
+    70% {
+        animation-timing-function: cubic-bezier(0, 0.26, 1,-0.37);
+        transform: translateX(-75vw) translateY(50px) rotate(200deg) scaleX(.7) scaleY(.7);
+        box-shadow: 20px -25px 30px rgba(0,0,0,.3);
+    }
+    100% {
+        transform: translateX(-50vw) translateY(-75vh);
+    }
+}
+
+.art#baseball div::before,
+.art#baseball div::after {
+    position: inherit;
+    content: "";
+    height: inherit;
+    width: inherit;
+}
+.art#baseball div::before {
+    margin-left: -200px;
+    background:
+    radial-gradient(circle at 15% 50%, white 69%, transparent 70.5%, transparent 76.5%, white 78%),
+    linear-gradient(61deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(54deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(46deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(38deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(29deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(20deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(10deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-10deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-20deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-29deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-38deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-46deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-54deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-61deg, transparent 49%, darkred 50%, transparent 51%);
+    border-radius: 50% 0% 0% 50%;
+    box-shadow: inset 100px 0px 15px black;
+}
+.art#baseball div::after {
+    background:
+    radial-gradient(circle at 85% 50%, white 69%, transparent 70.5%, transparent 76.5%, white 78%),
+    linear-gradient(61deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(54deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(46deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(38deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(29deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(20deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(10deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-10deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-20deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-29deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-38deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-46deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-54deg, transparent 49%, darkred 50%, transparent 51%),
+    linear-gradient(-61deg, transparent 49%, darkred 50%, transparent 51%);
+    border-radius: 0 50% 50% 0%;
+    box-shadow: inset -100px 0px 15px black;
 }
 
 /* ##### June 18, 2020 - Matrix ##### */
