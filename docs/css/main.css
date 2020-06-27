@@ -78,6 +78,25 @@ header a:hover {
     top: 50%;
 }
 
+/* ##### June 27, 2020 - Zodiac ##### */
+.art#zodiac {
+    background:
+    linear-gradient(45deg, rgb(82, 75, 193) -9%, rgb(12, 20, 60) 100%),
+    #0C143C;
+}
+.art#zodiac div {
+    height: 200px;
+    width: 200px;
+    /* border-radius: 50%; */
+    margin-top: -100px;
+    margin-left: -100px;
+    background:
+    /* url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='200px' width='200px'><text fill='none' stroke-width='.5' stroke='black'><tspan x='20' y='20'>\2649</tspan></text></svg>"); */
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100px' width='100px'><text fill='white' style='font-size: 50px;><tspan x='0' y='0'>\2605</tspan><tspan x='50' y='50'>\2605</tspan></text></svg>");
+    overflow: hidden;
+    box-shadow: 0px 50px 20px rgba(0,0,0,.3);
+}
+
 /* ##### June 27, 2020 - Baseball ##### */
 .art#baseball {
     background:
