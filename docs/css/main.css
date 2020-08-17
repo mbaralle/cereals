@@ -78,6 +78,68 @@ header a:hover {
     top: 50%;
 }
 
+/* ##### August 17, 2020 - Gameboy ##### */
+.art#gameboy {
+    --gameboy-color: #f7b604;
+    --gameboy-color-darker: #d69104;
+
+    --gameboy-buttons-color: #101d51;
+    /* --gameboy-buttons-color-lighter: #7a7a7a00; */
+    --gameboy-buttons-color-lighter: #101d5100;
+
+    --gameboy-sound-color: darkorange;
+    --gameboy-sound-color-lighter: orange;
+
+    background: blue;
+}
+.art#gameboy div {
+    margin: -148px auto auto -90px;
+    height: 296px;
+    width: 180px;
+    background:
+    radial-gradient(circle at 88% 63%, var(--gameboy-buttons-color) 2.4%, var(--gameboy-buttons-color-lighter) 3.9%, transparent 3.9%),
+    radial-gradient(circle at 75% 67%, var(--gameboy-buttons-color) 2.4%, var(--gameboy-buttons-color-lighter) 3.9%, transparent 3.9%),
+
+    /* linear-gradient(65deg, var(--gameboy-color) 23%, transparent 23%, transparent 34%, var(--gameboy-color) 34%, var(--gameboy-color) 32%, transparent 32%, transparent 39%, var(--gameboy-color) 39%), */
+    /* linear-gradient(65deg, rgba(0,255,0,.5) 30%, transparent 30%, transparent 39%, rgba(0,255,0,.5) 39%), */
+    /* linear-gradient(-25deg, transparent 28%, var(--gameboy-buttons-color) 28%, var(--gameboy-buttons-color) 29%, transparent 29%), */
+    
+    /* linear-gradient(65deg, rgba(255,0,255,.5) 25%, transparent 25%, transparent 34%, rgba(255,0,255,.5) 34%), */
+    /* linear-gradient(-25deg, transparent 29.5%, var(--gameboy-buttons-color) 29.5%, var(--gameboy-buttons-color) 30.5%, transparent 30.5%), */
+    
+    linear-gradient(0deg, var(--gameboy-color) 96%, var(--gameboy-color-darker) 96%, var(--gameboy-color-darker) 97%, transparent 97%),
+    linear-gradient(90deg, transparent 4%, var(--gameboy-color-darker) 4%, var(--gameboy-color-darker) 5.7%, transparent 5.7%,
+    transparent 9.7%, var(--gameboy-color-darker) 9.7%, var(--gameboy-color-darker) 11.4%, transparent 11.4%,
+    transparent 13.1%, var(--gameboy-color-darker) 13.1%, var(--gameboy-color-darker) 14.8%, transparent 14.8%,
+    transparent 16.5%, var(--gameboy-color-darker) 16.5%, var(--gameboy-color-darker) 18.2%, transparent 18.2%,
+    transparent 94.3%, var(--gameboy-color-darker) 94.3%, var(--gameboy-color-darker) 96%, transparent 96%
+    ),
+    
+    /* deeppink; */
+    var(--gameboy-color);
+    border-radius: 7px 7px 35px 7px;
+    box-shadow: inset -2.5px -2.5px 10px black;
+}
+.art#gameboy div::after {
+    margin: 128% 8%;
+
+    transform: rotate(-25deg);
+
+    content: "";
+    height: 17%;
+    width: 35%;
+    position: inherit;
+    background:
+    linear-gradient(90deg, var(--gameboy-sound-color-lighter) 0%, var(--gameboy-sound-color) 3.125%, var(--gameboy-sound-color-lighter) 6.25%, transparent 6.25%,
+    transparent 18.75%, var(--gameboy-sound-color-lighter) 18.75%, var(--gameboy-sound-color) 21.865%, var(--gameboy-sound-color-lighter) 25%, transparent 25%,
+    transparent 37.5%, var(--gameboy-sound-color-lighter) 37.5%, var(--gameboy-sound-color) 40.625%, var(--gameboy-sound-color-lighter) 43.75%, transparent 43.75%,
+    transparent 56.25%, var(--gameboy-sound-color-lighter) 56.25%, var(--gameboy-sound-color) 59.375%, var(--gameboy-sound-color-lighter) 62.5%, transparent 62.5%,
+    transparent 75%, var(--gameboy-sound-color-lighter) 75%, var(--gameboy-sound-color) 78.125%, var(--gameboy-sound-color-lighter) 81.25%, transparent 81.25%,
+    transparent 93.75%, var(--gameboy-sound-color-lighter) 93.75%, var(--gameboy-sound-color) 96.875%, var(--gameboy-sound-color-lighter) 100%, transparent 100%
+    );
+    border-radius: 7px;
+}
+
 /* ##### August 17, 2020 - Geometry ##### */
 .art#geometry {
     background: linear-gradient(305deg, rgb(58, 37, 73) 2%, rgb(183, 248, 172) 98%);
