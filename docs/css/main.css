@@ -142,82 +142,49 @@ header a:hover {
 
 /* ##### August 17, 2020 - Geometry ##### */
 .art#geometry {
-    background: linear-gradient(305deg, rgb(58, 37, 73) 2%, rgb(183, 248, 172) 98%);
-}
-.art#geometry2 {
-    background: linear-gradient(-305deg, rgb(58, 37, 73) 2%, rgb(183, 248, 172) 98%);
-}
-.art#geometry3 {
-    background: linear-gradient(-125deg, rgb(58, 37, 73) 2%, rgb(183, 248, 172) 98%);
-}
-.art#geometry4 {
-    background: linear-gradient(125deg, rgb(58, 37, 73) 2%, rgb(183, 248, 172) 98%);
-}
-.art#geometry div,
-.art#geometry2 div,
-.art#geometry3 div,
-.art#geometry4 div {
+    --geometry-background: rgb(58, 37, 73);
     --geometry-border-color: white;
-    animation: geometry 5s infinite linear;
+    background: var(--geometry-background);
 }
 .art#geometry div {
-    animation-delay: 0s;
+    animation: geometry 5s .6s infinite linear both;
     height: 200px;
-    width: 200px;
-    margin: -100px auto auto -100px;
-    
-    border-radius: 50%;
-    background: radial-gradient(circle, transparent 69%, var(--geometry-border-color) 69%);
-}
-.art#geometry2 div {
-    animation-delay: .5s;
-    height: 200px;
-    width: 231px;
-    margin: -100px auto auto -115.5px;
-    
-    background:
-    linear-gradient(transparent 99%, var(--geometry-border-color) 99%),
-    linear-gradient(60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%),
-    linear-gradient(-60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%);
-}
-.art#geometry3 div {
-    animation-delay: 1s;
-    height: 198px;
-    width: 198px;
-    margin: -100px auto auto -100px;
-    
-    border: 2px solid var(--geometry-border-color);
-}
-.art#geometry4 div {
-    animation-delay: 1.5s;
-    --geometry-bot-inf: 9.8%;
-    --geometry-bot-sup: 10.6%;
-    --geometry-med-inf: 17.2%;
-    --geometry-med-sup: 18.0%;
-    --geometry-top-inf: 20.8%;
-    --geometry-top-sup: 21.5%;
-    
-    height: 225px;
-    width: 225px;
-    margin: -112.5px auto auto -112.5px;
-    
-    border-radius: 50%;
-    background:
-    linear-gradient(0deg, transparent var(--geometry-bot-inf), var(--geometry-border-color) var(--geometry-bot-inf), var(--geometry-border-color) var(--geometry-bot-sup), transparent var(--geometry-bot-sup)),
-    linear-gradient(72deg, transparent var(--geometry-med-inf), var(--geometry-border-color) var(--geometry-med-inf), var(--geometry-border-color) var(--geometry-med-sup), transparent var(--geometry-med-sup)),
-    linear-gradient(144deg, transparent var(--geometry-top-inf), var(--geometry-border-color) var(--geometry-top-inf), var(--geometry-border-color) var(--geometry-top-sup), transparent var(--geometry-top-sup)),
-    linear-gradient(216deg, transparent var(--geometry-top-inf), var(--geometry-border-color) var(--geometry-top-inf), var(--geometry-border-color) var(--geometry-top-sup), transparent var(--geometry-top-sup)),
-    linear-gradient(288deg, transparent var(--geometry-med-inf), var(--geometry-border-color) var(--geometry-med-inf), var(--geometry-border-color) var(--geometry-med-sup), transparent var(--geometry-med-sup));
+    width: 230.96px;
+    margin: -100px auto auto -115.48px;
 }
 @keyframes geometry {
     0% {
+        background:
+        radial-gradient(circle 115.47px, transparent 85%, var(--geometry-border-color) 85%, var(--geometry-border-color) 87%, transparent 87%);
         transform: rotateY(0deg);
     }
+    25% {
+        background:
+        linear-gradient(transparent 99%, var(--geometry-border-color) 99%),
+        linear-gradient(60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%),
+        linear-gradient(-60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%);
+        transform: rotateY(180deg);
+    }
     50% {
+        background:
+        linear-gradient(90deg, var(--geometry-background) 6.5%, var(--geometry-border-color) 6.5%, var(--geometry-border-color) 7.5%, transparent 7.5%, transparent 92.5%, var(--geometry-border-color) 92.5%, var(--geometry-border-color) 93.5%, var(--geometry-background) 93.5%),
+        linear-gradient(0deg, var(--geometry-border-color) 1%, transparent 1%, transparent 99%, var(--geometry-border-color) 99%);
+        transform: rotateY(360deg);
+    }
+    75% {
+        background:
+        radial-gradient(circle at 50% 55%, transparent 68.6%, var(--geometry-background) 65%),
+        linear-gradient(0deg, var(--geometry-border-color) 1%, transparent 1%),
+        linear-gradient(72deg, transparent 17.2%, var(--geometry-border-color) 17.2%, var(--geometry-border-color) 18%, transparent 18%),
+        linear-gradient(144deg, transparent 22.5%, var(--geometry-border-color) 22.5%, var(--geometry-border-color) 23.2%, transparent 23.2%),
+        linear-gradient(216deg, transparent 22.5%, var(--geometry-border-color) 22.5%, var(--geometry-border-color) 23.2%, transparent 23.2%),
+        linear-gradient(288deg, transparent 17.2%, var(--geometry-border-color) 17.2%, var(--geometry-border-color) 18%, transparent 18%);
         transform: rotateY(180deg);
     }
     100% {
-        transform: rotateY(360deg);
+        background:
+        radial-gradient(circle 115.47px, transparent 85%, var(--geometry-border-color) 85%, var(--geometry-border-color) 87%, transparent 87%);
+        transform: rotateY(0deg);
     }
 }
 
