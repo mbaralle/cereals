@@ -12,6 +12,7 @@ div {
 header {
     background: linear-gradient(30deg, violet, skyblue, khaki, salmon);
     text-align: center;
+    user-select: none;
     font-family: 'MuseoModerno', cursive;
     padding: 5px;
 }
