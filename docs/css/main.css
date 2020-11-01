@@ -190,11 +190,10 @@ header a:hover {
     color: var(--lumin-white-mark);
 }
 .art#lumin div::before {
+    line-height: 224px;
     content: "charcoal cleanser";
-    line-height: 16px;
-    content: "\a \a \a \a \a \a \a       charcoal cleanser \a \a \a                                   ¹⋅⁷ ᵒᶻ ⁽⁵⁰ ᵐᶫ⁾";
 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Average', Times, serif;
     font-size: 16px;
     text-transform: capitalize;
     text-indent: 12%;
