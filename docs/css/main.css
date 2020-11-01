@@ -78,6 +78,90 @@ header a:hover {
     top: 50%;
 }
 
+/* ##### November 1, 2020 - Little Death ##### */
+.art#little-death {
+    --little-death-cloak: #3a484a;
+    --little-death-skull: #efedee;
+    --little-death-shadow: #d4d4d4;
+    --little-death-details: #323e40;
+}
+.art#little-death div {
+    height: 200px;
+    width: 160px;
+    margin-top: -100px;
+    margin-left: -80px;
+
+    border-radius: 100px 100px 0 0;
+
+    background:
+    radial-gradient(circle at 18.80% 87.5%, var(--little-death-details) 0.925%, transparent 0.925%),
+    radial-gradient(circle at 81.20% 87.5%, var(--little-death-details) 0.925%, transparent 0.925%),
+    linear-gradient(0deg, transparent 12.5%, var(--little-death-cloak) 12.5%),
+    linear-gradient(
+        90deg,
+        transparent 17.5%,
+        var(--little-death-details) 17.5%,
+        var(--little-death-details) 20%,
+        transparent 20%,
+        transparent 80%,
+        var(--little-death-details) 80%,
+        var(--little-death-details) 82.5%,
+        transparent 82.5%
+    ),
+    var(--little-death-cloak);
+}
+.art#little-death div::before, .art#little-death div::after {
+    position: inherit;
+    content: "";
+}
+.art#little-death div::before {
+    height: 108px;
+    width: 136px;
+    margin-left: -68px;
+    margin-top: 26px;
+
+    border-radius: 68px 68px 34px 34px;
+
+    background:
+    radial-gradient(circle at 50% 75%, transparent 65%, var(--little-death-shadow) 65%),
+    radial-gradient(circle at 35% 70%, var(--little-death-details) 4%, transparent 4.5%),
+    radial-gradient(circle at 65% 70%, var(--little-death-details) 4%, transparent 4.5%),
+    linear-gradient(60deg, transparent 40%, var(--little-death-skull) 40.5%),
+    linear-gradient(-60deg, transparent 40%, var(--little-death-skull) 40.5%),
+    linear-gradient(0deg, transparent 10.6%, var(--little-death-details) 11.1%, var(--little-death-details) 18.5%, transparent 18.5%),
+    var(--little-death-skull);
+}
+.art#little-death div::after {
+    height: 23px;
+    width: 64px;
+    margin-left: -32px;
+    margin-top: 133px;
+
+    border-radius: 0 0 16px 16px;
+
+    background:
+    radial-gradient(circle at 28% 20%, var(--little-death-details) 4.9%, transparent 4.9%),
+    radial-gradient(circle at 50% 20%, var(--little-death-details) 7%, transparent 7%),
+    radial-gradient(circle at 72% 20%, var(--little-death-details) 4.9%, transparent 4.9%),
+    linear-gradient(0deg, transparent 80%, var(--little-death-skull) 80%),
+    linear-gradient(
+        90deg,
+        transparent 24%,
+        var(--little-death-details) 24%,
+        var(--little-death-details) 32%,
+        transparent 32%,
+        transparent 46%,
+        var(--little-death-details) 46%,
+        var(--little-death-details) 54%,
+        transparent 54%,
+        transparent 68%,
+        var(--little-death-details) 68%,
+        var(--little-death-details) 76%,
+        transparent 76%
+    ),
+    var(--little-death-skull);
+}
+
 /* ##### October 31, 2020 - Potato ##### */
 .art#potato {
     --potato-color-primary: #ffe0b7;
