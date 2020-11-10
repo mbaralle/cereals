@@ -7,6 +7,9 @@ div {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+
+    --vermillon: #db1702;
+    --eggwhite: #ffefc1;
 }
 
 header {
@@ -77,6 +80,90 @@ header a:hover {
     position: absolute;
     left: 50%;
     top: 50%;
+}
+
+/* ##### November 10, 2020 - Clock ##### */
+.art#clock {
+    --clock-background: var(--vermillon);
+    --clock-color: var(--eggwhite);
+    --clock-dark: black;
+
+    --clock-base-length: 250px;
+
+    --clock-time-1: 5s;
+    --clock-time-2: calc(var(--clock-time-1)*3);
+    --clock-time-3: calc(var(--clock-time-2)*3);
+
+    background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ffefc1' fill-opacity='0.19' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    var(--clock-background);
+}
+.art#clock div {
+    height: calc(var(--clock-base-length));
+    width: calc(var(--clock-base-length));
+
+    margin-top: calc(var(--clock-base-length)*-.5);
+    margin-left: calc(var(--clock-base-length)*-.5);
+
+    border-radius: 50%;
+
+    background:
+    radial-gradient(circle at center, transparent 60%, var(--clock-color) 60%),
+    linear-gradient(90deg, var(--clock-color) 40%, transparent 40%),
+    linear-gradient(0deg, transparent 49.75%, var(--clock-dark) 49.75%, var(--clock-dark) 50.25%, transparent 50.25%),
+    var(--clock-color);
+
+    --clock-angle-min: -90deg;
+    --clock-angle-max: 270deg;
+    animation: clock infinite var(--clock-time-1) linear;
+
+    box-shadow: #00000080 0 0 calc(var(--clock-base-length)*.06) 0;
+
+}
+.art#clock div::before,
+.art#clock div::after {
+    content: "";
+    position: inherit;
+    --clock-angle-min: 0deg;
+}
+.art#clock div::before{
+    height: calc(var(--clock-base-length)*.01);
+    width: calc(var(--clock-base-length)*.4);
+
+    margin-top: calc(var(--clock-base-length)*.495);
+    margin-left: calc(var(--clock-base-length)*-.04);
+
+    --clock-angle-max: -720deg;
+    animation: clock infinite var(--clock-time-2) linear;
+    transform-origin: 10% 50%;
+
+    background-color: var(--clock-dark);
+}
+.art#clock div::after{
+    height: calc(var(--clock-base-length)*.012);
+    width: calc(var(--clock-base-length)*.32);
+
+    margin-top: calc(var(--clock-base-length)*.494);
+    margin-left: calc(var(--clock-base-length)*-.04);
+
+    --clock-angle-max: -2880deg;
+    animation: clock infinite var(--clock-time-3) linear;
+    transform-origin: 12.5% 50%;
+
+    background:
+    radial-gradient(circle at 12.5% 50%, var(--clock-background) .5%, transparent .5%),
+    radial-gradient(circle at 12.5% 50%, var(--clock-color) 1.0%, transparent 1.0%),
+    radial-gradient(circle at 12.5% 50%, var(--clock-dark) 1.5%, transparent 1.5%),
+    var(--clock-background);
+}
+
+@keyframes clock {
+    0%{
+        transform: rotateZ(var(--clock-angle-min));
+    }
+    100%{
+        transform: rotateZ(var(--clock-angle-max));
+    }
 }
 
 /* ##### November 9, 2020 - Peach ##### */
