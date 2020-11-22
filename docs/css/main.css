@@ -82,6 +82,145 @@ header a:hover {
     top: 50%;
 }
 
+/* ##### November 22, 2020 - Utopia ##### */
+.art#utopia {
+    --utopia-background: #ffec02;
+    --utopia-conjunctiva: #ffffff;
+    --utopia-conjunctiva-bloody: #ffc8b6;
+    --utopia-conjunctiva-blood: #cc0000ee;
+    --utopia-iris: #383d1a;
+    --utopia-iris-ext: #111903;
+    --utopia-iris-darker: #2e341a;
+    --utopia-iris-lighter: #76805f;
+    --utopia-pupil: #000000;
+    --utopia-virus: var(--utopia-background);
+
+    --utopia-base-length: 250px;
+    --utopia-bg-length: calc(var(--utopia-base-length)*.7);
+    --utopia-virus-length: calc(var(--utopia-base-length)*.1);
+
+    background: var(--utopia-background);
+}
+.art#utopia div {
+    height: var(--utopia-base-length);
+    width: var(--utopia-base-length);
+    margin: calc(var(--utopia-base-length)*-.5);
+    border-radius: 50%;
+
+    animation: utopia-blink 10s infinite;
+    overflow: hidden;
+}
+.art#utopia div::before,
+.art#utopia div::after {
+    content: "";
+    position: inherit;
+    top: inherit;
+}
+.art#utopia div::before {
+    margin: calc(var(--utopia-base-length)*-.5);
+    height: var(--utopia-base-length);
+    width: var(--utopia-base-length);
+
+    background:
+    radial-gradient(
+        circle at 60% 40%,
+        white calc(var(--utopia-bg-length)*.01),
+        transparent calc(var(--utopia-bg-length)*.04)
+    ),
+    radial-gradient(
+        circle,
+        var(--utopia-pupil) calc(var(--utopia-bg-length)*.08),
+        var(--utopia-iris) calc(var(--utopia-bg-length)*.12),
+        var(--utopia-iris) calc(var(--utopia-bg-length)*.16),
+        var(--utopia-iris-lighter) calc(var(--utopia-bg-length)*.22),
+        var(--utopia-iris-lighter) calc(var(--utopia-bg-length)*.27),
+        var(--utopia-iris-darker) calc(var(--utopia-bg-length)*.36),
+        var(--utopia-iris-ext) calc(var(--utopia-bg-length)*.38),
+        transparent calc(var(--utopia-bg-length)*.4)
+    ),
+    radial-gradient(
+        circle at -25% 25%,
+        var(--utopia-conjunctiva-blood) calc(var(--utopia-bg-length)*.03),
+        transparent calc(var(--utopia-bg-length)*.75)
+    ),
+    radial-gradient(
+        circle,
+        var(--utopia-conjunctiva) calc(var(--utopia-bg-length)*.5),
+        var(--utopia-conjunctiva-bloody) calc(var(--utopia-bg-length)*.7)
+    );
+
+    box-shadow:
+    inset
+    #000000
+    calc(var(--utopia-base-length)*.25)
+    calc(var(--utopia-base-length)*-.5)
+    calc(var(--utopia-base-length)*.5)
+    calc(var(--utopia-base-length)*-.45);
+}
+.art#utopia div::after {
+    margin: calc(var(--utopia-virus-length)*-.5);
+    height: var(--utopia-virus-length);
+    width: var(--utopia-virus-length);
+
+    border-radius: 50%;
+
+    background:
+    radial-gradient(circle, var(--utopia-pupil) 15%, var(--utopia-virus) 15%, var(--utopia-virus) 20%, transparent 20%),
+    linear-gradient(22.5deg, transparent 48.5%, var(--utopia-virus) 48.5%, var(--utopia-virus) 51.5%, transparent 51.5%),
+    linear-gradient(67.5deg, transparent 48.5%, var(--utopia-virus) 48.5%, var(--utopia-virus) 51.5%, transparent 51.5%),
+    linear-gradient(112.5deg, transparent 48.5%, var(--utopia-virus) 48.5%, var(--utopia-virus) 51.5%, transparent 51.5%),
+    linear-gradient(157.5deg, transparent 48.5%, var(--utopia-virus) 48.5%, var(--utopia-virus) 51.5%, transparent 51.5%),
+    linear-gradient(0deg, transparent 43%, var(--utopia-pupil) 43%, var(--utopia-pupil) 57%, transparent 57%),
+    linear-gradient(45deg, transparent 45%, var(--utopia-pupil) 45%, var(--utopia-pupil) 55%, transparent 55%),
+    linear-gradient(90deg, transparent 43%, var(--utopia-pupil) 43%, var(--utopia-pupil) 57%, transparent 57%),
+    linear-gradient(135deg, transparent 45%, var(--utopia-pupil) 45%, var(--utopia-pupil) 55%, transparent 55%),
+    radial-gradient(circle, transparent 66%, var(--utopia-virus) 66%);
+
+    animation: utopia-virus 30s infinite linear;
+}
+@keyframes utopia-blink {
+    9% {
+        height: calc(var(--utopia-base-length));
+        margin-top: calc(var(--utopia-base-length)*-.5);
+    }
+    10% {
+        height: 0;
+        margin-top: 0;
+    }
+    11% {
+        height: calc(var(--utopia-base-length));
+        margin-top: calc(var(--utopia-base-length)*-.5);
+    }
+    14% {
+        height: calc(var(--utopia-base-length));
+        margin-top: calc(var(--utopia-base-length)*-.5);
+    }
+    15% {
+        height: 0;
+        margin-top: 0;
+    }
+    16% {
+        height: calc(var(--utopia-base-length));
+        margin-top: calc(var(--utopia-base-length)*-.5);
+    }
+    59% {
+        height: calc(var(--utopia-base-length));
+        margin-top: calc(var(--utopia-base-length)*-.5);
+    }
+    60% {
+        height: 0;
+        margin-top: 0;
+    }
+    61% {
+        height: calc(var(--utopia-base-length));
+        margin-top: calc(var(--utopia-base-length)*-.5);
+    }
+}
+@keyframes utopia-virus {
+    0%{ transform: rotateZ(0deg); }
+    100%{ transform: rotateZ(360deg); }
+}
+
 /* ##### November 10, 2020 - Clock ##### */
 .art#clock {
     --clock-background: var(--vermillon);
