@@ -82,6 +82,151 @@ header a:hover {
     top: 50%;
 }
 
+/* ##### November 27, 2020 - ezdinin */
+/* Inspired by ezdinin's photography - https://www.instagram.com/p/B_IGYfWHS-m/ */
+.art#ezdinin {
+    --ezdinin-cloud: #fc3d60;
+    --ezdinin-cloud-semi: #fc3d6080;
+    --ezdinin-cloud-shadow: #682c50;
+    --ezdinin-sky-darker: #12234f;
+    --ezdinin-sky-lighter: #242949;
+
+    --ezdinin-size: 320px;
+
+    background: white;
+}
+.art#ezdinin div {
+    height: calc(var(--ezdinin-size)*.825);
+    width: var(--ezdinin-size);
+
+    margin-top: calc(var(--ezdinin-size)*-.4125);
+    margin-left: calc(var(--ezdinin-size)*-.5);
+
+    background:
+    /* Big cloud - darker */
+    radial-gradient(circle at 84% 83%, var(--ezdinin-cloud-shadow) 2.5%, transparent 2.5%),
+    radial-gradient(circle at 81% 82.5%, var(--ezdinin-cloud-shadow) 4%, transparent 4%),
+    radial-gradient(circle at 77% 81%, var(--ezdinin-cloud-shadow) 5%, transparent 5%),
+    radial-gradient(circle at 71% 79.5%, var(--ezdinin-cloud-shadow) 5.5%, transparent 5.5%),
+    radial-gradient(circle at 66% 80.5%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
+    radial-gradient(circle at 62.5% 79%, var(--ezdinin-cloud-shadow) 2%, transparent 2%),
+    radial-gradient(circle at 64% 81.5%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
+    radial-gradient(circle at 61% 81.5%, var(--ezdinin-cloud-shadow) 2%, transparent 2%),
+    /* Big cloud - lighter */
+    radial-gradient(circle at 72% 76%, var(--ezdinin-cloud) 4%, transparent 4%),
+    radial-gradient(circle at 69% 77%, var(--ezdinin-cloud) 3%, transparent 3%),
+    radial-gradient(circle at 65.5% 77.5%, var(--ezdinin-cloud) 2.5%, transparent 2.5%),
+    radial-gradient(circle at 77% 75%, var(--ezdinin-cloud) 6%, transparent 6%),
+    radial-gradient(circle at 81.5% 80%, var(--ezdinin-cloud) 3.5%, transparent 3.5%),
+    radial-gradient(circle at 84% 81%, var(--ezdinin-cloud) 2.5%, transparent 2.5%),
+    /* Big cloud - halo */
+    radial-gradient(ellipse at 82% 80%, var(--ezdinin-cloud) 0%, transparent 7%),
+    radial-gradient(ellipse at 77% 74%, var(--ezdinin-cloud) 0%, transparent 10%),
+    radial-gradient(ellipse at 71% 77%, var(--ezdinin-cloud) 0%, transparent 9%),
+    radial-gradient(ellipse at 65% 79%, var(--ezdinin-cloud) 0%, transparent 6%),
+    radial-gradient(ellipse at 60% 80%, var(--ezdinin-cloud) 0%, transparent 4%),
+
+    /* Small cloud - darker */
+    radial-gradient(circle at 36% 87%, var(--ezdinin-cloud-shadow) 2%, transparent 2%),
+    radial-gradient(circle at 38% 88%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
+    radial-gradient(circle at 40% 89%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
+    radial-gradient(circle at 42.5% 88.5%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
+    /* Small cloud - lighter */
+    radial-gradient(circle at 38.5% 87%, var(--ezdinin-cloud) 3.5%, transparent 3.5%),
+    radial-gradient(circle at 41.5% 86.5%, var(--ezdinin-cloud) 3.5%, transparent 3.5%),
+    /* Small cloud - halo */    
+    radial-gradient(ellipse at 36% 86%, var(--ezdinin-cloud) 0%, transparent 4.5%),
+    radial-gradient(ellipse at 39.5% 85.5%, var(--ezdinin-cloud) 0%, transparent 6%),
+    radial-gradient(ellipse at 43% 85.5%, var(--ezdinin-cloud) 0%, transparent 6%),
+    
+    /* Sky gradient */
+    radial-gradient(circle at 100% 60%, var(--ezdinin-sky-lighter), var(--ezdinin-sky-darker));
+    overflow: hidden;
+
+}
+.art#ezdinin div::before,
+.art#ezdinin div::after {
+    content: "";
+    position: inherit;
+}
+.art#ezdinin div::before {
+    margin-top: calc(var(--ezdinin-size)*.421875);
+    margin-left: calc(var(--ezdinin-size)*-.471875);
+    height: calc(var(--ezdinin-size)*.0625);
+    width: calc(var(--ezdinin-size)*.11875);
+
+    --ezdinin-background-off:
+    linear-gradient(90deg, transparent 50%, black 50%, black 87%, transparent 87%),
+    linear-gradient(56deg, transparent 73%, #212736 73%, #212736 90%, transparent 90%),
+    linear-gradient(56deg, transparent 10%, black 10%, black 75%, transparent 75%);
+    --ezdinin-background-on:
+    linear-gradient(90deg, transparent 50%, #ffd000 50%, #ffd000 87%, transparent 87%),
+    linear-gradient(56deg, transparent 73%, #212736 73%, #212736 90%, transparent 90%),
+    linear-gradient(56deg, transparent 10%, #ffd000 10%, #ffd000 75%, transparent 75%);
+
+    --ezdinin-15: calc(var(--ezdinin-size)*.046875);
+    --ezdinin-5: calc(var(--ezdinin-size)*.015625);
+    --ezdinin-13: calc(var(--ezdinin-size)*.0040625);
+    --ezdinin-8: calc(var(--ezdinin-size)*-.025);
+    --ezdinin-box-shadow-off:
+    black var(--ezdinin-15) var(--ezdinin-13) 0 var(--ezdinin-8),
+    #ffa50000 var(--ezdinin-5) var(--ezdinin-15) var(--ezdinin-15) calc(var(--ezdinin-5)*-1);
+    --ezdinin-box-shadow-on:
+    black var(--ezdinin-15) var(--ezdinin-13) 0 var(--ezdinin-8),
+    #ffa500 var(--ezdinin-5) var(--ezdinin-15) var(--ezdinin-15) calc(var(--ezdinin-5)*-1);
+
+    background: var(--ezdinin-background-off);
+    box-shadow: var(--ezdinin-box-shadow-off);
+
+    transform: rotateZ(2deg);
+    animation: ezdinin-blink 5s linear infinite;
+}
+.art#ezdinin div::after {
+    margin-top: calc(var(--ezdinin-size)*.509375);
+    margin-left: calc(var(--ezdinin-size)*-.434375);
+    height: calc(var(--ezdinin-size)*.375);
+    width: calc(var(--ezdinin-size)*.3125);
+
+    background:
+    linear-gradient(.75deg, transparent 95.5%, black 95.5%),
+    linear-gradient(90deg, transparent 87%, black 87%);
+    transform: perspective(calc(var(--ezdinin-size)*.78125)) rotateY(70deg) rotateZ(7deg);
+}
+@keyframes ezdinin-blink {
+    14% {
+        background: var(--ezdinin-background-off);
+        box-shadow: var(--ezdinin-box-shadow-off);
+    }
+    15% {
+        background: var(--ezdinin-background-on);
+        box-shadow: var(--ezdinin-box-shadow-on);
+    }
+    16% {
+        background: var(--ezdinin-background-off);
+        box-shadow: var(--ezdinin-box-shadow-off);
+    }
+    70% {
+        background: var(--ezdinin-background-off);
+        box-shadow: var(--ezdinin-box-shadow-off);
+    }
+    75% {
+        background: var(--ezdinin-background-on);
+        box-shadow: var(--ezdinin-box-shadow-on);
+    }
+    80% {
+        background: var(--ezdinin-background-off);
+        box-shadow: var(--ezdinin-box-shadow-off);
+    }
+    81% {
+        background: var(--ezdinin-background-on);
+        box-shadow: var(--ezdinin-box-shadow-on);
+    }
+    82% {
+        background: var(--ezdinin-background-off);
+        box-shadow: var(--ezdinin-box-shadow-off);
+    }
+}
+
 /* ##### November 22, 2020 - Utopia ##### */
 .art#utopia {
     --utopia-background: #ffec02;
