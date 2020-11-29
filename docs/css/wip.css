@@ -82,6 +82,380 @@ header a:hover {
     top: 50%;
 }
 
+/* ##### November 28, 2020 - Zodiac */
+.art#zodiac {
+    --zodiac-star: #ffffff;
+    --zodiac-star-watched: yellow;
+    --zodiac-sky: #242949;
+
+    --zodiac-size: 1100px;
+
+    background: var(--zodiac-sky);
+}
+.art#zodiac div {
+    height: var(--zodiac-size);
+    width: var(--zodiac-size);
+    margin-top: calc(var(--zodiac-size)*-.15);
+    margin-left: calc(var(--zodiac-size)*-.5);
+    animation: zodiac-sky infinite linear 36s;
+}
+.art#zodiac div::before,
+.art#zodiac div::after {
+    content: "";
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.art#zodiac div::before {
+    box-shadow:
+    /* Aries */
+    calc(var(--zodiac-size)*.4) calc(var(--zodiac-size)*.06) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.49) calc(var(--zodiac-size)*.05) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.54) calc(var(--zodiac-size)*.15) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.545) calc(var(--zodiac-size)*.2) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.535) calc(var(--zodiac-size)*.225) 1px -1px var(--zodiac-star),
+    /* Taurus */
+    calc(var(--zodiac-size)*.665) calc(var(--zodiac-size)*.03) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.665) calc(var(--zodiac-size)*.18) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.665) calc(var(--zodiac-size)*.16) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.745) calc(var(--zodiac-size)*.045) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.685) calc(var(--zodiac-size)*.185) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.7) calc(var(--zodiac-size)*.17) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.76) calc(var(--zodiac-size)*.22) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.67) calc(var(--zodiac-size)*.2) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.655) calc(var(--zodiac-size)*.25) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.66) calc(var(--zodiac-size)*.33) 1px var(--zodiac-star),
+    /* Gemini */
+    calc(var(--zodiac-size)*.83) calc(var(--zodiac-size)*.24) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.89) calc(var(--zodiac-size)*.3) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.95) calc(var(--zodiac-size)*.345) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.975) calc(var(--zodiac-size)*.35) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.8) calc(var(--zodiac-size)*.32) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.83) calc(var(--zodiac-size)*.34) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.89) calc(var(--zodiac-size)*.38) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.87) calc(var(--zodiac-size)*.41) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.785) calc(var(--zodiac-size)*.225) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.76) calc(var(--zodiac-size)*.255) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.76) calc(var(--zodiac-size)*.285) 1px -1px var(--zodiac-star),
+    /* Cancer */
+    calc(var(--zodiac-size)*.95) calc(var(--zodiac-size)*.4) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.9) calc(var(--zodiac-size)*.475) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.875) calc(var(--zodiac-size)*.5) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.81) calc(var(--zodiac-size)*.515) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.86) calc(var(--zodiac-size)*.59) 1px var(--zodiac-star),
+    /* Leo */
+    calc(var(--zodiac-size)*.855) calc(var(--zodiac-size)*.82) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.88) calc(var(--zodiac-size)*.8) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.85) calc(var(--zodiac-size)*.745) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.83) calc(var(--zodiac-size)*.645) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.825) calc(var(--zodiac-size)*.735) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.8) calc(var(--zodiac-size)*.76) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.795) calc(var(--zodiac-size)*.585) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.79) calc(var(--zodiac-size)*.64) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.76) calc(var(--zodiac-size)*.75) 1px var(--zodiac-star),
+    /* Virgo */
+    calc(var(--zodiac-size)*.79) calc(var(--zodiac-size)*.81) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.75) calc(var(--zodiac-size)*.82) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.70) calc(var(--zodiac-size)*.815) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.72) calc(var(--zodiac-size)*.91) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.69) calc(var(--zodiac-size)*.875) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.66) calc(var(--zodiac-size)*.86) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.62) calc(var(--zodiac-size)*.89) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.58) calc(var(--zodiac-size)*.94) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.71) calc(var(--zodiac-size)*.77) 1px var(--zodiac-star),
+    /* Libra */
+    calc(var(--zodiac-size)*.46) calc(var(--zodiac-size)*.92) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.51) calc(var(--zodiac-size)*.89) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.42) calc(var(--zodiac-size)*.85) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.48) calc(var(--zodiac-size)*.785) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.555) calc(var(--zodiac-size)*.775) 1px var(--zodiac-star),
+    /* Scorpius */
+    calc(var(--zodiac-size)*.19) calc(var(--zodiac-size)*.88) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.17) calc(var(--zodiac-size)*.86) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.18) calc(var(--zodiac-size)*.83) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.195) calc(var(--zodiac-size)*.805) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.215) calc(var(--zodiac-size)*.785) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.24) calc(var(--zodiac-size)*.84) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.255) calc(var(--zodiac-size)*.845) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.27) calc(var(--zodiac-size)*.84) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.31) calc(var(--zodiac-size)*.80) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.33) calc(var(--zodiac-size)*.77) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.35) calc(var(--zodiac-size)*.74) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.39) calc(var(--zodiac-size)*.75) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.42) calc(var(--zodiac-size)*.77) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.42) calc(var(--zodiac-size)*.815) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.395) calc(var(--zodiac-size)*.83) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.385) calc(var(--zodiac-size)*.825) 1px -1px var(--zodiac-star),
+    /* Sagittarius */
+    calc(var(--zodiac-size)*.095) calc(var(--zodiac-size)*.775) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.11) calc(var(--zodiac-size)*.75) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.07) calc(var(--zodiac-size)*.66) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.1) calc(var(--zodiac-size)*.67) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.125) calc(var(--zodiac-size)*.635) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.17) calc(var(--zodiac-size)*.62) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.12) calc(var(--zodiac-size)*.61) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.13) calc(var(--zodiac-size)*.69) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.155) calc(var(--zodiac-size)*.705) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.13) calc(var(--zodiac-size)*.71) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.15) calc(var(--zodiac-size)*.72) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.145) calc(var(--zodiac-size)*.76) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.185) calc(var(--zodiac-size)*.77) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.22) calc(var(--zodiac-size)*.74) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.225) calc(var(--zodiac-size)*.73) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.27) calc(var(--zodiac-size)*.69) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.255) calc(var(--zodiac-size)*.635) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.235) calc(var(--zodiac-size)*.65) 1px var(--zodiac-star),
+    /* Capricornus */
+    calc(var(--zodiac-size)*.09) calc(var(--zodiac-size)*.395) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.105) calc(var(--zodiac-size)*.405) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.12) calc(var(--zodiac-size)*.43) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.175) calc(var(--zodiac-size)*.485) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.065) calc(var(--zodiac-size)*.61) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.09) calc(var(--zodiac-size)*.60) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.13) calc(var(--zodiac-size)*.57) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.14) calc(var(--zodiac-size)*.565) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.165) calc(var(--zodiac-size)*.535) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.07) calc(var(--zodiac-size)*.595) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.08) calc(var(--zodiac-size)*.55) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.10) calc(var(--zodiac-size)*.51) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.19) calc(var(--zodiac-size)*.505) 1px var(--zodiac-star),
+    /* Aquarius */
+    calc(var(--zodiac-size)*.19) calc(var(--zodiac-size)*.18) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.14) calc(var(--zodiac-size)*.19) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.105) calc(var(--zodiac-size)*.225) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.135) calc(var(--zodiac-size)*.255) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.09) calc(var(--zodiac-size)*.26) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.088) calc(var(--zodiac-size)*.269) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.115) calc(var(--zodiac-size)*.305) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.11) calc(var(--zodiac-size)*.345) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.11) calc(var(--zodiac-size)*.35) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.135) calc(var(--zodiac-size)*.405) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.16) calc(var(--zodiac-size)*.41) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.19) calc(var(--zodiac-size)*.38) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.195) calc(var(--zodiac-size)*.34) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.17) calc(var(--zodiac-size)*.305) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.16) calc(var(--zodiac-size)*.295) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.10) calc(var(--zodiac-size)*.25) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.085) calc(var(--zodiac-size)*.25) 1px -1px var(--zodiac-star),
+    /* Pisces */
+    calc(var(--zodiac-size)*.415) calc(var(--zodiac-size)*.175) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.435) calc(var(--zodiac-size)*.145) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.43) calc(var(--zodiac-size)*.125) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.415) calc(var(--zodiac-size)*.12) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.395) calc(var(--zodiac-size)*.13) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.385) calc(var(--zodiac-size)*.155) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.365) calc(var(--zodiac-size)*.17) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.345) calc(var(--zodiac-size)*.215) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.34) calc(var(--zodiac-size)*.23) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.335) calc(var(--zodiac-size)*.245) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.338) calc(var(--zodiac-size)*.27) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.335) calc(var(--zodiac-size)*.28) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.215) calc(var(--zodiac-size)*.24) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.285) calc(var(--zodiac-size)*.20) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.265) calc(var(--zodiac-size)*.16) 1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.24) calc(var(--zodiac-size)*.155) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.215) calc(var(--zodiac-size)*.155) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.20) calc(var(--zodiac-size)*.155) 1px -1px var(--zodiac-star),
+    calc(var(--zodiac-size)*.20) calc(var(--zodiac-size)*.135) 1px -1px var(--zodiac-star);
+}
+.art#zodiac div::after {
+    animation: zodiac-stars infinite steps(1) 36s;
+}
+
+@keyframes zodiac-sky {
+    0% { transform: rotate(20deg); }
+    100% { transform: rotate(-340deg); }
+}
+@keyframes zodiac-stars {
+    0%{
+        box-shadow:
+        /* Aries */
+        calc(var(--zodiac-size)*.4) calc(var(--zodiac-size)*.06) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.49) calc(var(--zodiac-size)*.05) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.54) calc(var(--zodiac-size)*.15) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.545) calc(var(--zodiac-size)*.2) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.535) calc(var(--zodiac-size)*.225) 1px -1px var(--zodiac-star-watched);
+    }
+    8.33%{
+        box-shadow:
+        /* Taurus */
+        calc(var(--zodiac-size)*.665) calc(var(--zodiac-size)*.03) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.665) calc(var(--zodiac-size)*.18) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.665) calc(var(--zodiac-size)*.16) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.745) calc(var(--zodiac-size)*.045) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.685) calc(var(--zodiac-size)*.185) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.7) calc(var(--zodiac-size)*.17) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.76) calc(var(--zodiac-size)*.22) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.67) calc(var(--zodiac-size)*.2) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.655) calc(var(--zodiac-size)*.25) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.66) calc(var(--zodiac-size)*.33) 1px var(--zodiac-star-watched);
+    }
+    16.66%{
+        box-shadow:
+        /* Gemini */
+        calc(var(--zodiac-size)*.83) calc(var(--zodiac-size)*.24) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.89) calc(var(--zodiac-size)*.3) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.95) calc(var(--zodiac-size)*.345) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.975) calc(var(--zodiac-size)*.35) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.8) calc(var(--zodiac-size)*.32) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.83) calc(var(--zodiac-size)*.34) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.89) calc(var(--zodiac-size)*.38) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.87) calc(var(--zodiac-size)*.41) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.785) calc(var(--zodiac-size)*.225) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.76) calc(var(--zodiac-size)*.255) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.76) calc(var(--zodiac-size)*.285) 1px -1px var(--zodiac-star-watched);
+    }
+    25%{
+        box-shadow:
+        /* Cancer */
+        calc(var(--zodiac-size)*.95) calc(var(--zodiac-size)*.4) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.9) calc(var(--zodiac-size)*.475) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.875) calc(var(--zodiac-size)*.5) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.81) calc(var(--zodiac-size)*.515) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.86) calc(var(--zodiac-size)*.59) 1px var(--zodiac-star-watched);
+    }
+    33.33%{
+        box-shadow:
+        /* Leo */
+        calc(var(--zodiac-size)*.855) calc(var(--zodiac-size)*.82) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.88) calc(var(--zodiac-size)*.8) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.85) calc(var(--zodiac-size)*.745) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.83) calc(var(--zodiac-size)*.645) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.825) calc(var(--zodiac-size)*.735) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.8) calc(var(--zodiac-size)*.76) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.795) calc(var(--zodiac-size)*.585) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.79) calc(var(--zodiac-size)*.64) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.76) calc(var(--zodiac-size)*.75) 1px var(--zodiac-star-watched);
+    }
+    41.66%{
+        box-shadow:
+        /* Virgo */
+        calc(var(--zodiac-size)*.79) calc(var(--zodiac-size)*.81) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.75) calc(var(--zodiac-size)*.82) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.70) calc(var(--zodiac-size)*.815) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.72) calc(var(--zodiac-size)*.91) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.69) calc(var(--zodiac-size)*.875) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.66) calc(var(--zodiac-size)*.86) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.62) calc(var(--zodiac-size)*.89) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.58) calc(var(--zodiac-size)*.94) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.71) calc(var(--zodiac-size)*.77) 1px var(--zodiac-star-watched);
+    }
+    50%{
+        box-shadow:
+        /* Libra */
+        calc(var(--zodiac-size)*.46) calc(var(--zodiac-size)*.92) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.51) calc(var(--zodiac-size)*.89) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.42) calc(var(--zodiac-size)*.85) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.48) calc(var(--zodiac-size)*.785) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.555) calc(var(--zodiac-size)*.775) 1px var(--zodiac-star-watched);
+    }
+    58.33%{
+        box-shadow:
+        /* Scorpius */
+        calc(var(--zodiac-size)*.19) calc(var(--zodiac-size)*.88) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.17) calc(var(--zodiac-size)*.86) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.18) calc(var(--zodiac-size)*.83) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.195) calc(var(--zodiac-size)*.805) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.215) calc(var(--zodiac-size)*.785) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.24) calc(var(--zodiac-size)*.84) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.255) calc(var(--zodiac-size)*.845) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.27) calc(var(--zodiac-size)*.84) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.31) calc(var(--zodiac-size)*.80) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.33) calc(var(--zodiac-size)*.77) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.35) calc(var(--zodiac-size)*.74) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.39) calc(var(--zodiac-size)*.75) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.42) calc(var(--zodiac-size)*.77) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.42) calc(var(--zodiac-size)*.815) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.395) calc(var(--zodiac-size)*.83) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.385) calc(var(--zodiac-size)*.825) 1px -1px var(--zodiac-star-watched);
+    }
+    66.66%{
+        box-shadow:
+        /* Sagittarius */
+        calc(var(--zodiac-size)*.095) calc(var(--zodiac-size)*.775) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.11) calc(var(--zodiac-size)*.75) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.07) calc(var(--zodiac-size)*.66) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.1) calc(var(--zodiac-size)*.67) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.125) calc(var(--zodiac-size)*.635) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.17) calc(var(--zodiac-size)*.62) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.12) calc(var(--zodiac-size)*.61) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.13) calc(var(--zodiac-size)*.69) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.155) calc(var(--zodiac-size)*.705) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.13) calc(var(--zodiac-size)*.71) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.15) calc(var(--zodiac-size)*.72) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.145) calc(var(--zodiac-size)*.76) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.185) calc(var(--zodiac-size)*.77) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.22) calc(var(--zodiac-size)*.74) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.225) calc(var(--zodiac-size)*.73) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.27) calc(var(--zodiac-size)*.69) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.255) calc(var(--zodiac-size)*.635) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.235) calc(var(--zodiac-size)*.65) 1px var(--zodiac-star-watched);
+    }
+    75%{
+        box-shadow:
+        /* Capricornus */
+        calc(var(--zodiac-size)*.09) calc(var(--zodiac-size)*.395) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.105) calc(var(--zodiac-size)*.405) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.12) calc(var(--zodiac-size)*.43) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.175) calc(var(--zodiac-size)*.485) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.065) calc(var(--zodiac-size)*.61) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.09) calc(var(--zodiac-size)*.60) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.13) calc(var(--zodiac-size)*.57) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.14) calc(var(--zodiac-size)*.565) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.165) calc(var(--zodiac-size)*.535) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.07) calc(var(--zodiac-size)*.595) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.08) calc(var(--zodiac-size)*.55) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.10) calc(var(--zodiac-size)*.51) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.19) calc(var(--zodiac-size)*.505) 1px var(--zodiac-star-watched);
+    }
+    82.33%{
+        box-shadow:
+        /* Aquarius */
+        calc(var(--zodiac-size)*.19) calc(var(--zodiac-size)*.18) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.14) calc(var(--zodiac-size)*.19) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.105) calc(var(--zodiac-size)*.225) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.135) calc(var(--zodiac-size)*.255) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.09) calc(var(--zodiac-size)*.26) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.088) calc(var(--zodiac-size)*.269) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.115) calc(var(--zodiac-size)*.305) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.11) calc(var(--zodiac-size)*.345) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.11) calc(var(--zodiac-size)*.35) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.135) calc(var(--zodiac-size)*.405) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.16) calc(var(--zodiac-size)*.41) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.19) calc(var(--zodiac-size)*.38) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.195) calc(var(--zodiac-size)*.34) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.17) calc(var(--zodiac-size)*.305) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.16) calc(var(--zodiac-size)*.295) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.10) calc(var(--zodiac-size)*.25) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.085) calc(var(--zodiac-size)*.25) 1px -1px var(--zodiac-star-watched);
+    }
+    91.66%{
+        box-shadow:
+        /* Pisces */
+        calc(var(--zodiac-size)*.415) calc(var(--zodiac-size)*.175) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.435) calc(var(--zodiac-size)*.145) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.43) calc(var(--zodiac-size)*.125) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.415) calc(var(--zodiac-size)*.12) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.395) calc(var(--zodiac-size)*.13) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.385) calc(var(--zodiac-size)*.155) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.365) calc(var(--zodiac-size)*.17) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.345) calc(var(--zodiac-size)*.215) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.34) calc(var(--zodiac-size)*.23) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.335) calc(var(--zodiac-size)*.245) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.338) calc(var(--zodiac-size)*.27) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.335) calc(var(--zodiac-size)*.28) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.215) calc(var(--zodiac-size)*.24) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.285) calc(var(--zodiac-size)*.20) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.265) calc(var(--zodiac-size)*.16) 1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.24) calc(var(--zodiac-size)*.155) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.215) calc(var(--zodiac-size)*.155) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.20) calc(var(--zodiac-size)*.155) 1px -1px var(--zodiac-star-watched),
+        calc(var(--zodiac-size)*.20) calc(var(--zodiac-size)*.135) 1px -1px var(--zodiac-star-watched);
+    }
+}
 
 /* ##### November 24, 2020 - Le Règlement */
 .art#le-reglement {
