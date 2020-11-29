@@ -91,9 +91,14 @@ header a:hover {
     --ezdinin-sky-darker: #12234f;
     --ezdinin-sky-lighter: #242949;
 
-    --ezdinin-size: 320px;
+    --ezdinin-size: 370px;
 
     background: white;
+}
+@media (max-width: 390px) {
+    .art#ezdinin {
+        --ezdinin-size: 90vw;
+    }
 }
 .art#ezdinin div {
     height: calc(var(--ezdinin-size)*.825);
