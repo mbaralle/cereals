@@ -457,6 +457,26 @@ header a:hover {
     }
 }
 
+/* ##### November 26, 2020 - Thanksgiving */
+.art#thanksgiving {
+    --thanksgiving-color-1: #b80000;
+    --thanksgiving-color-2: #9a000a;
+    --thanksgiving-color-3: #cc0000;
+    --thanksgiving-color-4: #824520;
+    --thanksgiving-color-5: #904d24;
+    --thanksgiving-color-6: #9f5528;
+    --thanksgiving-color-7: #673416;
+
+    --thanksgiving-size: 100px;
+
+    background: white;
+}
+.art#thanksgiving div {
+    margin-top: calc(var(--thanksgiving-size)*-.5);
+    margin-left: calc(var(--thanksgiving-size)*-.5);
+    width: var(--thanksgiving-size);
+    height: var(--thanksgiving-size);
+}
 /* ##### November 24, 2020 - Le Règlement */
 .art#le-reglement {
     --reglement-color-1: #3200ff;
