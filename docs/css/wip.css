@@ -1,0 +1,84 @@
+html,
+body,
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+    --vermillon: #db1702;
+    --eggwhite: #ffefc1;
+}
+
+header {
+    background: linear-gradient(30deg, violet, skyblue, khaki, salmon);
+    text-align: center;
+    user-select: none;
+    font-family: 'MuseoModerno', cursive;
+    padding: 5px;
+}
+
+#header-title-container {
+    padding: 5px;
+    font-size: 200%;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    opacity: .7;
+}
+
+#header-logo img {
+    height: 64px;
+    width: 64px;
+    vertical-align: middle;
+}
+
+.header-link img {
+    height: 48px;
+    width: 48px;
+}
+
+.art {
+    text-align: center;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 960px) {
+    #header-title-container {
+        font-size: initial;
+    }
+    
+    #header-logo img {
+        height: 32px;
+        width: 32px;
+    }
+    
+    .header-link img {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .art {
+        float: left;
+        width: 50%;
+    }
+    
+    .art.wide {
+        width: 100%;
+    }
+}
+
+.art div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
