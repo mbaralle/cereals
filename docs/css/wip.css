@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@500&display=swap');
+
 html,
 body,
 div {
@@ -17,6 +19,8 @@ header {
     text-align: center;
     user-select: none;
     font-family: 'MuseoModerno', cursive;
+    color: white;
+    animation: title-animation 4s linear infinite;
     padding: 5px;
 }
 
@@ -33,15 +37,130 @@ header a:hover {
     opacity: .7;
 }
 
-#header-logo img {
+.logo {
     height: 64px;
     width: 64px;
     vertical-align: middle;
 }
 
-.header-link img {
-    height: 48px;
-    width: 48px;
+.logo path#rect {
+    animation: logo-rect-animation 4s linear infinite;
+}
+.logo path#letter {
+    animation: logo-letter-animation 4s linear infinite;
+}
+
+@keyframes title-animation {
+    0%{ color: violet; }
+    25%{ color: skyblue; }
+    50%{ color: khaki; }
+    75%{ color: salmon; }
+    100%{ color: violet; }
+}
+@keyframes logo-rect-animation {
+    0%{ stroke: violet; }
+    25%{ stroke: skyblue; }
+    50%{ stroke: khaki; }
+    75%{ stroke: salmon; }
+    100%{ stroke: violet; }
+}
+@keyframes logo-letter-animation {
+    0%{ fill: violet; }
+    25%{ fill: skyblue; }
+    50%{ fill: khaki; }
+    75%{ fill: salmon; }
+    100%{ fill: violet; }
+}
+
+#menu-button {
+    height: 1.3em;
+    width: 1.5em;
+    
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 3;
+    transition: all 1s, opacity 0s;
+    cursor: pointer;
+}
+#menu-button:hover {
+    opacity: .8;
+}
+#menu-button::before,
+#menu-button::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    background: white;
+    height: .25em;
+    width: inherit;
+    transition: inherit;
+    transform-origin: 0% 50%;
+}
+#menu-button::before {
+    top: 0%;
+    --angle: 45deg;
+}
+#menu-button::after {
+    bottom: 0%;
+    --angle: -45deg;
+}
+#menu-button.opened {
+    transform: rotate(-180deg);
+}
+#menu-button.opened::before,
+#menu-button.opened::after {
+    transform: rotate(var(--angle));
+}
+#mobile-menu {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    
+    opacity: 0;
+    
+    height: fit-content;
+    width: 100%;    
+    
+    background: #000c;
+    z-index: 2;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: left;
+    
+    font-family: 'Advent Pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    transition: top .7s, opacity 1.5s;
+}
+@media (min-width: 720px) {
+    #mobile-menu {
+        width: fit-content;
+        left: initial;
+        right: 0;
+    }
+}
+#mobile-menu.opened {
+    top: 0;
+    opacity: 1;
+}
+#mobile-menu a {
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+    
+    color: white;
+    
+    margin-top: 10px;
+    margin-left: 32px;
+    margin-right: 64px;
+}
+#mobile-menu a#wip {
+    font-size: 30%;
+}
+#mobile-menu a:hover {
+    opacity: .7;
+    font-style: italic;
 }
 
 .art {
@@ -52,20 +171,6 @@ header a:hover {
 }
 
 @media (min-width: 960px) {
-    #header-title-container {
-        font-size: initial;
-    }
-    
-    #header-logo img {
-        height: 32px;
-        width: 32px;
-    }
-    
-    .header-link img {
-        height: 20px;
-        width: 20px;
-    }
-    
     .art {
         float: left;
         width: 50%;

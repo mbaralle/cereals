@@ -27,23 +27,55 @@
 </head>
 <body>
     <header>
-        <h3 id="header-title-container">
-            <a href="https://mbaralle.dev" id="header-logo" target="_blank" rel="noopener">
-                <img src="img/logo/mbaralle-m-logo-128.png" alt="mbaralle">
-            </a>
-            |
-            <span id="header-title">
-                CSS ART
-            </span>
-        </h3>
-        <div id="header-links-container">
-            <a class="header-link" href="https://twitter.com/intent/tweet?text=🎨👨‍💻%20Make%20art%20with%20%23CSS%3F%20%40mbaralle%20does%20it%21%20https%3A%2F%2Fcss.art.mbaralle.dev" target="_blank" rel="noopener">
-                <img src="img/icons/icon-twitter.svg" alt="Tweet" title="Tweet">
-            </a>
-            <a class="header-link" href="https://github.com/mbaralle/css-art/" target="_blank" rel="noopener">
-                <img src="img/icons/icon-github.svg" alt="GitHub" title="See on GitHub">
-            </a>
-        </div>
+      <h3 id="header-title-container">
+        <a
+          href="https://mbaralle.dev"
+          id="header-logo"
+          name="mbaralle"
+          target="_blank"
+          rel="noopener"
+        >
+          <svg
+            class="logo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 824.18909 824.18909"
+          >
+            <path
+              id="rect"
+              fill="#fff"
+              stroke="#000"
+              stroke-width="15.4396"
+              d="M412.09454702 10.91744012l401.17710302 401.17710302-401.17710302 401.17710302L10.917444 412.09454314z"
+            />
+            <path
+              id="letter"
+              d="M276.1905087 414.7545909v-42.5607l154.76617 172.661-19.34577 21.28035-107.36903-119.94377v143.1587h-28.05137zm135.90404 29.01866l190.0722-208.93433v354.51125h-28.53501v-201.67965l-25.14951 28.05136v173.62829h-28.53501v-142.67505l-71.57935 78.83401-197.8105-217.63992v281.48096h-28.53502v-354.51125zm161.53719-98.17979v-37.72425l-142.67506 156.70074 17.41119 18.86214z"
+            />
+          </svg>
+        </a>
+        <span id="header-title">CSS ART</span>
+      </h3>
+      <div id="menu-button" onclick="menuClick()"></div>
+      <div id="mobile-menu">
+        <a
+          href="https://github.com/mbaralle/css-art/"
+          target="_blank"
+          rel="noopener"
+        >
+          See code
+        </a>
+        <a href="https://ko-fi.com/mbaralle" target="_blank" rel="noopener">
+          Support
+        </a>
+        <a
+          href="https://twitter.com/intent/tweet?text=🎨👨‍💻%20Make%20art%20with%20%23CSS%3F%20%40mbaralle%20does%20it%21%20https%3A%2F%2Fcss.art.mbaralle.dev"
+          target="_blank"
+          rel="noopener"
+        >
+          Share
+        </a>
+        <a href="/wip" id="wip">Work in progress</a>
+      </div>
     </header>
     <main>
         <!-- November 28, 2020 - Zodiac -->
@@ -66,6 +98,24 @@
         <div></div>
       </div>
     </main>
+
+    <script type="text/javascript">
+      let isMenuOpened = false;
+      const menuButton = this.document.getElementById("menu-button");
+      const mobileMenu = this.document.getElementById("mobile-menu");
+
+      function menuClick() {
+        if (isMenuOpened) {
+          menuButton.classList.remove("opened");
+          mobileMenu.classList.remove("opened");
+        } else {
+          menuButton.classList.add("opened");
+          mobileMenu.classList.add("opened");
+        }
+        isMenuOpened = !isMenuOpened;
+      }
+    </script>
+
     <script type="text/javascript">
         // This is the service worker with the Cache-first network
         // Check compatibility for the browser we're running this in
