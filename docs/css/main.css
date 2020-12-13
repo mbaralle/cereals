@@ -1,48 +1,176 @@
 html,
 body,
 div {
+    user-select: none;
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-
-    --vermillon: #db1702;
-    --eggwhite: #ffefc1;
 }
 
 header {
     background: linear-gradient(30deg, violet, skyblue, khaki, salmon);
     text-align: center;
-    user-select: none;
     font-family: 'MuseoModerno', cursive;
+    color: white;
     padding: 5px;
 }
 
-#header-title-container {
+header h3 {
+    animation: title-animation 4s linear infinite;
     padding: 5px;
     font-size: 200%;
 }
 
-header a {
+header h3 a {
     text-decoration: none;
 }
 
-header a:hover {
+header h3 a:hover {
     opacity: .7;
 }
 
-#header-logo img {
+header h3 svg {
     height: 64px;
     width: 64px;
     vertical-align: middle;
 }
 
-.header-link img {
-    height: 48px;
-    width: 48px;
+header h3 svg path#rect {
+    animation: logo-rect-animation 4s linear infinite;
 }
+
+header h3 svg path#letter {
+    animation: logo-letter-animation 4s linear infinite;
+}
+
+@keyframes title-animation {
+    0%{ color: violet; }
+    25%{ color: skyblue; }
+    50%{ color: khaki; }
+    75%{ color: salmon; }
+    100%{ color: violet; }
+}
+
+@keyframes logo-rect-animation {
+    0%{ stroke: violet; }
+    25%{ stroke: skyblue; }
+    50%{ stroke: khaki; }
+    75%{ stroke: salmon; }
+    100%{ stroke: violet; }
+}
+
+@keyframes logo-letter-animation {
+    0%{ fill: violet; }
+    25%{ fill: skyblue; }
+    50%{ fill: khaki; }
+    75%{ fill: salmon; }
+    100%{ fill: violet; }
+}
+
+
+#menu-button {
+    height: 1.3em;
+    width: 1.5em;
+    
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 3;
+    transition: all .7s;
+    cursor: pointer;
+}
+
+#menu-button:hover {
+    opacity: .8;
+}
+
+#menu-button::before,
+#menu-button::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    background: white;
+    height: .25em;
+    width: inherit;
+    transition: inherit;
+    transform-origin: 0% 50%;
+}
+
+#menu-button::before {
+    top: 0%;
+    --angle: 45deg;
+}
+
+#menu-button::after {
+    bottom: 0%;
+    --angle: -45deg;
+}
+
+#menu-button.opened {
+    transform: rotate(-180deg);
+}
+
+#menu-button.opened::before,
+#menu-button.opened::after {
+    transform: rotate(var(--angle));
+}
+
+
+#menu {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    
+    opacity: 0;
+    
+    height: fit-content;
+    width: 100%;    
+    
+    background: #000c;
+    z-index: 2;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: left;
+    
+    font-family: 'Advent Pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    transition: all .7s;
+}
+
+@media (min-width: 720px) {
+    #menu {
+        width: fit-content;
+        left: initial;
+        right: 0;
+    }
+}
+
+#menu.opened {
+    top: 0;
+    opacity: 1;
+}
+
+#menu a {
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 10px 64px 0 32px;
+}
+
+#menu a#wip {
+    font-size: 30%;
+}
+
+#menu a:hover {
+    opacity: .7;
+    font-style: italic;
+}
+
 
 .art {
     text-align: center;
@@ -52,20 +180,6 @@ header a:hover {
 }
 
 @media (min-width: 960px) {
-    #header-title-container {
-        font-size: initial;
-    }
-    
-    #header-logo img {
-        height: 32px;
-        width: 32px;
-    }
-    
-    .header-link img {
-        height: 20px;
-        width: 20px;
-    }
-    
     .art {
         float: left;
         width: 50%;
@@ -80,1136 +194,4 @@ header a:hover {
     position: absolute;
     left: 50%;
     top: 50%;
-}
-
-/* ##### November 27, 2020 - ezdinin */
-/* Inspired by ezdinin's photography - https://www.instagram.com/p/B_IGYfWHS-m/ */
-.art#ezdinin {
-    --ezdinin-cloud: #fc3d60;
-    --ezdinin-cloud-semi: #fc3d6080;
-    --ezdinin-cloud-shadow: #682c50;
-    --ezdinin-sky-darker: #12234f;
-    --ezdinin-sky-lighter: #242949;
-
-    --ezdinin-size: 370px;
-
-    background: white;
-}
-@media (max-width: 390px) {
-    .art#ezdinin {
-        --ezdinin-size: 90vw;
-    }
-}
-.art#ezdinin div {
-    height: calc(var(--ezdinin-size)*.825);
-    width: var(--ezdinin-size);
-
-    margin-top: calc(var(--ezdinin-size)*-.4125);
-    margin-left: calc(var(--ezdinin-size)*-.5);
-
-    background:
-    /* Big cloud - darker */
-    radial-gradient(circle at 84% 83%, var(--ezdinin-cloud-shadow) 2.5%, transparent 2.5%),
-    radial-gradient(circle at 81% 82.5%, var(--ezdinin-cloud-shadow) 4%, transparent 4%),
-    radial-gradient(circle at 77% 81%, var(--ezdinin-cloud-shadow) 5%, transparent 5%),
-    radial-gradient(circle at 71% 79.5%, var(--ezdinin-cloud-shadow) 5.5%, transparent 5.5%),
-    radial-gradient(circle at 66% 80.5%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
-    radial-gradient(circle at 62.5% 79%, var(--ezdinin-cloud-shadow) 2%, transparent 2%),
-    radial-gradient(circle at 64% 81.5%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
-    radial-gradient(circle at 61% 81.5%, var(--ezdinin-cloud-shadow) 2%, transparent 2%),
-    /* Big cloud - lighter */
-    radial-gradient(circle at 72% 76%, var(--ezdinin-cloud) 4%, transparent 4%),
-    radial-gradient(circle at 69% 77%, var(--ezdinin-cloud) 3%, transparent 3%),
-    radial-gradient(circle at 65.5% 77.5%, var(--ezdinin-cloud) 2.5%, transparent 2.5%),
-    radial-gradient(circle at 77% 75%, var(--ezdinin-cloud) 6%, transparent 6%),
-    radial-gradient(circle at 81.5% 80%, var(--ezdinin-cloud) 3.5%, transparent 3.5%),
-    radial-gradient(circle at 84% 81%, var(--ezdinin-cloud) 2.5%, transparent 2.5%),
-    /* Big cloud - halo */
-    radial-gradient(ellipse at 82% 80%, var(--ezdinin-cloud) 0%, transparent 7%),
-    radial-gradient(ellipse at 77% 74%, var(--ezdinin-cloud) 0%, transparent 10%),
-    radial-gradient(ellipse at 71% 77%, var(--ezdinin-cloud) 0%, transparent 9%),
-    radial-gradient(ellipse at 65% 79%, var(--ezdinin-cloud) 0%, transparent 6%),
-    radial-gradient(ellipse at 60% 80%, var(--ezdinin-cloud) 0%, transparent 4%),
-
-    /* Small cloud - darker */
-    radial-gradient(circle at 36% 87%, var(--ezdinin-cloud-shadow) 2%, transparent 2%),
-    radial-gradient(circle at 38% 88%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
-    radial-gradient(circle at 40% 89%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
-    radial-gradient(circle at 42.5% 88.5%, var(--ezdinin-cloud-shadow) 3%, transparent 3%),
-    /* Small cloud - lighter */
-    radial-gradient(circle at 38.5% 87%, var(--ezdinin-cloud) 3.5%, transparent 3.5%),
-    radial-gradient(circle at 41.5% 86.5%, var(--ezdinin-cloud) 3.5%, transparent 3.5%),
-    /* Small cloud - halo */    
-    radial-gradient(ellipse at 36% 86%, var(--ezdinin-cloud) 0%, transparent 4.5%),
-    radial-gradient(ellipse at 39.5% 85.5%, var(--ezdinin-cloud) 0%, transparent 6%),
-    radial-gradient(ellipse at 43% 85.5%, var(--ezdinin-cloud) 0%, transparent 6%),
-    
-    /* Sky gradient */
-    radial-gradient(circle at 100% 60%, var(--ezdinin-sky-lighter), var(--ezdinin-sky-darker));
-    overflow: hidden;
-
-}
-.art#ezdinin div::before,
-.art#ezdinin div::after {
-    content: "";
-    position: inherit;
-}
-.art#ezdinin div::before {
-    margin-top: calc(var(--ezdinin-size)*.421875);
-    margin-left: calc(var(--ezdinin-size)*-.471875);
-    height: calc(var(--ezdinin-size)*.0625);
-    width: calc(var(--ezdinin-size)*.11875);
-
-    --ezdinin-background-off:
-    linear-gradient(90deg, transparent 50%, black 50%, black 87%, transparent 87%),
-    linear-gradient(56deg, transparent 73%, #212736 73%, #212736 90%, transparent 90%),
-    linear-gradient(56deg, transparent 10%, black 10%, black 75%, transparent 75%);
-    --ezdinin-background-on:
-    linear-gradient(90deg, transparent 50%, #ffd000 50%, #ffd000 87%, transparent 87%),
-    linear-gradient(56deg, transparent 73%, #212736 73%, #212736 90%, transparent 90%),
-    linear-gradient(56deg, transparent 10%, #ffd000 10%, #ffd000 75%, transparent 75%);
-
-    --ezdinin-15: calc(var(--ezdinin-size)*.046875);
-    --ezdinin-5: calc(var(--ezdinin-size)*.015625);
-    --ezdinin-13: calc(var(--ezdinin-size)*.0040625);
-    --ezdinin-8: calc(var(--ezdinin-size)*-.025);
-    --ezdinin-box-shadow-off:
-    black var(--ezdinin-15) var(--ezdinin-13) 0 var(--ezdinin-8),
-    #ffa50000 var(--ezdinin-5) var(--ezdinin-15) var(--ezdinin-15) calc(var(--ezdinin-5)*-1);
-    --ezdinin-box-shadow-on:
-    black var(--ezdinin-15) var(--ezdinin-13) 0 var(--ezdinin-8),
-    #ffa500 var(--ezdinin-5) var(--ezdinin-15) var(--ezdinin-15) calc(var(--ezdinin-5)*-1);
-
-    background: var(--ezdinin-background-off);
-    box-shadow: var(--ezdinin-box-shadow-off);
-
-    transform: rotateZ(2deg);
-    animation: ezdinin-blink 5s linear infinite;
-}
-.art#ezdinin div::after {
-    margin-top: calc(var(--ezdinin-size)*.509375);
-    margin-left: calc(var(--ezdinin-size)*-.434375);
-    height: calc(var(--ezdinin-size)*.375);
-    width: calc(var(--ezdinin-size)*.3125);
-
-    background:
-    linear-gradient(.75deg, transparent 95.5%, black 95.5%),
-    linear-gradient(90deg, transparent 87%, black 87%);
-    transform: perspective(calc(var(--ezdinin-size)*.78125)) rotateY(70deg) rotateZ(7deg);
-}
-@keyframes ezdinin-blink {
-    14% {
-        background: var(--ezdinin-background-off);
-        box-shadow: var(--ezdinin-box-shadow-off);
-    }
-    15% {
-        background: var(--ezdinin-background-on);
-        box-shadow: var(--ezdinin-box-shadow-on);
-    }
-    16% {
-        background: var(--ezdinin-background-off);
-        box-shadow: var(--ezdinin-box-shadow-off);
-    }
-    70% {
-        background: var(--ezdinin-background-off);
-        box-shadow: var(--ezdinin-box-shadow-off);
-    }
-    75% {
-        background: var(--ezdinin-background-on);
-        box-shadow: var(--ezdinin-box-shadow-on);
-    }
-    80% {
-        background: var(--ezdinin-background-off);
-        box-shadow: var(--ezdinin-box-shadow-off);
-    }
-    81% {
-        background: var(--ezdinin-background-on);
-        box-shadow: var(--ezdinin-box-shadow-on);
-    }
-    82% {
-        background: var(--ezdinin-background-off);
-        box-shadow: var(--ezdinin-box-shadow-off);
-    }
-}
-
-/* ##### November 22, 2020 - Utopia ##### */
-.art#utopia {
-    --utopia-background: #ffec02;
-    --utopia-conjunctiva: #ffffff;
-    --utopia-conjunctiva-bloody: #ffc8b6;
-    --utopia-conjunctiva-blood: #cc0000ee;
-    --utopia-iris: #383d1a;
-    --utopia-iris-ext: #111903;
-    --utopia-iris-darker: #2e341a;
-    --utopia-iris-lighter: #76805f;
-    --utopia-pupil: #000000;
-    --utopia-virus: var(--utopia-background);
-
-    --utopia-base-length: 250px;
-    --utopia-bg-length: calc(var(--utopia-base-length)*.7);
-    --utopia-virus-length: calc(var(--utopia-base-length)*.1);
-
-    background: var(--utopia-background);
-}
-.art#utopia div {
-    height: var(--utopia-base-length);
-    width: var(--utopia-base-length);
-    margin: calc(var(--utopia-base-length)*-.5);
-    border-radius: 50%;
-
-    animation: utopia-blink 10s infinite;
-    overflow: hidden;
-}
-.art#utopia div::before,
-.art#utopia div::after {
-    content: "";
-    position: inherit;
-    top: inherit;
-}
-.art#utopia div::before {
-    margin: calc(var(--utopia-base-length)*-.5);
-    height: var(--utopia-base-length);
-    width: var(--utopia-base-length);
-
-    background:
-    radial-gradient(
-        circle at 60% 40%,
-        white calc(var(--utopia-bg-length)*.01),
-        transparent calc(var(--utopia-bg-length)*.04)
-    ),
-    radial-gradient(
-        circle,
-        var(--utopia-pupil) calc(var(--utopia-bg-length)*.08),
-        var(--utopia-iris) calc(var(--utopia-bg-length)*.12),
-        var(--utopia-iris) calc(var(--utopia-bg-length)*.16),
-        var(--utopia-iris-lighter) calc(var(--utopia-bg-length)*.22),
-        var(--utopia-iris-lighter) calc(var(--utopia-bg-length)*.27),
-        var(--utopia-iris-darker) calc(var(--utopia-bg-length)*.36),
-        var(--utopia-iris-ext) calc(var(--utopia-bg-length)*.38),
-        transparent calc(var(--utopia-bg-length)*.4)
-    ),
-    radial-gradient(
-        circle at -25% 25%,
-        var(--utopia-conjunctiva-blood) calc(var(--utopia-bg-length)*.03),
-        transparent calc(var(--utopia-bg-length)*.75)
-    ),
-    radial-gradient(
-        circle,
-        var(--utopia-conjunctiva) calc(var(--utopia-bg-length)*.5),
-        var(--utopia-conjunctiva-bloody) calc(var(--utopia-bg-length)*.7)
-    );
-
-    box-shadow:
-    inset
-    #000000
-    calc(var(--utopia-base-length)*.25)
-    calc(var(--utopia-base-length)*-.5)
-    calc(var(--utopia-base-length)*.5)
-    calc(var(--utopia-base-length)*-.45);
-}
-.art#utopia div::after {
-    margin: calc(var(--utopia-virus-length)*-.5);
-    height: var(--utopia-virus-length);
-    width: var(--utopia-virus-length);
-
-    border-radius: 50%;
-
-    background:
-    radial-gradient(circle, var(--utopia-pupil) 15%, var(--utopia-virus) 15%, var(--utopia-virus) 20%, transparent 20%),
-    linear-gradient(22.5deg, transparent 48.5%, var(--utopia-virus) 48.5%, var(--utopia-virus) 51.5%, transparent 51.5%),
-    linear-gradient(67.5deg, transparent 48.5%, var(--utopia-virus) 48.5%, var(--utopia-virus) 51.5%, transparent 51.5%),
-    linear-gradient(112.5deg, transparent 48.5%, var(--utopia-virus) 48.5%, var(--utopia-virus) 51.5%, transparent 51.5%),
-    linear-gradient(157.5deg, transparent 48.5%, var(--utopia-virus) 48.5%, var(--utopia-virus) 51.5%, transparent 51.5%),
-    linear-gradient(0deg, transparent 43%, var(--utopia-pupil) 43%, var(--utopia-pupil) 57%, transparent 57%),
-    linear-gradient(45deg, transparent 45%, var(--utopia-pupil) 45%, var(--utopia-pupil) 55%, transparent 55%),
-    linear-gradient(90deg, transparent 43%, var(--utopia-pupil) 43%, var(--utopia-pupil) 57%, transparent 57%),
-    linear-gradient(135deg, transparent 45%, var(--utopia-pupil) 45%, var(--utopia-pupil) 55%, transparent 55%),
-    radial-gradient(circle, transparent 66%, var(--utopia-virus) 66%);
-
-    animation: utopia-virus 30s infinite linear;
-}
-@keyframes utopia-blink {
-    9% {
-        height: calc(var(--utopia-base-length));
-        margin-top: calc(var(--utopia-base-length)*-.5);
-    }
-    10% {
-        height: 0;
-        margin-top: 0;
-    }
-    11% {
-        height: calc(var(--utopia-base-length));
-        margin-top: calc(var(--utopia-base-length)*-.5);
-    }
-    14% {
-        height: calc(var(--utopia-base-length));
-        margin-top: calc(var(--utopia-base-length)*-.5);
-    }
-    15% {
-        height: 0;
-        margin-top: 0;
-    }
-    16% {
-        height: calc(var(--utopia-base-length));
-        margin-top: calc(var(--utopia-base-length)*-.5);
-    }
-    59% {
-        height: calc(var(--utopia-base-length));
-        margin-top: calc(var(--utopia-base-length)*-.5);
-    }
-    60% {
-        height: 0;
-        margin-top: 0;
-    }
-    61% {
-        height: calc(var(--utopia-base-length));
-        margin-top: calc(var(--utopia-base-length)*-.5);
-    }
-}
-@keyframes utopia-virus {
-    0%{ transform: rotateZ(0deg); }
-    100%{ transform: rotateZ(360deg); }
-}
-
-/* ##### November 10, 2020 - Clock ##### */
-.art#clock {
-    --clock-background: var(--vermillon);
-    --clock-color: var(--eggwhite);
-    --clock-dark: black;
-
-    --clock-base-length: 250px;
-
-    --clock-time-1: 5s;
-    --clock-time-2: calc(var(--clock-time-1)*3);
-    --clock-time-3: calc(var(--clock-time-2)*3);
-
-    background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ffefc1' fill-opacity='0.19' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-    var(--clock-background);
-}
-.art#clock div {
-    height: calc(var(--clock-base-length));
-    width: calc(var(--clock-base-length));
-
-    margin-top: calc(var(--clock-base-length)*-.5);
-    margin-left: calc(var(--clock-base-length)*-.5);
-
-    border-radius: 50%;
-
-    background:
-    radial-gradient(circle at center, transparent 60%, var(--clock-color) 60%),
-    linear-gradient(90deg, var(--clock-color) 40%, transparent 40%),
-    linear-gradient(0deg, transparent 49.75%, var(--clock-dark) 49.75%, var(--clock-dark) 50.25%, transparent 50.25%),
-    var(--clock-color);
-
-    --clock-angle-min: -90deg;
-    --clock-angle-max: 270deg;
-    animation: clock infinite var(--clock-time-1) linear;
-
-    box-shadow: #00000080 0 0 calc(var(--clock-base-length)*.06) 0;
-
-}
-.art#clock div::before,
-.art#clock div::after {
-    content: "";
-    position: inherit;
-    --clock-angle-min: 0deg;
-}
-.art#clock div::before{
-    height: calc(var(--clock-base-length)*.01);
-    width: calc(var(--clock-base-length)*.4);
-
-    margin-top: calc(var(--clock-base-length)*.495);
-    margin-left: calc(var(--clock-base-length)*-.04);
-
-    --clock-angle-max: -720deg;
-    animation: clock infinite var(--clock-time-2) linear;
-    transform-origin: 10% 50%;
-
-    background-color: var(--clock-dark);
-}
-.art#clock div::after{
-    height: calc(var(--clock-base-length)*.012);
-    width: calc(var(--clock-base-length)*.32);
-
-    margin-top: calc(var(--clock-base-length)*.494);
-    margin-left: calc(var(--clock-base-length)*-.04);
-
-    --clock-angle-max: -2880deg;
-    animation: clock infinite var(--clock-time-3) linear;
-    transform-origin: 12.5% 50%;
-
-    background:
-    radial-gradient(circle at 12.5% 50%, var(--clock-background) .5%, transparent .5%),
-    radial-gradient(circle at 12.5% 50%, var(--clock-color) 1.0%, transparent 1.0%),
-    radial-gradient(circle at 12.5% 50%, var(--clock-dark) 1.5%, transparent 1.5%),
-    var(--clock-background);
-}
-
-@keyframes clock {
-    0%{
-        transform: rotateZ(var(--clock-angle-min));
-    }
-    100%{
-        transform: rotateZ(var(--clock-angle-max));
-    }
-}
-
-/* ##### November 9, 2020 - Peach ##### */
-.art#peach {
-    --peach-background: white;
-    --peach-orange: peachpuff;
-    --peach-pink: lightpink;
-    --peach-stem: rosybrown;
-    --peach-leaf-dark: mediumseagreen;
-    --peach-leaf-light: limegreen;
-
-    background: var(--peach-background);
-}
-.art#peach div {
-    height: 200px;
-    width: 170px;
-
-    border-radius: 50%;
-
-    margin-top: -100px;
-    margin-left: -112.5px;
-
-    background: var(--peach-orange);
-    box-shadow: 
-    inset var(--peach-pink) 15px 10px 45px 5px,
-    rgba(0 0 0 / .5) 30px 50px 50px -32px;
-}
-.art#peach div::before,
-.art#peach div::after {
-    content: "";
-    position: inherit;
-}
-.art#peach div::before {
-    height: 75px;
-    width: 75px;
-    margin-left: 0px;
-    margin-top: -73px;
-
-    border-radius: 25% 50% 0% 10%;
-
-    transform: rotateZ(60deg);
-    background:
-    radial-gradient(circle at 70% 5%, var(--peach-background) 7%, transparent 7%),
-    radial-gradient(circle at 37% 250%, var(--peach-stem) 65%, transparent 65%),
-    radial-gradient(circle at 165% 0%, transparent 30%, var(--peach-leaf-light) 30%, transparent 60%),
-    radial-gradient(circle at 165% 0%, var(--peach-leaf-dark) 60%, transparent 60%),
-    radial-gradient(circle at 110% 35%, transparent 15%, var(--peach-leaf-dark) 55%, transparent 55%),
-    radial-gradient(circle at 110% 35%, var(--peach-leaf-light) 55%, transparent 55%),
-    rgba(0 0 255 / .0);
-}
-.art#peach div::after {
-    height: inherit;
-    width: inherit;
-    margin-left: -30px;
-    border-radius: inherit;
-
-    background: inherit;
-    box-shadow: inherit;
-}
-
-/* ##### November 1, 2020 - Little Death ##### */
-.art#little-death {
-    --little-death-cloak: #3a484a;
-    --little-death-skull: #efedee;
-    --little-death-shadow: #d4d4d4;
-    --little-death-details: #323e40;
-}
-.art#little-death div {
-    height: 200px;
-    width: 160px;
-    margin-top: -100px;
-    margin-left: -80px;
-
-    border-radius: 100px 100px 0 0;
-
-    background:
-    radial-gradient(circle at 18.80% 87.5%, var(--little-death-details) 0.925%, transparent 0.925%),
-    radial-gradient(circle at 81.20% 87.5%, var(--little-death-details) 0.925%, transparent 0.925%),
-    linear-gradient(0deg, transparent 12.5%, var(--little-death-cloak) 12.5%),
-    linear-gradient(
-        90deg,
-        transparent 17.5%,
-        var(--little-death-details) 17.5%,
-        var(--little-death-details) 20%,
-        transparent 20%,
-        transparent 80%,
-        var(--little-death-details) 80%,
-        var(--little-death-details) 82.5%,
-        transparent 82.5%
-    ),
-    var(--little-death-cloak);
-}
-.art#little-death div::before, .art#little-death div::after {
-    position: inherit;
-    content: "";
-}
-.art#little-death div::before {
-    height: 108px;
-    width: 136px;
-    margin-left: -68px;
-    margin-top: 26px;
-
-    border-radius: 68px 68px 34px 34px;
-
-    background:
-    radial-gradient(circle at 50% 75%, transparent 65%, var(--little-death-shadow) 65%),
-    radial-gradient(circle at 35% 70%, var(--little-death-details) 4%, transparent 4.5%),
-    radial-gradient(circle at 65% 70%, var(--little-death-details) 4%, transparent 4.5%),
-    linear-gradient(60deg, transparent 40%, var(--little-death-skull) 40.5%),
-    linear-gradient(-60deg, transparent 40%, var(--little-death-skull) 40.5%),
-    linear-gradient(0deg, transparent 10.6%, var(--little-death-details) 11.1%, var(--little-death-details) 18.5%, transparent 18.5%),
-    var(--little-death-skull);
-}
-.art#little-death div::after {
-    height: 23px;
-    width: 64px;
-    margin-left: -32px;
-    margin-top: 133px;
-
-    border-radius: 0 0 16px 16px;
-
-    background:
-    radial-gradient(circle at 28% 20%, var(--little-death-details) 4.9%, transparent 4.9%),
-    radial-gradient(circle at 50% 20%, var(--little-death-details) 7%, transparent 7%),
-    radial-gradient(circle at 72% 20%, var(--little-death-details) 4.9%, transparent 4.9%),
-    linear-gradient(0deg, transparent 80%, var(--little-death-skull) 80%),
-    linear-gradient(
-        90deg,
-        transparent 24%,
-        var(--little-death-details) 24%,
-        var(--little-death-details) 32%,
-        transparent 32%,
-        transparent 46%,
-        var(--little-death-details) 46%,
-        var(--little-death-details) 54%,
-        transparent 54%,
-        transparent 68%,
-        var(--little-death-details) 68%,
-        var(--little-death-details) 76%,
-        transparent 76%
-    ),
-    var(--little-death-skull);
-}
-
-/* ##### October 31, 2020 - Potato ##### */
-.art#potato {
-    --potato-color-primary: #ffe0b7;
-    --potato-color-shadow: #fdcb89;
-    --potato-color-blush: #ff83b4;
-    --potato-color-details: #454545;
-    --potato-color-stains: #fc8978;
-    --potato-color-arms: #c74b36;
-    
-    background: #a1e6c8;
-}
-.art#potato div {
-    height: 270px;
-    width: 15px;
-    margin-top: -135px;
-    margin-left: -7.5px;
-    border-radius: 35px;
-    transform: rotate(45deg);
-
-    background: var(--potato-color-arms);
-}
-
-.art#potato div::before,
-.art#potato div::after {
-    position: inherit;
-    content: "";
-}
-.art#potato div::before {
-    height: 250px;
-    width: 186px;
-    margin-top: 0px;
-    margin-left: -110px;
-    border-radius: 45% 76% 50% 60%;
-    transform: rotate(-30deg);
-
-    background:
-    radial-gradient(10px 5px at 47% 37%, var(--potato-color-details) 90%, transparent 100%),
-    radial-gradient(5px 10px at 32% 32%, var(--potato-color-details) 90%, transparent 100%),
-    radial-gradient(5px 10px at 62% 32%, var(--potato-color-details) 90%, transparent 100%),
-    radial-gradient(13px 10px at 29% 37%, var(--potato-color-blush) 90%, transparent 100%),
-    radial-gradient(13px 10px at 65% 36%, var(--potato-color-blush) 90%, transparent 100%),
-    radial-gradient(circle at 96% 64%, var(--potato-color-stains) 13%, transparent 14%),
-    radial-gradient(circle at 50% 55%, var(--potato-color-stains) 7%, transparent 8%),
-    radial-gradient(circle at 38% 77%, var(--potato-color-stains) 7%, transparent 8%),
-    radial-gradient(circle at -61% 84%, var(--potato-color-shadow) 55%, transparent 5%),
-    radial-gradient(circle at 165% 51%, transparent 77%, var(--potato-color-shadow) 77%),
-    var(--potato-color-primary);
-}
-.art#potato div::after {
-    height: 280px;
-    width: inherit;
-    margin-top: 5px;
-    margin-left: -25px;
-    border-radius: 50px;
-    transform: rotate(-75deg);
-
-    background:
-    linear-gradient(180deg, var(--potato-color-arms) 40px, transparent 40px, transparent 250px, var(--potato-color-arms) 250px),
-    radial-gradient(circle 150px at center 40px, var(--potato-color-arms) 5%, transparent 5%),
-    radial-gradient(circle 150px at center 250px, var(--potato-color-arms) 5%, transparent 5%);
-}
-
-/* ##### October 17, 2020 - Lumin ##### */
-.art#lumin {
-    background: black;
-    --lumin-white-10: rgba(255,255,255,.05);
-    --lumin-white-40: rgba(255,255,255,.2);
-    --lumin-white-mark: rgba(255,255,255,.7);
-    --lumin-background: black;
-}
-.art#lumin div {
-    height: 136px;
-    width: 214px;
-    margin: -39px auto auto -107px;
-    border-radius: 5% 5% 10% 10%;
-
-    background:
-    linear-gradient(-3deg, rgba(0,0,0,.8) 0%, transparent 10%),
-    linear-gradient(
-        90deg,
-        var(--lumin-white-40) 0%, var(--lumin-white-10) 5%,
-        var(--lumin-background) 15%,
-        var(--lumin-white-10) 34%, var(--lumin-white-10) 38%,
-        var(--lumin-background) 59%,
-        var(--lumin-white-10) 77%,
-        rgba(0,0,0,.2) 88%,
-        var(--lumin-white-10) 100%
-    ),
-    linear-gradient(0deg, transparent 94%, rgb(0 0 0 / .8) 97%, black 98%),
-    linear-gradient(0deg, transparent 95%, rgba(255,255,255,.5) 100%),
-    linear-gradient(
-        90deg,
-        var(--lumin-white-40) 0%, var(--lumin-white-10) 10%,
-        var(--lumin-background) 15%,
-        var(--lumin-white-10) 36%,
-        var(--lumin-background) 59%,
-        var(--lumin-white-10) 77%,
-        rgba(0,0,0,.2) 88%,
-        var(--lumin-white-10) 100%
-    ),
-    var(--lumin-background);
-
-    box-shadow: 21px 75px 65px -10px rgba(0,0,0,0.73);
-    transform: perspective(2000px) rotateX(-5deg);
-}
-.art#lumin div::before, .art#lumin div::after {
-    white-space: pre;
-    position: inherit;
-    text-align: left;
-    color: var(--lumin-white-mark);
-}
-.art#lumin div::before {
-    line-height: 224px;
-    content: "charcoal cleanser";
-
-    font-family: 'Average', Times, serif;
-    font-size: 16px;
-    text-transform: capitalize;
-    text-indent: 12%;
-    height: 56px;
-    width: inherit;
-    margin: -54px auto auto -107px;
-    
-    border-radius: 5px 5px 5% 5%;
-
-    background:
-    linear-gradient(0deg, var(--lumin-background) 1%, transparent 5%),
-    linear-gradient(
-        90deg,
-        var(--lumin-white-40) 0%, var(--lumin-white-10) 10%,
-        var(--lumin-background) 15%,
-        var(--lumin-white-10) 36%,
-        var(--lumin-background) 59%,
-        var(--lumin-white-10) 79%,
-        var(--lumin-background) 89%,
-        var(--lumin-white-10) 100%
-    ),
-    linear-gradient(0deg, transparent 95%, rgba(255,255,255,.5) 100%),
-    linear-gradient(0deg, transparent 95%, rgba(0,0,0,.8) 97%),
-    linear-gradient(
-        90deg,
-        var(--lumin-white-40) 0%, var(--lumin-white-10) 5%,
-        var(--lumin-background) 15%,
-        var(--lumin-white-10) 34%, var(--lumin-white-10) 38%,
-        var(--lumin-background) 59%,
-        var(--lumin-white-10) 77%,
-        var(--lumin-background) 89%,
-        var(--lumin-white-10) 95%, var(--lumin-white-10) 100%
-    ),
-    var(--lumin-background);
-    transform: perspective(500px) rotateX(3deg);
-}
-.art#lumin div::after {
-    content: "lumin";
-    text-transform: uppercase;
-    letter-spacing: 4.8px;
-    font-size: 11.2px;
-    line-height: 27.2px;
-    border-bottom: .01rem solid var(--lumin-white-mark);
-    width: 70%;
-    margin-left: -38%;
-    margin-bottom: 10%;
-    bottom: 50%;
-    font-family: 'Martel Sans', sans-serif;
-    font-weight: 200;
-}
-
-/* ##### August 17, 2020 - Geometry ##### */
-.art#geometry {
-    --geometry-background: rgb(58, 37, 73);
-    --geometry-border-color: white;
-    background: var(--geometry-background);
-}
-.art#geometry div {
-    animation: geometry 5s .6s infinite linear both;
-    height: 200px;
-    width: 230.96px;
-    margin: -100px auto auto -115.48px;
-}
-@keyframes geometry {
-    0% {
-        background:
-        radial-gradient(circle 115.47px, transparent 85%, var(--geometry-border-color) 85%, var(--geometry-border-color) 87%, transparent 87%);
-        transform: rotateY(0deg);
-    }
-    25% {
-        background:
-        linear-gradient(transparent 99%, var(--geometry-border-color) 99%),
-        linear-gradient(60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%),
-        linear-gradient(-60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%);
-        transform: rotateY(180deg);
-    }
-    50% {
-        background:
-        linear-gradient(90deg, var(--geometry-background) 6.5%, var(--geometry-border-color) 6.5%, var(--geometry-border-color) 7.5%, transparent 7.5%, transparent 92.5%, var(--geometry-border-color) 92.5%, var(--geometry-border-color) 93.5%, var(--geometry-background) 93.5%),
-        linear-gradient(0deg, var(--geometry-border-color) 1%, transparent 1%, transparent 99%, var(--geometry-border-color) 99%);
-        transform: rotateY(360deg);
-    }
-    75% {
-        background:
-        radial-gradient(circle at 50% 55%, transparent 68.6%, var(--geometry-background) 65%),
-        linear-gradient(0deg, var(--geometry-border-color) 1%, transparent 1%),
-        linear-gradient(72deg, transparent 17.2%, var(--geometry-border-color) 17.2%, var(--geometry-border-color) 18%, transparent 18%),
-        linear-gradient(144deg, transparent 22.5%, var(--geometry-border-color) 22.5%, var(--geometry-border-color) 23.2%, transparent 23.2%),
-        linear-gradient(216deg, transparent 22.5%, var(--geometry-border-color) 22.5%, var(--geometry-border-color) 23.2%, transparent 23.2%),
-        linear-gradient(288deg, transparent 17.2%, var(--geometry-border-color) 17.2%, var(--geometry-border-color) 18%, transparent 18%);
-        transform: rotateY(180deg);
-    }
-    100% {
-        background:
-        radial-gradient(circle 115.47px, transparent 85%, var(--geometry-border-color) 85%, var(--geometry-border-color) 87%, transparent 87%);
-        transform: rotateY(0deg);
-    }
-}
-
-/* ##### June 27, 2020 - Baseball ##### */
-.art#baseball {
-    background:
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100px' width='100px'><text fill='white' style='font-size: 25px;'><tspan x='13' y='32'>★</tspan><tspan x='63' y='82'>★</tspan></text></svg>"),
-    linear-gradient(45deg, #4a527a -9%, #0C143C 100%),
-    #0C143C;
-    background-repeat: round;
-}
-.art#baseball div {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    margin-top: -100px;
-    margin-left: -100px;
-    background:
-    radial-gradient(circle at 135% 50%, transparent 49.5%, darkred 50.5%, transparent 51.5%),
-    radial-gradient(circle at -35% 50%, transparent 49.5%, darkred 50.5%, transparent 51.5%),
-    white;
-    overflow: hidden;
-    box-shadow: 0px 50px 20px rgba(0,0,0,.3);
-    animation: baseball 3.5s infinite linear;
-}
-@keyframes baseball {
-    0% {
-        transform: translateY(-75vh) scaleX(.1) scaleY(.1);
-        box-shadow: 0px 75vh 300px rgba(0,0,0,.15);
-    }
-    20% {
-        transform: translateX(2vw) translateY(50px) rotate(-2deg) scaleY(.9);
-        box-shadow: 0px 50px 20px rgba(0,0,0,.3);
-    }
-    25% {
-        transform: translateX(0) translateY(0) rotate(0deg);
-    }
-    30% {
-        transform: translateX(-2vw) translateY(50px) rotate(2deg) scaleY(.9);
-    }
-    35% {
-        transform: translateX(0) translateY(25px) rotate(0deg);
-    }
-    40% {
-        transform: translateX(2vw) translateY(50px) rotate(-2deg) scaleY(.9);
-    }
-    45% {
-        transform: translateX(-2vw) translateY(35px);
-    }
-    70% {
-        animation-timing-function: cubic-bezier(0, 0.26, 1,-0.37);
-        transform: translateX(-75vw) translateY(50px) rotate(200deg) scaleX(0) scaleY(0);
-        box-shadow: 20px -25px 30px rgba(0,0,0,.3);
-    }
-    100% {
-        transform: translateX(-50vw) translateY(-75vh);
-    }
-}
-
-.art#baseball div::before,
-.art#baseball div::after {
-    position: inherit;
-    content: "";
-    height: inherit;
-    width: inherit;
-}
-.art#baseball div::before {
-    margin-left: -200px;
-    background:
-    radial-gradient(circle at 15% 50%, white 69%, transparent 70.5%, transparent 76.5%, white 78%),
-    linear-gradient(61deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(54deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(46deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(38deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(29deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(20deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(10deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-10deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-20deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-29deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-38deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-46deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-54deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-61deg, transparent 49%, darkred 50%, transparent 51%);
-    border-radius: 50% 0% 0% 50%;
-    box-shadow: inset 100px 0px 15px black;
-}
-.art#baseball div::after {
-    background:
-    radial-gradient(circle at 85% 50%, white 69%, transparent 70.5%, transparent 76.5%, white 78%),
-    linear-gradient(61deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(54deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(46deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(38deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(29deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(20deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(10deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-10deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-20deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-29deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-38deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-46deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-54deg, transparent 49%, darkred 50%, transparent 51%),
-    linear-gradient(-61deg, transparent 49%, darkred 50%, transparent 51%);
-    border-radius: 0 50% 50% 0%;
-    box-shadow: inset -100px 0px 15px black;
-}
-
-/* ##### June 18, 2020 - Matrix ##### */
-.art#matrix {
-    background: linear-gradient(47deg, rgb(79, 93, 116) 20%, rgb(149, 162, 49) 98%);
-}
-.art#matrix div {
-    width: 160px;
-    height: 90px;
-    margin-top: -52.5px;
-    margin-left: -87.5px;
-    border: 7px solid #333;
-    border-radius: 3px;
-    
-    animation: matrixFlare 2.5s infinite, matrixBg .5s infinite;
-}
-.art#matrix div::before,
-.art#matrix div::after {
-    content: "";
-    position: inherit;
-    
-    margin-left: -102px;
-    margin-top: 62px;
-    border-radius: 5px;
-    height: 104px;
-    width: 204px;
-    transform: perspective(250px) rotateX(65deg);
-}
-.art#matrix div::after {
-    background: radial-gradient(circle at 93% 4%, white 0.1%, transparent .5%);
-    animation: matrixPower 1.5s infinite;
-}
-.art#matrix div::before {
-    background-image:
-    radial-gradient(circle at 37.5% 41%, transparent 0%, rgba(0,0,0,.3) 1.5%, transparent 1.5%),
-    radial-gradient(circle at 37.5% 41%, darkred 1.5%, transparent 1.5%),
-    linear-gradient(90deg,
-    #222 3.7%,
-    transparent 3.7%, transparent 96.3%,
-    #222 96.3%),
-    linear-gradient(
-    #222 2.3%,
-    transparent 2.3%, transparent 6.5%,
-    #222 6.5%, #222 8.8%,
-    grey 8.8%, black 11.1%,
-    
-    transparent 11.1%, transparent 15.5%,
-    grey 15.5%, black 17.8%,
-    
-    transparent 17.8%, transparent 23.7%,
-    grey 23.7%, black 26%,
-    
-    transparent 26%, transparent 31.9%,
-    grey 31.9%, black 34.2%,
-    
-    transparent 34.2%, transparent 40.1%,
-    grey 40.1%, black 42.4%,
-    
-    transparent 42.4%, transparent 48.3%,
-    grey 48.3%, black 50.6%,
-    
-    transparent 50.6%, transparent 56.5%,
-    grey 56.5%, black 58.8%,
-    
-    #222 58.8%, #222 61.1%,
-    transparent 61.1%, transparent 97.7%,
-    #222 97.7%),
-    linear-gradient(#333 7%, #272727 7%, #272727 60%, transparent 60%),
-    linear-gradient(90deg, #222 24.1%, transparent 24.1%, transparent 50%, #222 50%),
-    linear-gradient(
-    transparent 67%, darkred 67%, black 68%, #333 68%,
-    #333 92%, black 93%, transparent 93%),
-    radial-gradient(circle at 37.5% 63%, transparent 3%, black 3%, black 3.3%, transparent 3.3%),
-    linear-gradient(#333 67%, transparent 67%),
-    linear-gradient(90deg, transparent 34.7%, black 34.7%, black 35%, transparent 35%, transparent 40%, black 40%, black 40.3%, transparent 40.3%),
-    linear-gradient(transparent 93%, #333 93%);
-}
-@keyframes matrixFlare {
-    0% {
-        box-shadow: inset 0px 20px 300px 0px rgba(0,100,0,.3);
-    }
-    50% {
-        box-shadow: inset 20px 0px 300px 0px rgba(0,100,0,.4);
-    }
-    100% {
-        box-shadow: inset 0px 20px 300px 0px rgba(0,100,0,.3);
-    }
-}
-@keyframes matrixPower {
-    0% {
-        background: radial-gradient(circle at 93% 4%, white 0.1%, transparent .5%);
-    }
-    50% {
-        background: none;
-    }
-    100% {
-        background: radial-gradient(circle at 93% 4%, white 0.1%, transparent .5%);
-    }
-}
-@keyframes matrixBg {
-    0% {
-        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='2' y='2'>6ds54r5 6f33f564f56x4b6</tspan><tspan x='10' y='0'>g4t6848fd4 v6f 5d46g4</tspan><tspan x='18' y='2'>tb6g46468 r4fd5grd4</tspan><tspan x='26' y='0'>4768fd464s6re4 dsf64s55</tspan><tspan x='34' y='2'>4tr 5yg4564fdsf e001</tspan><tspan x='42' y='0'>00110011 00100110</tspan><tspan x='50' y='2'>010111111 1000110156</tspan><tspan x='58' y='0'>8t5d4gf 5s3d456465</tspan><tspan x='66' y='2'>4 346546534456 854ytu</tspan><tspan x='74' y='0'>fglfjqiezruyk gtr6d4g</tspan><tspan x='82' y='2'>56ers3 6ds54r5 6f33f</tspan><tspan x='90' y='0'>564f56x4b6 g4t6848fd4</tspan><tspan x='98' y='2'>v6f 5d46g4 tb6g46468</tspan><tspan x='106' y='0'>r4fd5grd4 4768fd464s6</tspan><tspan x='114' y='2'>re4 dsf64s55 4tr 5yg45</tspan><tspan x='122' y='0'>64fdsf e00100110011</tspan><tspan x='130' y='2'>00100110 010111111</tspan><tspan x='138' y='0'>10001101568t5d4gf</tspan><tspan x='146' y='2'>5s3d456465 4 6ds54r5</tspan><tspan x='154' y='0'>6f33f564f56x4b6 g4t68</tspan></text></svg>") black;
-    }
-    25% {
-        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='0' y='0'>Why are you reading</tspan><tspan x='8' y='2'>this? You know you're</tspan><tspan x='16' y='0'>not supposed to read</tspan><tspan x='24' y='2'>this, right? I mean,</tspan><tspan x='32' y='0'>you can if you want</tspan><tspan x='40' y='2'>to, but it's completely</tspan><tspan x='48' y='0'>useless. Unless you've</tspan><tspan x='56' y='2'>got plenty of time,</tspan><tspan x='64' y='0'>say during a pandemic</tspan><tspan x='72' y='2'>or a lockdown ...</tspan><tspan x='80' y='0'>Know what I'm talking</tspan><tspan x='88' y='2'>about eh? That's how</tspan><tspan x='96' y='0'>I started this project.</tspan><tspan x='104' y='2'>Spring 2020, I woke</tspan><tspan x='112' y='0'>up one morning and</tspan><tspan x='120' y='2'>thought  \"Today I start</tspan><tspan x='128' y='0'>a CSS project! \",</tspan><tspan x='136' y='2'>and that was it.</tspan><tspan x='144' y='0'>One more sentence</tspan><tspan x='152' y='2'>and I'm done with</tspan><tspan x='160' y='0'>this nonsense.</tspan></text></svg>") black;
-    }
-    50% {
-        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='6' y='2'>¯\\_(ツ)_/¯ (╯°□°）╯︵ ┻━┻</tspan><tspan x='14' y='0'>(¬_¬ ) (❁´◡`❁) (●'◡'●)</tspan><tspan x='22' y='2'>╰(*°▽°*)╯ ☆*: .｡.</tspan><tspan x='30' y='0'>o(≧▽≦)o  .｡.:*☆(*/ω＼*)</tspan><tspan x='38' y='2'>(^///^) :-D ^_^ :-)</tspan><tspan x='46' y='0'>ᓚᘏᗢ (┬┬﹏┬┬) ಥ_ಥ</tspan><tspan x='54' y='2'>༼ つ ◕_◕ ༽つ ( ´･･)</tspan><tspan x='62' y='0'>ﾉ(._.`) ಠ_ಠ (ˉ﹃ˉ)</tspan><tspan x='70' y='2'>(•_•) :-( ( •_•)</tspan><tspan x='78' y='0'>>⌐■-■ ;-) :-P (⌐■_■)</tspan><tspan x='86' y='2'>(☞ﾟヮﾟ)☞ ☜(ﾟヮﾟ☜) (¬‿¬)</tspan><tspan x='94' y='0'>(T_T) (⊙_⊙;) ¯\\_(ツ)_/¯</tspan><tspan x='102' y='2'>(╯°□°）╯︵ ┻━┻ (¬_¬ )</tspan><tspan x='110' y='0'>(❁´◡`❁) (●'◡'●) ╰(*°▽°*)╯</tspan><tspan x='118' y='2'>☆*: .｡.  o(≧▽≦)o  .｡.:*☆(*/ω＼*)</tspan><tspan x='126' y='0'>(^///^) :-D ^_^ :-)</tspan><tspan x='134' y='2'>ᓚᘏᗢ (┬┬﹏┬┬) ಥ_ಥ ༼ つ ◕_◕ ༽つ</tspan><tspan x='142' y='0'>( ´･･) ﾉ(._.`) ಠ_ಠ</tspan><tspan x='150' y='2'>(ˉ﹃ˉ) (•_•) :-( ( •_•)</tspan><tspan x='158' y='0'>>⌐■-■ ;-) :-P (⌐■_■)</tspan></text></svg>") black;
-    }
-    75% {
-        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='4' y='0'>10101010010 1010110</tspan><tspan x='12' y='2'>0110010 0010010 0010</tspan><tspan x='20' y='0'>010 100 010101010101</tspan><tspan x='28' y='2'>1010101 10101 01011</tspan><tspan x='36' y='0'>110101010 101010101011111</tspan><tspan x='44' y='2'>001000000 100 10</tspan><tspan x='52' y='0'>101111011 10110101011011</tspan><tspan x='60' y='2'>1111010101010 1101010</tspan><tspan x='68' y='0'>001100110110 0101001</tspan><tspan x='76' y='2'>0111 000101110101</tspan><tspan x='84' y='0'>010101001 010101001</tspan><tspan x='92' y='2'>001101010 01010101</tspan><tspan x='100' y='0'>10 01 011101010 10101</tspan><tspan x='108' y='2'>010 1011111 0101010</tspan><tspan x='116' y='0'>0111010011 0101010100</tspan><tspan x='124' y='2'>010101010 0100101010010101</tspan><tspan x='132' y='0'>011010101010101 0100</tspan><tspan x='140' y='2'>1010 010110 10101010</tspan><tspan x='148' y='0'>010 1010110 0110010</tspan><tspan x='156' y='2'>0010010 0010 11101</tspan></text></svg>") black;
-    }
-    100% {
-        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='2' y='2'>6ds54r5 6f33f564f56x4b6</tspan><tspan x='10' y='0'>g4t6848fd4 v6f 5d46g4</tspan><tspan x='18' y='2'>tb6g46468 r4fd5grd4</tspan><tspan x='26' y='0'>4768fd464s6re4 dsf64s55</tspan><tspan x='34' y='2'>4tr 5yg4564fdsf e001</tspan><tspan x='42' y='0'>00110011 00100110</tspan><tspan x='50' y='2'>010111111 1000110156</tspan><tspan x='58' y='0'>8t5d4gf 5s3d456465</tspan><tspan x='66' y='2'>4 346546534456 854ytu</tspan><tspan x='74' y='0'>fglfjqiezruyk gtr6d4g</tspan><tspan x='82' y='2'>56ers3 6ds54r5 6f33f</tspan><tspan x='90' y='0'>564f56x4b6 g4t6848fd4</tspan><tspan x='98' y='2'>v6f 5d46g4 tb6g46468</tspan><tspan x='106' y='0'>r4fd5grd4 4768fd464s6</tspan><tspan x='114' y='2'>re4 dsf64s55 4tr 5yg45</tspan><tspan x='122' y='0'>64fdsf e00100110011</tspan><tspan x='130' y='2'>00100110 010111111</tspan><tspan x='138' y='0'>10001101568t5d4gf</tspan><tspan x='146' y='2'>5s3d456465 4 6ds54r5</tspan><tspan x='154' y='0'>6f33f564f56x4b6 g4t68</tspan></text></svg>") black;
-    }
-}
-/* ##### June 15, 2020 - Black Lives Matter ##### */
-.art#blm {
-    background: #926557;
-    background-image:
-    linear-gradient(90deg,
-    #dabaab 16.67%,
-    #c29e8f 16.67%, #c29e8f 33.33%,
-    #aa8173 33.33%, #aa8173 50%,
-    #926557 50%, #926557 66.67%,
-    #79483b 66.67%, #79483b 83.33%,
-    #612b1f 83.33%);
-}
-.art#blm div:hover {
-    opacity: .85;
-}
-.art#blm div {
-    --blm-bg-color: #2f463f;
-    --blm-fist-color: #000;
-    --blm-lines-color: #fff;
-    width: 300px;
-    height: 300px;
-    margin-top: -70px;
-    margin-left: -160px;
-    border-radius: 50%;
-    border: 10px solid white;
-    background-color: var(--blm-bg-color);
-    overflow: hidden;
-}
-.art#blm div::before {
-    content: "";
-    position: inherit;
-    width: 210px;
-    height: 350px;
-    margin-top: -10px;
-    margin-left: -105px;
-    border-radius: 50% 50% 0 0;
-    background-color: var(--blm-fist-color);
-    background-image:
-    linear-gradient(40deg, transparent 76%, var(--blm-bg-color) 76%),
-    linear-gradient(-55deg, transparent 79%, var(--blm-bg-color) 79%),
-    linear-gradient(-45deg, transparent 80%, var(--blm-bg-color) 80%),
-    
-    radial-gradient(circle at 38% 12.8%, var(--blm-fist-color) 7%, transparent 7%),
-    radial-gradient(ellipse at 41% -21.5%, transparent 24.5%, var(--blm-lines-color) 24.5%, var(--blm-lines-color) 25%, transparent 25%),
-    
-    radial-gradient(ellipse at 64.7% 41.5%, var(--blm-fist-color) 15.8%, transparent 15.8%),
-    radial-gradient(circle at 97% 42%, var(--blm-bg-color) 15%, transparent 15%),
-    radial-gradient(circle at 72.5% 28%, var(--blm-fist-color) 10%, transparent 10%),
-    
-    linear-gradient(-80deg, var(--blm-bg-color) 26.7%, transparent 26.7%),
-    linear-gradient(25deg, transparent 70.8%, var(--blm-fist-color) 70.8%),
-    
-    radial-gradient(ellipse at 31% 24.5%, var(--blm-fist-color) 5%, transparent 5%),
-    radial-gradient(circle at 20% 29%, var(--blm-fist-color) 8%, transparent 8%),
-    radial-gradient(circle at 31% 31%, transparent 1%, var(--blm-lines-color) 1%, var(--blm-lines-color) 2%, transparent 2%),
-    radial-gradient(circle at 44% 24%, transparent 10%, var(--blm-lines-color) 10%, var(--blm-lines-color) 11%, transparent 11%),
-    
-    linear-gradient(25deg, transparent 59.2%, var(--blm-lines-color) 59.2%, var(--blm-lines-color) 60%, var(--blm-fist-color) 60%, var(--blm-fist-color) 70%, var(--blm-lines-color) 70%, var(--blm-lines-color) 70.8%, var(--blm-fist-color) 70.8%),
-    
-    linear-gradient(85deg, transparent 54.04%, var(--blm-fist-color) 54.04%,var(--blm-fist-color) 67%, var(--blm-bg-color) 67%),
-    
-    linear-gradient(65deg, transparent 51%, var(--blm-lines-color) 51%, var(--blm-lines-color) 52%, transparent 52%),
-    
-    linear-gradient(-80deg, transparent 45%, var(--blm-lines-color) 45%, var(--blm-lines-color) 46%, transparent 46%),
-    linear-gradient(-80deg, transparent 35%, var(--blm-fist-color) 35%, var(--blm-fist-color) 63%, transparent 63%),
-    linear-gradient(60deg, var(--blm-bg-color) 38%, transparent 38%)
-    ;
-}
-.art#blm div::after {
-    content: "";
-    position: inherit;
-    width: 60px;
-    height: 75px;
-    margin-top: 73px;
-    margin-left: 7.5px;
-    transform: rotate(40deg);
-    border-top-right-radius: 5px;
-    border-left: 3px solid var(--blm-lines-color);
-    background-image:
-    radial-gradient(circle at 30% 198%, var(--blm-fist-color) 50%,var(--blm-lines-color) 50%, var(--blm-lines-color) 52%, transparent 52%),
-    linear-gradient(-75deg, transparent 11.6%, var(--blm-lines-color) 11.6%, var(--blm-lines-color) 16%, transparent 16%),
-    linear-gradient(90deg, transparent 47%, var(--blm-lines-color) 47%, var(--blm-lines-color) 53%, transparent 53%),
-    linear-gradient(10deg, transparent 17%, var(--blm-fist-color) 17%)
-    ;
-}
-
-/* ##### June 15, 2020 - Hoverboard ##### */
-.art#hoverboard {
-    background: linear-gradient(165deg, rgb(16, 115, 55) 3%, rgb(244, 100, 238) 98%);
-}
-.art#hoverboard div {
-    width: 312px;
-    height: 67px;
-    margin-top: -37.5px;
-    margin-left: -160px;
-    border-radius: 50px 10px 10px 50px;
-    border: 4px solid #fa517e;
-    background-color: pink;
-    background-image:
-    linear-gradient(90deg, transparent 92%, rgba(50,50,50,.05) 95%),
-    
-    linear-gradient(60deg, transparent 93.5%, white 93.5%, white 95%, #ffd000 95%, #ffd000 99%, transparent 99%),
-    linear-gradient(55deg, transparent 49.5%, white 49.5%, white 51%, #ffd000 51%, #ffd000 55%, transparent 55%, transparent 56%, #ffd000 56%, #ffd000 60%, white 60%, white 61.5%, transparent 61.5%),
-    
-    linear-gradient(-45deg, transparent 65.5%, white 65.5%, white 67%, #fa517e 67%, #fa517e 71%, transparent 71%, transparent 72%, #fa517e 72%, #fa517e 76%, white 76%, white 77.5%, transparent 77.5%),
-    linear-gradient(-45deg, transparent 22.5%, white 22.5%, white 24%, #fa517e 24%, #fa517e 28%, transparent 28%, transparent 29%, #fa517e 29%, #fa517e 33%, white 33%, white 34.5%, transparent 34.5%),
-    linear-gradient(55deg, transparent 2.5%, #ffd000 2.5%, #ffd000 6.5%, white 6.5%, white 8%, transparent 8%),
-    
-    linear-gradient(35deg, transparent 80%, #85b64a 80%, #85b64a 83%, transparent 83%),
-    linear-gradient(-35deg, pink 50%, transparent 50%),
-    linear-gradient(25deg, pink 30%, #85b64a 30%, #85b64a 34%, transparent 34%),
-    linear-gradient(-35deg, transparent 50%, #85b64a 50%, #85b64a 53%, transparent 53%);
-    
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% {
-        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
-        transform: translatey(0px);
-    }
-    50% {
-        box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
-        transform: translatey(-20px);
-    }
-    100% {
-        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
-        transform: translatey(0px);
-    }
-}
-
-/* ##### May 30, 2020 - Logo ##### */
-.art#logo {
-    background: linear-gradient(193deg, rgb(63, 75, 105) 20%, rgb(249, 247, 185) 95%);
-}
-.art#logo div {
-    margin-top: -108px;
-    margin-left: -108px;
-    height: 200px;
-    width: 200px;
-    border: 8px solid black;
-    transform: rotate(45deg);
-    background-image:
-    linear-gradient(-45deg,transparent 73%,white 73%,white 100%,transparent 100%),
-    linear-gradient(-45deg,transparent 0%,white 0%,white 30%,transparent 30%),
-    linear-gradient(45deg,transparent 0%,white 0%,white 22%,transparent 22%),
-    linear-gradient(45deg,transparent 78%,white 78%,white 100%,transparent 100%),
-    linear-gradient(0deg,transparent 40%,black 40%,black 45%,transparent 45%),
-    linear-gradient(45deg,transparent 26%,white 26%,white 28%,transparent 28%),
-    linear-gradient(0deg,transparent 32%,black 32%,black 37%,transparent 37%),
-    linear-gradient(45deg,transparent 22%,black 22%,black 26%,transparent 26%),
-    linear-gradient(0deg,transparent 37%,white 37%,white 40%,transparent 40%),
-    linear-gradient(45deg,transparent 28%,black 28%,black 32%,transparent 32%),
-    linear-gradient(0deg,transparent 0%,white 0%,white 32%,transparent 32%),
-    linear-gradient(90deg,transparent 45%,white 45%,white 55%,transparent 55%),
-    linear-gradient(45deg,transparent 74%,black 74%,black 78%,transparent 78%),
-    linear-gradient(90deg,transparent 55%,black 55%,black 60%,white 60%, white 63%,black 63%,black 68%,transparent 68%),
-    linear-gradient(45deg,transparent 68%,black 68%,black 72%,transparent 72%),
-    linear-gradient(0deg,transparent 45%,white 45%,white 100%,transparent 100%),
-    linear-gradient(90deg,transparent 63%,white 63%,white 68%,transparent 68%),
-    linear-gradient(45deg,transparent 68%,black 68%,black 72%,transparent 72%),
-    linear-gradient(45deg,transparent 74%,black 74%,black 78%,transparent 78%);
-}
-.art#logo div::before,
-.art#logo div::after {
-    content: "";
-    position: inherit;
-    background-color:white;
-}
-.art#logo div::before {
-    height: 55%;
-    width: 55%;
-    margin-left: -50%;
-}
-.art#logo div::after {
-    height: 30%;
-    width: 30%;
-    margin-left: 18%;
-    margin-top: 54%;
 }
