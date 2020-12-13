@@ -80,7 +80,7 @@ header a:hover {
     top: 1em;
     right: 1em;
     z-index: 3;
-    transition: all 1s, opacity 0s;
+    transition: all .7s;
     cursor: pointer;
 }
 #menu-button:hover {
@@ -131,7 +131,7 @@ header a:hover {
     font-family: 'Advent Pro', sans-serif;
     text-transform: uppercase;
     font-size: 2em;
-    transition: top .7s, opacity 1.5s;
+    transition: all .7s;
 }
 @media (min-width: 720px) {
     #mobile-menu {
