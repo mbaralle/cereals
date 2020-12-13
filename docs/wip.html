@@ -96,6 +96,10 @@
       </div>
     </header>
     <main>
+      <div class="wip-banner">
+        Work in progress
+        <a href="/">Go back</a>
+      </div>
       <!-- November 30, 2020 - Dinosaur -->
       <div class="art wide" id="dinosaur">
         <div></div>
@@ -132,6 +136,11 @@
         }
         isMenuOpened = !isMenuOpened;
       }
+    </script>
+
+    <script type="text/javascript">
+      const wipBanner = this.document.getElementsByClassName("wip-banner")[0];
+      [].forEach.call(this.document.getElementsByClassName("art"), (art) => art.after(wipBanner.cloneNode(true)));
     </script>
 
     <script type="text/javascript">
