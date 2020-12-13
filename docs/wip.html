@@ -12,7 +12,8 @@
     <link rel="icon" type="image/png" href="img/logo/mbaralle-m-logo-32.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
-    <link rel="stylesheet" type="text/css" href="css/wip.css?v=20201212" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/wip.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
@@ -23,7 +24,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Average&display=swap"
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Advent+Pro:wght@500;700&display=swap"
       rel="stylesheet"
     />
 
@@ -45,16 +46,14 @@
   </head>
   <body>
     <header>
-      <h3 id="header-title-container">
+      <h3>
         <a
           href="https://mbaralle.dev"
-          id="header-logo"
           name="mbaralle"
           target="_blank"
           rel="noopener"
         >
           <svg
-            class="logo"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 824.18909 824.18909"
           >
@@ -71,10 +70,10 @@
             />
           </svg>
         </a>
-        <span id="header-title">CSS ART</span>
+        <span>CSS ART</span>
       </h3>
       <div id="menu-button" onclick="menuClick()"></div>
-      <div id="mobile-menu">
+      <div id="menu">
         <a
           href="https://github.com/mbaralle/css-art/"
           target="_blank"
@@ -121,26 +120,13 @@
       </div>
     </main>
 
-    <script type="text/javascript">
-      let isMenuOpened = false;
-      const menuButton = this.document.getElementById("menu-button");
-      const mobileMenu = this.document.getElementById("mobile-menu");
-
-      function menuClick() {
-        if (isMenuOpened) {
-          menuButton.classList.remove("opened");
-          mobileMenu.classList.remove("opened");
-        } else {
-          menuButton.classList.add("opened");
-          mobileMenu.classList.add("opened");
-        }
-        isMenuOpened = !isMenuOpened;
-      }
-    </script>
+    <script src="js/main.js"></script>
 
     <script type="text/javascript">
       const wipBanner = this.document.getElementsByClassName("wip-banner")[0];
-      [].forEach.call(this.document.getElementsByClassName("art"), (art) => art.after(wipBanner.cloneNode(true)));
+      [].forEach.call(this.document.getElementsByClassName("art"), (art) =>
+        art.after(wipBanner.cloneNode(true))
+      );
     </script>
   </body>
 </html>
