@@ -24,14 +24,6 @@ header h3 {
     font-size: 200%;
 }
 
-header h3 a {
-    text-decoration: none;
-}
-
-header h3 a:hover {
-    opacity: .7;
-}
-
 header h3 svg {
     height: 64px;
     width: 64px;
