@@ -1,22 +1,5 @@
-html,
-body,
-div {
-    user-select: none;
-    
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
 body {
-    background: #6d3f93;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(129deg, rgb(109, 63, 147) 23%, rgb(235, 131, 147) 96%);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(129deg, rgb(109, 63, 147) 23%, rgb(235, 131, 147) 96%);
+    background: linear-gradient(129deg, #6d3f93 23%, #eb8393 96%), #6d3f93;
     
     background-attachment: fixed;
     height: 100vh;
@@ -24,21 +7,20 @@ body {
     text-align: center;
 }
 
-#header-title-container {
-    font-family: 'MuseoModerno', cursive;
-    padding: 5px;
-    font-size: 200%;
-    
-    margin: 0;
-    padding: 50px;
+header {
+    background: none;
 }
-#header-logo img {
-    height: 64px;
-    width: 64px;
-    vertical-align: middle;
+header h3,
+header h3 svg path#rect,
+header h3 svg path#letter {
+    animation: none;
 }
-#header-title-container a {
-    text-decoration: none;
+header h3 svg path#rect {
+    fill: none;
+    stroke: white;
+}
+header h3 svg path#letter {
+    fill: white;
 }
 
 main {
