@@ -10,6 +10,24 @@ div {
     vertical-align: baseline;
 }
 
+html, body {
+    overflow: overlay;
+    scrollbar-width: thin;
+    scrollbar-color: #3337 transparent;
+}
+html::-webkit-scrollbar,
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-thumb {
+    width: 12px;
+    border: 4px solid transparent;
+    border-radius: 1000px;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 0 6px #3337;
+}
+
 header {
     background: linear-gradient(30deg, violet, skyblue, khaki, salmon);
     text-align: center;
