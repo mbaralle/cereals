@@ -24,42 +24,46 @@
 
 /* ##### November 30, 2020 - Dinosaur ##### */
 .art#dinosaur {
-    --dinosaur-background: white;
+    --dinosaur-background: #f1e2c3;
     --dinosaur-color: #57ad57;
     --dinosaur-shadow: #4a8d4a;
-    --dinosaur-color-body: blue;
     --dinosaur-size: 120px;
     --dinosaur-eye-size: calc(var(--dinosaur-size)*.06);
+
+    background: var(--dinosaur-background);
 }
 .art#dinosaur div {
-    height: calc(var(--dinosaur-size)*.9375);
-    width: calc(var(--dinosaur-size)*1.25);
-    /* margin-top: calc(var(--dinosaur-size)*-.375); */
-    margin-top: calc(var(--dinosaur-size)*-1.375);
-    margin-left: calc(var(--dinosaur-size)*-.625);
+    height: calc(var(--dinosaur-size)*2.5);
+    width: calc(var(--dinosaur-size)*2);
+    margin-top: calc(var(--dinosaur-size)*-1);
+    margin-left: calc(var(--dinosaur-size)*-1.1);
     background:
-    radial-gradient(circle at 83% 45%, black var(--dinosaur-eye-size), transparent var(--dinosaur-eye-size)),
-    radial-gradient(circle at 68% 48%, black var(--dinosaur-eye-size), transparent var(--dinosaur-eye-size)),
-    var(--dinosaur-color);
-
-    border-radius: 50% 50% 45% 0;
-    border-radius: 55% 75% 45% 0;
-    box-shadow: 150px 0 0px -50px var(--dinosaur-color);
+    radial-gradient(circle at 81.5% 7%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.075), transparent calc(var(--dinosaur-size)*.075)),
+    radial-gradient(circle at 72.5% 5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.1), transparent calc(var(--dinosaur-size)*.1)),
+    radial-gradient(circle at 62% 5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.1), transparent calc(var(--dinosaur-size)*.1)),
+    radial-gradient(circle at 51% 8.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 43% 15.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 41% 25.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 40% 36%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 39% 46.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 36% 56.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 30% 64.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.1), transparent calc(var(--dinosaur-size)*.1)),
+    radial-gradient(circle at 24.5% 70.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.075), transparent calc(var(--dinosaur-size)*.075)),
+    radial-gradient(circle at 19% 75%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.075), transparent calc(var(--dinosaur-size)*.075)),
+    radial-gradient(circle at 13.5% 78%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.05), transparent calc(var(--dinosaur-size)*.05)),
+    radial-gradient(circle at 9.5% 81%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.05), transparent calc(var(--dinosaur-size)*.05));
 }
 .art#dinosaur div::before {
     content: "";
     position: inherit;
     height: calc(var(--dinosaur-size)*1.5);
     width: calc(var(--dinosaur-size)*1.7);
-    /* margin-top: calc(var(--dinosaur-size)*-.375); */
-    margin-top: calc(var(--dinosaur-size)*.93);
-    margin-left: calc(var(--dinosaur-size)*-1.42);
+    margin-top: calc(var(--dinosaur-size)*1);
+    margin-left: calc(var(--dinosaur-size)*-1);
     background:
     radial-gradient(circle at 35% 10%, transparent 60%, var(--dinosaur-background) 0%),
     radial-gradient(circle at -20% 0%, transparent 45%, var(--dinosaur-color) 45%);
-    background:
-    radial-gradient(circle at 35% 10%, transparent 60%, var(--dinosaur-background) 0%),
-    radial-gradient(circle at -20% 0%, transparent 45%, var(--dinosaur-color) 45%);
+
 }
 .art#dinosaur div::after {
     content: "";
@@ -68,10 +72,8 @@
     left: inherit;
     height: calc(var(--dinosaur-size)*.9375);
     width: calc(var(--dinosaur-size)*1.25);
-    /* margin-top: calc(var(--dinosaur-size)*-.375); */
-    /* margin-top: calc(var(--dinosaur-size)*-1.375); */
-    margin-top: calc(var(--dinosaur-size)*-.46875);
-    margin-left: calc(var(--dinosaur-size)*-.625);
+    margin-top: calc(var(--dinosaur-size)*-1.13);
+    margin-left: calc(var(--dinosaur-size)*-.2);
     background:
     radial-gradient(circle at 83% 45%, black var(--dinosaur-eye-size), transparent var(--dinosaur-eye-size)),
     radial-gradient(circle at 68% 48%, black var(--dinosaur-eye-size), transparent var(--dinosaur-eye-size)),
@@ -80,9 +82,12 @@
     border-radius: 50% 50% 45% 0;
     border-radius: 55% 75% 45% 0;
     box-shadow:
-    28px 84px 0px -50px var(--dinosaur-color),
-    -29px 95px 0px -39px var(--dinosaur-color),
-    20px 100px 0px -50px var(--dinosaur-shadow);
+    28px 70px 0px -50px var(--dinosaur-color),
+    -29px 81px 0px -39px var(--dinosaur-color),
+    20px 86px 0px -50px var(--dinosaur-shadow),
+    -10px 165px 0px -45px var(--dinosaur-shadow),
+    0px 165px 0px -45px var(--dinosaur-shadow),
+    15px 150px 0px -45px var(--dinosaur-color);
 }
 
 /* ##### November 28, 2020 - Zodiac ##### */
