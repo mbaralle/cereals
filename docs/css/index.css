@@ -575,15 +575,15 @@
     radial-gradient(circle 150px at center 250px, var(--potato-color-arms) 5%, transparent 5%);
 }
 
-/* ##### October 17, 2020 - Lumin ##### */
-.art#lumin {
+/* ##### October 17, 2020 - SKIN ##### */
+.art#skin {
     background: black;
-    --lumin-white-10: rgba(255,255,255,.05);
-    --lumin-white-40: rgba(255,255,255,.2);
-    --lumin-white-mark: rgba(255,255,255,.7);
-    --lumin-background: black;
+    --skin-white-10: rgba(255,255,255,.05);
+    --skin-white-40: rgba(255,255,255,.2);
+    --skin-white-mark: rgba(255,255,255,.7);
+    --skin-background: black;
 }
-.art#lumin div {
+.art#skin div {
     height: 136px;
     width: 214px;
     margin: -39px auto auto -107px;
@@ -593,38 +593,38 @@
     linear-gradient(-3deg, rgba(0,0,0,.8) 0%, transparent 10%),
     linear-gradient(
         90deg,
-        var(--lumin-white-40) 0%, var(--lumin-white-10) 5%,
-        var(--lumin-background) 15%,
-        var(--lumin-white-10) 34%, var(--lumin-white-10) 38%,
-        var(--lumin-background) 59%,
-        var(--lumin-white-10) 77%,
+        var(--skin-white-40) 0%, var(--skin-white-10) 5%,
+        var(--skin-background) 15%,
+        var(--skin-white-10) 34%, var(--skin-white-10) 38%,
+        var(--skin-background) 59%,
+        var(--skin-white-10) 77%,
         rgba(0,0,0,.2) 88%,
-        var(--lumin-white-10) 100%
+        var(--skin-white-10) 100%
     ),
     linear-gradient(0deg, transparent 94%, rgb(0 0 0 / .8) 97%, black 98%),
     linear-gradient(0deg, transparent 95%, rgba(255,255,255,.5) 100%),
     linear-gradient(
         90deg,
-        var(--lumin-white-40) 0%, var(--lumin-white-10) 10%,
-        var(--lumin-background) 15%,
-        var(--lumin-white-10) 36%,
-        var(--lumin-background) 59%,
-        var(--lumin-white-10) 77%,
+        var(--skin-white-40) 0%, var(--skin-white-10) 10%,
+        var(--skin-background) 15%,
+        var(--skin-white-10) 36%,
+        var(--skin-background) 59%,
+        var(--skin-white-10) 77%,
         rgba(0,0,0,.2) 88%,
-        var(--lumin-white-10) 100%
+        var(--skin-white-10) 100%
     ),
-    var(--lumin-background);
+    var(--skin-background);
 
     box-shadow: 21px 75px 65px -10px rgba(0,0,0,0.73);
     transform: perspective(2000px) rotateX(-5deg);
 }
-.art#lumin div::before, .art#lumin div::after {
+.art#skin div::before, .art#skin div::after {
     white-space: pre;
     position: inherit;
     text-align: left;
-    color: var(--lumin-white-mark);
+    color: var(--skin-white-mark);
 }
-.art#lumin div::before {
+.art#skin div::before {
     line-height: 224px;
     content: "charcoal cleanser";
 
@@ -639,39 +639,39 @@
     border-radius: 5px 5px 5% 5%;
 
     background:
-    linear-gradient(0deg, var(--lumin-background) 1%, transparent 5%),
+    linear-gradient(0deg, var(--skin-background) 1%, transparent 5%),
     linear-gradient(
         90deg,
-        var(--lumin-white-40) 0%, var(--lumin-white-10) 10%,
-        var(--lumin-background) 15%,
-        var(--lumin-white-10) 36%,
-        var(--lumin-background) 59%,
-        var(--lumin-white-10) 79%,
-        var(--lumin-background) 89%,
-        var(--lumin-white-10) 100%
+        var(--skin-white-40) 0%, var(--skin-white-10) 10%,
+        var(--skin-background) 15%,
+        var(--skin-white-10) 36%,
+        var(--skin-background) 59%,
+        var(--skin-white-10) 79%,
+        var(--skin-background) 89%,
+        var(--skin-white-10) 100%
     ),
     linear-gradient(0deg, transparent 95%, rgba(255,255,255,.5) 100%),
     linear-gradient(0deg, transparent 95%, rgba(0,0,0,.8) 97%),
     linear-gradient(
         90deg,
-        var(--lumin-white-40) 0%, var(--lumin-white-10) 5%,
-        var(--lumin-background) 15%,
-        var(--lumin-white-10) 34%, var(--lumin-white-10) 38%,
-        var(--lumin-background) 59%,
-        var(--lumin-white-10) 77%,
-        var(--lumin-background) 89%,
-        var(--lumin-white-10) 95%, var(--lumin-white-10) 100%
+        var(--skin-white-40) 0%, var(--skin-white-10) 5%,
+        var(--skin-background) 15%,
+        var(--skin-white-10) 34%, var(--skin-white-10) 38%,
+        var(--skin-background) 59%,
+        var(--skin-white-10) 77%,
+        var(--skin-background) 89%,
+        var(--skin-white-10) 95%, var(--skin-white-10) 100%
     ),
-    var(--lumin-background);
+    var(--skin-background);
     transform: perspective(500px) rotateX(3deg);
 }
-.art#lumin div::after {
-    content: "lumin";
+.art#skin div::after {
+    content: "skin care";
     text-transform: uppercase;
     letter-spacing: 4.8px;
     font-size: 11.2px;
     line-height: 27.2px;
-    border-bottom: .01rem solid var(--lumin-white-mark);
+    border-bottom: .01rem solid var(--skin-white-mark);
     width: 70%;
     margin-left: -38%;
     margin-bottom: 10%;
