@@ -119,6 +119,10 @@
       [].forEach.call(this.document.getElementsByClassName("art"), (art) =>
         art.after(wipBanner.cloneNode(true))
       );
+
+      alert(`userAgent: ${navigator.userAgent}\nappName: ${navigator.appName}\nvendor: ${navigator.vendor}\nproduct: ${navigator.product}`);
+      if(!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/))
+        alert("Consider using a modern browser (Chrome, Edge, Firefox, Opera...) to have the best experience on this website 🎨");
     </script>
   </body>
 </html>
