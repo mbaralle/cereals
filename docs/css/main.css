@@ -12,6 +12,7 @@ div {
 
 html, body {
     overflow: overlay;
+    overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: #3337 transparent;
 }
