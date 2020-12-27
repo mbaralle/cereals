@@ -348,6 +348,13 @@
         var(--utopia-conjunctiva-bloody) calc(var(--utopia-bg-length)*.7)
     );
 
+    -webkit-box-shadow:
+    inset
+    #000000
+    calc(var(--utopia-base-length)*.25)
+    calc(var(--utopia-base-length)*-.5)
+    calc(var(--utopia-base-length)*.5)
+    calc(var(--utopia-base-length)*-.45);
     box-shadow:
     inset
     #000000
@@ -416,8 +423,14 @@
     }
 }
 @keyframes utopia-virus {
-    0%{ transform: rotateZ(0deg); }
-    100%{ transform: rotateZ(360deg); }
+    0%{
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+    100%{
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
 }
 
 /* ##### November 10, 2020 - Clock ##### */
