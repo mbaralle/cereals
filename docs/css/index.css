@@ -1,66 +1,115 @@
-/* ##### December 25, 2020 - Christmas sock ##### */
-.art#christmas-sock {
-    --christmas-sock-red: #a00000;
-    --christmas-sock-white: #fffaee;
-    --christmas-sock-background: #003900;
-    --christmas-sock-size: 120px;
+/* ##### March 19, 2021 - Spider-Man ##### */
+.art#spider-man {
+    --spider-man-blue: #195386;
+    --spider-man-red: #940505;
+    --spider-man-pattern: #3e7a8e;
+    --spider-man-border: #000000;
+    --spider-man-white: #ffffff;
+    --spider-man-size: 250px;
 
-    background: var(--christmas-sock-background);
-}
-.art#christmas-sock div {
-    height: calc(var(--christmas-sock-size)*1.7);
-    width: calc(var(--christmas-sock-size)*.75);
-    margin-top: calc(var(--christmas-sock-size)*-.84);
-    margin-left: calc(var(--christmas-sock-size)*-.2);
-    border-radius: calc(var(--christmas-sock-size)*.15);
+    --spider-man-animation: spiderman-eyes 4s infinite cubic-bezier(1,-0.4, 0, 1.4), 5s infinite cubic-bezier(1,-0.4, 0, 1.4);
 
-    transform: rotate(15deg);
-    transform-origin: 20px -25px;
-    animation: christmas-sock 2s ease-in-out infinite;
+    background: var(--spider-man-blue);
+}
+.art#spider-man div {
+    height: var(--spider-man-size);
+    width: calc(var(--spider-man-size)*.8);
+    margin-top: calc(var(--spider-man-size)*-.5);
+    margin-left: calc(var(--spider-man-size)*-.4);
+    border-radius: 50% 50% / 40% 40% 60% 60%;
 
-    background: var(--christmas-sock-red);
-    box-shadow:
-    calc(var(--christmas-sock-size)*-.2) calc(var(--christmas-sock-size)*-.6) 0 calc(var(--christmas-sock-size)*-.35) var(--christmas-sock-red),
-    calc(var(--christmas-sock-size)*-.22) calc(var(--christmas-sock-size)*-0.6) 5px calc(var(--christmas-sock-size)*-.35) black,
-    inset calc(var(--christmas-sock-size)*-.19) calc(var(--christmas-sock-size)*.24) calc(var(--christmas-sock-size)*.175) calc(var(--christmas-sock-size)*-.22) white,
-    calc(var(--christmas-sock-size)*-.025) calc(var(--christmas-sock-size)*.025) calc(var(--christmas-sock-size)*.04) black;
+    background:
+    radial-gradient(
+        ellipse at 50% 47.5%,
+        transparent calc(var(--spider-man-size)*.0625), var(--spider-man-pattern) calc(var(--spider-man-size)*.0625), var(--spider-man-pattern) calc(var(--spider-man-size)*.0725), transparent calc(var(--spider-man-size)*.0725),
+        transparent calc(var(--spider-man-size)*.1875), var(--spider-man-pattern) calc(var(--spider-man-size)*.1875), var(--spider-man-pattern) calc(var(--spider-man-size)*.1975), transparent calc(var(--spider-man-size)*.1975),
+        transparent calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3225), transparent calc(var(--spider-man-size)*.3225)
+    ),
+    radial-gradient(
+        circle at 129% 48%,
+        transparent calc(var(--spider-man-size)*.625), var(--spider-man-pattern) calc(var(--spider-man-size)*.625), var(--spider-man-pattern) calc(var(--spider-man-size)*.635), transparent calc(var(--spider-man-size)*.635)
+    ),
+    radial-gradient(
+        circle at -29% 48%,
+        transparent calc(var(--spider-man-size)*.625), var(--spider-man-pattern) calc(var(--spider-man-size)*.625), var(--spider-man-pattern) calc(var(--spider-man-size)*.635), transparent calc(var(--spider-man-size)*.635)
+    ),
+    radial-gradient(
+        circle at 89% 48%,
+        transparent calc(var(--spider-man-size)*.31), var(--spider-man-pattern) calc(var(--spider-man-size)*.31), var(--spider-man-pattern) calc(var(--spider-man-size)*.32), transparent calc(var(--spider-man-size)*.32)
+    ),
+    radial-gradient(
+        circle at 11% 48%,
+        transparent calc(var(--spider-man-size)*.31), var(--spider-man-pattern) calc(var(--spider-man-size)*.31), var(--spider-man-pattern) calc(var(--spider-man-size)*.32), transparent calc(var(--spider-man-size)*.32)
+    ),
+    linear-gradient(
+        90deg, transparent 49.25%, var(--spider-man-pattern) 49.25%, var(--spider-man-pattern) 50.75%, transparent 50.75%
+    ),
+    linear-gradient(
+        var(--spider-man-red) calc(var(--spider-man-size)*.46), var(--spider-man-pattern) calc(var(--spider-man-size)*.46), var(--spider-man-pattern) calc(var(--spider-man-size)*.475), transparent calc(var(--spider-man-size)*.475)
+    ),
+    radial-gradient(
+        circle at 13% 35%,
+        transparent calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3225), transparent calc(var(--spider-man-size)*.3225)
+    ),
+    radial-gradient(
+        circle at 87% 35%,
+        transparent calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3225), transparent calc(var(--spider-man-size)*.3225)
+    ),
+    var(--spider-man-red);
 }
-@keyframes christmas-sock {
-    0% { transform: rotate(15deg); }
-    50% { transform: rotate(17deg); }
-}
-.art#christmas-sock div::before,
-.art#christmas-sock div::after {
+.art#spider-man div::before,
+.art#spider-man div::after {
     position: inherit;
     content: "";
+
+    width: calc(var(--spider-man-size)*.25);
+    height: calc(var(--spider-man-size)*.19);
+    margin-top: calc(var(--spider-man-size)*.30);
+
+    border: calc(var(--spider-man-size)*.025) solid var(--spider-man-border);
+    background: var(--spider-man-white);
 }
-.art#christmas-sock div::before {
-    width: calc(var(--christmas-sock-size)*.9);
-    height: calc(var(--christmas-sock-size)*.45);
-    margin-left: calc(var(--christmas-sock-size)*-.45);
-    margin-top: calc(var(--christmas-sock-size)*-.05);
+.art#spider-man div::before {
+    margin-left: calc(var(--spider-man-size)*-.33);
 
-    border-radius: calc(var(--christmas-sock-size)*.15) calc(var(--christmas-sock-size)*.15) calc(var(--christmas-sock-size)*.1) calc(var(--christmas-sock-size)*.1);
-
-    background: var(--christmas-sock-white);
-    box-shadow:
-    calc(var(--christmas-sock-size)*-.025) calc(var(--christmas-sock-size)*.01) calc(var(--christmas-sock-size)*.04) 0 black,
-    inset calc(var(--christmas-sock-size)*.025) calc(var(--christmas-sock-size)*-.025) calc(var(--christmas-sock-size)*.04) calc(var(--christmas-sock-size)*-.025) black;
+    border-radius: 2% 100% 29% 100% / 0% 66% 37% 100%;
+    transform: rotate(12deg);
+    animation: var(--spider-man-animation) spiderman-expression-before;
 }
-.art#christmas-sock div::after {
-    height: calc(var(--christmas-sock-size)*.55);
-    width: calc(var(--christmas-sock-size)*1.15);
-    margin-top: calc(var(--christmas-sock-size)*1.2);
-    margin-left: calc(var(--christmas-sock-size)*-.37);
+.art#spider-man div::after {
+    margin-left: calc(var(--spider-man-size)*.04);
 
-    border-radius: 0 calc(var(--christmas-sock-size)*.35) calc(var(--christmas-sock-size)*.15) calc(var(--christmas-sock-size)*.15);
+    border-radius: 100% 2% 100% 29% / 66% 0% 100% 37%;
+    transform: rotate(-12deg);
+    animation: var(--spider-man-animation) spiderman-expression-after;
+}
 
-    transform: rotate(5deg);
-
-    background: var(--christmas-sock-red);
-    box-shadow:
-    inset calc(var(--christmas-sock-size)*-.19) 0 calc(var(--christmas-sock-size)*.17) calc(var(--christmas-sock-size)*-.21) white,
-    0 calc(var(--christmas-sock-size)*.07) calc(var(--christmas-sock-size)*.04) calc(var(--christmas-sock-size)*-.04) black;
+@keyframes spiderman-eyes {
+    0% {
+        width: calc(var(--spider-man-size)*.25);
+        height: calc(var(--spider-man-size)*.19);
+        border: calc(var(--spider-man-size)*.025) solid var(--spider-man-border);
+    }
+    50% {
+        width: calc(var(--spider-man-size)*.2);
+        height: calc(var(--spider-man-size)*.14);
+        border: calc(var(--spider-man-size)*.05) solid var(--spider-man-border);
+    }
+    100% {
+        width: calc(var(--spider-man-size)*.25);
+        height: calc(var(--spider-man-size)*.19);
+        border: calc(var(--spider-man-size)*.025) solid var(--spider-man-border);
+    }
+}
+@keyframes spiderman-expression-before {
+    0% { transform: rotate(12deg) }
+    50% { transform: rotate(3deg) }
+    100% { transform: rotate(12deg) }
+}
+@keyframes spiderman-expression-after {
+    0% { transform: rotate(-12deg) }
+    50% { transform: rotate(-3deg) }
+    100% { transform: rotate(-12deg) }
 }
 
 /* ##### December 20, 2020 - Dinosaur ##### */
