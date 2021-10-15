@@ -1,3 +1,790 @@
+/* ##### May 22, 2021 - Coffee to go ##### */
+.art#coffee-to-go {
+    --coffee-to-go-background: #fedafe;
+    --coffee-to-go-straw: #22a37d;
+    --coffee-to-go-straw-shadow: #1c8767;
+    --coffee-to-go-cup: #e7c192;
+    --coffee-to-go-cup-light: #fadcbf;
+    --coffee-to-go-cream: #fff;
+    --coffee-to-go-lid: #ddf8;
+    --coffee-to-go-shadow: #0002;
+
+    --coffee-to-go-size: 275px;
+    --coffee-to-go-border-size: calc(var(--coffee-to-go-size) * .01);
+    --coffee-to-go-border-color: #555;
+    --coffee-to-go-border: var(--coffee-to-go-border-size) solid var(--coffee-to-go-border-color);
+
+    background: var(--coffee-to-go-background);
+}
+.art#coffee-to-go div {
+    height: var(--coffee-to-go-size);
+    width: calc(var(--coffee-to-go-size)*.03);
+
+    margin-top: calc(var(--coffee-to-go-size) * -.5 - var(--coffee-to-go-border-size));
+    margin-left: calc(var(--coffee-to-go-size) * -.015 - var(--coffee-to-go-border-size));
+
+    background: linear-gradient(90deg, var(--coffee-to-go-straw) 60%, var(--coffee-to-go-straw-shadow) 60%);
+
+    border: var(--coffee-to-go-border);
+    border-radius: var(--coffee-to-go-border-size);
+}
+.art#coffee-to-go div::before,
+.art#coffee-to-go div::after {
+    content: "";
+    position: inherit;
+}
+.art#coffee-to-go div::before {
+    --size: calc(var(--coffee-to-go-size) * .5);
+
+    height: calc(var(--size) *1.25);
+    width: var(--size);
+    margin-top: calc(var(--size) * .25 + calc(var(--coffee-to-go-size) * .25) + var(--coffee-to-go-border-size) * 1.5);
+    margin-left: calc(var(--size) * -.5);
+
+    clip-path: polygon(0 0, 100% 0, 83% 100%, 15% 100%);
+    border-radius: 0 0 50% 50% / 0 0 15% 15%;
+    
+    --stop: calc(var(--coffee-to-go-size) * .616);
+    background:
+    radial-gradient(circle at top, transparent var(--stop), var(--coffee-to-go-border-color) var(--stop)),
+    linear-gradient(83deg, var(--coffee-to-go-border-color) 15%, transparent 15%),
+    linear-gradient(-82.5deg, var(--coffee-to-go-border-color) 16%, var(--coffee-to-go-shadow) 16%, var(--coffee-to-go-shadow) 23%, transparent 23%),
+    linear-gradient(var(--coffee-to-go-cup-light) calc(var(--coffee-to-go-border-size) * 2), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 2), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 3), var(--coffee-to-go-cup) calc(var(--coffee-to-go-border-size) * 3));
+}
+.art#coffee-to-go div::after {
+    --size: calc(var(--coffee-to-go-size) * .5);
+
+    height: calc(var(--size) *.5);
+    width: var(--size);
+    margin-top: calc(var(--size) * .25);
+    margin-left: calc(var(--size) * -.5 - var(--coffee-to-go-border-size));
+
+    border-radius: 42.5% 42.5% var(--coffee-to-go-border-size) var(--coffee-to-go-border-size) / 100% 100% var(--coffee-to-go-border-size) var(--coffee-to-go-border-size);
+
+    --stop: calc(var(--size) * .75);
+    background:
+    radial-gradient(circle at 10% 100%, transparent var(--stop), var(--coffee-to-go-shadow) var(--stop)),
+    linear-gradient(0deg, var(--coffee-to-go-cup) calc(var(--coffee-to-go-border-size) * 1.5), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 1.5), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 2.5), transparent calc(var(--coffee-to-go-border-size) * 2.5)),
+    radial-gradient(circle at 82% 88%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .055), transparent calc(var(--coffee-to-go-size) * .055)),
+    radial-gradient(circle at 55% 85%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .13), transparent calc(var(--coffee-to-go-size) * .13)),
+    radial-gradient(circle at 37% 68%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .055), transparent calc(var(--coffee-to-go-size) * .055)),
+    radial-gradient(circle at 27% 100%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .091), transparent calc(var(--coffee-to-go-size) * .091)),
+    var(--coffee-to-go-lid);
+    border: var(--coffee-to-go-border);
+}
+
+/* ##### May 17, 2021 - Guillotine ##### */
+.art#guillotine {
+    --guillotine-background: #931817;
+    --guillotine-wood-light: #aa8855;
+    --guillotine-wood-dark: #816842;
+    --guillotine-blade-light: #bfbfbf;
+    --guillotine-blade-dark: #999;
+
+    --guillotine-size: 250px;
+
+    background: var(--guillotine-background);
+}
+.art#guillotine div {
+    height: var(--guillotine-size);
+    width: calc(var(--guillotine-size)*.5);
+
+    margin-top: calc(var(--guillotine-size) * -.5);
+    margin-left: calc(var(--guillotine-size) * -.25);
+
+    background:
+    linear-gradient(
+        transparent 2%, var(--guillotine-wood-dark) 2%, var(--guillotine-wood-dark) 7%, transparent 7%,
+        transparent 97%, var(--guillotine-wood-dark) 97%
+    ),
+    linear-gradient(
+        90deg,
+        var(--guillotine-background) 5%,
+        var(--guillotine-wood-dark) 5%, var(--guillotine-wood-dark) 15%,
+        transparent 15%, transparent 85%,
+        var(--guillotine-wood-dark) 85%, var(--guillotine-wood-dark) 95%,
+        var(--guillotine-background) 95%
+    ),
+    radial-gradient(circle at center 81%, var(--guillotine-background) 7.5%, transparent 7.5%),
+    linear-gradient(
+        transparent 70%,
+        var(--guillotine-wood-light) 70%, var(--guillotine-wood-light) 80.5%,
+        transparent 80.5%, transparent 81.5%,
+        var(--guillotine-wood-light) 81.5%, var(--guillotine-wood-light) 92%,
+        transparent 92%
+    );
+}
+.art#guillotine div::before,
+.art#guillotine div::after {
+    content: "";
+    position: inherit;
+
+    width: calc(var(--guillotine-size)*.35);
+    margin-left: calc(var(--guillotine-size)*-.175);
+}
+.art#guillotine div::before {
+    height: calc(var(--guillotine-size)*.25);
+    margin-top: calc(var(--guillotine-size)*.07);
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent 30%,
+        var(--guillotine-blade-dark) 30%, var(--guillotine-blade-dark) 33%,
+        transparent 33%, transparent 67%,
+        var(--guillotine-blade-dark) 67%, var(--guillotine-blade-dark) 70%,
+        transparent 70%
+    );
+    animation: guillotine-cables 3s infinite linear both;
+}
+.art#guillotine div::after {
+    height: calc(var(--guillotine-size)*.25);
+
+    background:
+    linear-gradient(
+        -20deg,
+        transparent 33%,
+        var(--guillotine-blade-light) 33%, var(--guillotine-blade-light) 43%,
+        var(--guillotine-blade-dark) 43%
+    );
+    animation: guillotine-blade 3s infinite linear both;
+}
+@keyframes guillotine-cables {
+    0% {
+        height: 0px;
+    }
+    33% {
+        height: calc(var(--guillotine-size)*.65);
+    }
+    100% {
+        height: 0px;
+    }
+}
+@keyframes guillotine-blade {
+    0% {
+        margin-top: calc(var(--guillotine-size)*.07);
+    }
+    33% {
+        margin-top: calc(var(--guillotine-size)*.72);
+    }
+    100% {
+        margin-top: calc(var(--guillotine-size)*.07);
+    }
+}
+
+/* ##### May 16, 2021 - Lotus ##### */
+.art#lotus {
+    --lotus-green-light: #a2e786;
+    --lotus-green-normal: #00cb75;
+    --lotus-green-dark: #009859;
+    --lotus-background: #b8b8ff;
+
+    --lotus-size: 420px;
+
+    background: var(--lotus-background);
+}
+.art#lotus div {
+    height: calc(var(--lotus-size)*.5);
+    width: calc(var(--lotus-size)*.6);
+    margin-top: calc(var(--lotus-size)*-.25);
+    margin-left: calc(var(--lotus-size)*-.3);
+
+    background:
+    radial-gradient(circle at left, transparent 60%, var(--lotus-background) 60%),
+    radial-gradient(circle at right, transparent 60%, var(--lotus-background) 60%),
+    var(--lotus-green-dark);
+}
+.art#lotus div::before,
+.art#lotus div::after {
+    content: "";
+    position: inherit;
+    height: inherit;
+    width: inherit;
+    border-radius: 35% 0 0 0 / 75% 0 0 0;
+    margin-left: 15px;
+    transform-origin: left bottom;
+    transform: translateX(-15px) rotateZ(20deg);
+    background:
+    radial-gradient(circle at -30% -5%, transparent 59%, var(--lotus-background) 59%),
+    radial-gradient(circle at 65% 115%, var(--lotus-green-light) 58%, transparent 58%),
+    radial-gradient(circle at -50% 30%, transparent 50%, var(--lotus-background) 50%),
+    radial-gradient(circle at 75% 72%, transparent 81%, var(--lotus-background) 81%),
+    var(--lotus-green-normal);
+}
+.art#lotus div::after {
+    transform: rotateY(180deg) translateX(15px) rotateZ(20deg);
+}
+
+/* ##### May 16, 2021 - Pool ##### */
+.art#pool {
+    --pool-blue: #51b0f7;
+    --pool-blue-shadow: #1a96f4;
+
+    --pool-shadow: inset #0005 0 0 75px, #0003 0 0 150px;
+
+    background: #e2ccb1;
+}
+.art#pool div {
+    position: relative;
+}
+.art#pool div::before,
+.art#pool div::after {
+    content: "";
+    position: absolute;
+}
+.art#pool div::before {
+    height: 275px;
+    width: 150px;
+    margin-top: 75px;
+    margin-left: calc(-50% - 75px);
+
+    transform: perspective(250px) rotateX(45deg);
+    animation: pool-bg 8s infinite linear both;
+}
+.art#pool div::after {
+    height: 40px;
+    width: 40px;
+
+    border-radius: 50%;
+    background-size: 500% 500%;
+    background-image: linear-gradient(deeppink, yellow, orange);
+
+    margin-left: calc(-50% - 20px);
+    margin-top: 5px;
+    transform-origin: 20px 450px;
+
+    animation: pool-sun 8s infinite linear both;
+}
+@keyframes pool-sun {
+    0% {
+        transform: rotateZ(0deg);
+        background-position: 50% 50%;
+    }
+    25% {
+        opacity: 1;
+    }
+    35% {
+        background-position: 30% 30%;
+        opacity: 0;
+    }
+    40% {
+        background-position: 0% 0%;
+        transform: rotateZ(60deg);
+    }
+    60% {
+        background-position: 100% 100%;
+        transform: rotateZ(300deg);
+    }
+    65% {
+        background-position: 100% 100%;
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        background-position: 50% 50%;
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes pool-bg {
+    0% {
+        background:
+        radial-gradient(circle at 78% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    2.857% {
+        background:
+        radial-gradient(circle at 71% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    5.714% {
+        background:
+        radial-gradient(circle at 64% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    8.571% {
+        background:
+        radial-gradient(circle at 57% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    11.426% {
+        background:
+        radial-gradient(circle at 50% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    14.286% {
+        background:
+        radial-gradient(circle at 43% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    17.143% {
+        background:
+        radial-gradient(circle at 36% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    20% {
+        background:
+        radial-gradient(circle at 29% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    22.857% {
+        background:
+        radial-gradient(circle at 22% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    25.714% {
+        background:
+        radial-gradient(circle at 15% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    28.571% {
+        background:
+        radial-gradient(circle at 8% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    31.426% {
+        background:
+        radial-gradient(circle at 1% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    34.286% {
+        background:
+        radial-gradient(circle at -6% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    37.143% {
+        background:
+        radial-gradient(circle at -13% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    40% {
+        background:
+        radial-gradient(circle at -20% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+        box-shadow: var(--pool-shadow);
+    }
+    88% {
+        background:
+        radial-gradient(circle at 120% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+        box-shadow: var(--pool-shadow);
+    }
+    90% {
+        background:
+        radial-gradient(circle at 113% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    92% {
+        background:
+        radial-gradient(circle at 106% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    94% {
+        background:
+        radial-gradient(circle at 99% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    96% {
+        background:
+        radial-gradient(circle at 92% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    98% {
+        background:
+        radial-gradient(circle at 85% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+    100% {
+        background:
+        radial-gradient(circle at 78% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+    }
+}
+/* ##### May 12, 2021 - Old lift ##### */
+.art#old-lift {
+    --old-lift-background: #fff;
+    --old-lift-color: #333;
+
+    --old-lift-size: 15px;
+
+    --old-lift-animation:  10s alternate infinite linear;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent 48.5%, var(--old-lift-color) 48.5%, var(--old-lift-color) 49%, transparent 49%,
+        transparent 51%, var(--old-lift-color) 51%, var(--old-lift-color) 51.5%, transparent 51.5%
+        ),
+    var(--old-lift-background);
+}
+.art#old-lift div {
+    height: calc(var(--old-lift-size)*16);
+    width: calc(var(--old-lift-size)*8);
+    margin-top: calc(var(--old-lift-size)*-8.05);
+    margin-left: calc(var(--old-lift-size)*-4.05);
+
+    border: calc(var(--old-lift-size)*.1) solid var(--old-lift-color);
+
+    box-shadow:
+        var(--old-lift-background) 0 5px 0 calc(var(--old-lift-size)*1.3),
+        var(--old-lift-color) 0 5px 0 calc(var(--old-lift-size)*1.4);
+    
+    --old-lift-diagonals:
+        transparent 9.5%, var(--old-lift-color) 9.5%, var(--old-lift-color) 10%, transparent 10%,
+        transparent 15.75%, var(--old-lift-color) 15.75%, var(--old-lift-color) 16.25%, transparent 16.25%,
+        transparent 22%, var(--old-lift-color) 22%, var(--old-lift-color) 22.5%, transparent 22.5%,
+        transparent 28.25%, var(--old-lift-color) 28.25%, var(--old-lift-color) 28.75%, transparent 28.75%,
+        transparent 34.5%, var(--old-lift-color) 34.5%, var(--old-lift-color) 35%, transparent 35%,
+        transparent 40.75%, var(--old-lift-color) 40.75%, var(--old-lift-color) 41.25%, transparent 41.25%,
+        transparent 47%, var(--old-lift-color) 47%, var(--old-lift-color) 47.5%, transparent 47.5%,
+        transparent 53.25%, var(--old-lift-color) 53.25%, var(--old-lift-color) 53.75%, transparent 53.75%,
+        transparent 59.5%, var(--old-lift-color) 59.5%, var(--old-lift-color) 60%, transparent 60%,
+        transparent 65.75%, var(--old-lift-color) 65.75%, var(--old-lift-color) 66.25%, transparent 66.25%,
+        transparent 72%, var(--old-lift-color) 72%, var(--old-lift-color) 72.5%, transparent 72.5%,
+        transparent 78.25%, var(--old-lift-color) 78.25%, var(--old-lift-color) 78.75%, transparent 78.75%,
+        transparent 84.5%, var(--old-lift-color) 84.5%, var(--old-lift-color) 85%, transparent 85%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent 12.25%, var(--old-lift-color) 12.25%, var(--old-lift-color) 12.75%, transparent 12.75%,
+        transparent 24.75%, var(--old-lift-color) 24.75%, var(--old-lift-color) 25.25%, transparent 25.25%,
+        transparent 37.25%, var(--old-lift-color) 37.25%, var(--old-lift-color) 37.75%, transparent 37.75%,
+        transparent 49.75%, var(--old-lift-color) 49.75%, var(--old-lift-color) 50.25%, transparent 50.25%,
+        transparent 62.25%, var(--old-lift-color) 62.25%, var(--old-lift-color) 62.75%, transparent 62.75%,
+        transparent 74.75%, var(--old-lift-color) 74.75%, var(--old-lift-color) 75.25%, transparent 75.25%,
+        transparent 87.25%, var(--old-lift-color) 87.25%, var(--old-lift-color) 87.75%, transparent 87.75%
+    ),
+    linear-gradient(
+        var(--old-lift-background) calc(var(--old-lift-size)*3), transparent  calc(var(--old-lift-size)*3),
+        transparent calc(var(--old-lift-size)*7), var(--old-lift-background) calc(var(--old-lift-size)*7), var(--old-lift-background) calc(var(--old-lift-size)*11), transparent calc(var(--old-lift-size)*11),
+        transparent calc(var(--old-lift-size)*15), var(--old-lift-background) calc(var(--old-lift-size)*15), var(--old-lift-background)
+    ),
+    linear-gradient(63.4349deg, var(--old-lift-diagonals)),
+    linear-gradient(-63.4349deg, var(--old-lift-diagonals)),
+    var(--old-lift-background);
+
+    animation: old-lift-up-and-down var(--old-lift-animation);
+}
+.art#old-lift div::before,
+.art#old-lift div::after {
+    content: "";
+    position: inherit;
+}
+.art#old-lift div::before {
+    --size: calc(var(--old-lift-size)*1.2);
+    height: var(--size);
+    width: var(--size);
+
+    top: -13%;
+    left: 113%;
+
+    border-radius: 30% 40% 100% 0% / 100% 40% 30% 0% ;
+    background:
+    radial-gradient(
+        circle at left bottom,
+        transparent 42%,
+        var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+        transparent 48%, transparent 62%,
+        var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+        transparent 68%
+    );
+
+    animation: old-lift-bip var(--old-lift-animation);
+}
+.art#old-lift div::after {
+    height: calc(var(--old-lift-size)*.8);
+    width: calc(var(--old-lift-size)*.8);
+
+    top: 50%;
+    left: -15%;
+
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        var(--old-lift-background) calc(var(--old-lift-size)*.175),
+        var(--old-lift-color) calc(var(--old-lift-size)*.175), var(--old-lift-color) calc(var(--old-lift-size)*.25),
+        var(--old-lift-background) calc(var(--old-lift-size)*.25), var(--old-lift-background) calc(var(--old-lift-size)*.325),
+        var(--old-lift-color) calc(var(--old-lift-size)*.325)
+    );
+}
+
+@keyframes old-lift-up-and-down {
+    0% { margin-top: calc(var(--old-lift-size)*-30); }
+    10% { margin-top: calc(var(--old-lift-size)*-30); }
+    40% { margin-top: calc(var(--old-lift-size)*-8.05); }
+    60% { margin-top: calc(var(--old-lift-size)*-8.05); }
+    90% { margin-top: calc(var(--old-lift-size)*13); }
+    100% { margin-top: calc(var(--old-lift-size)*13); }
+}
+
+@keyframes old-lift-bip {
+    0% { background: none; }
+    44% { background: none; }
+    45% {
+        background:
+        radial-gradient(
+            circle at left bottom,
+            transparent 42%,
+            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+            transparent 48%, transparent 62%,
+            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+            transparent 68%
+        );
+    }
+    48% { background: none; }
+    49% {
+        background:
+        radial-gradient(
+            circle at left bottom,
+            transparent 42%,
+            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+            transparent 48%, transparent 62%,
+            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+            transparent 68%
+        );
+    }
+    50% {
+        background:
+        radial-gradient(
+            circle at left bottom,
+            transparent 42%,
+            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+            transparent 48%, transparent 62%,
+            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+            transparent 68%
+        );
+    }
+    51% { background: none; }
+    52% {
+        background:
+        radial-gradient(
+            circle at left bottom,
+            transparent 42%,
+            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+            transparent 48%, transparent 62%,
+            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+            transparent 68%
+        );
+    }
+    55% {
+        background:
+        radial-gradient(
+            circle at left bottom,
+            transparent 42%,
+            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+            transparent 48%, transparent 62%,
+            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+            transparent 68%
+        );
+    }
+    56% { background: none; }
+    100% { background: none; }
+}
+
+/* ##### April 10, 2021 - Connect 4 ##### */
+.art#connect-4 {
+    --connect-4-size: 40px;
+    --connect-4-border: calc(var(--connect-4-size)*.1);
+
+    --connect-4-blue: #1D62D9;
+    
+    --connect-4-win: #ffffff;
+    --connect-4-red: #E12625;
+    --connect-4-yellow: #F0C714;
+    --connect-4-token-win: 0 calc(var(--connect-4-size)*.375) var(--connect-4-win);
+    --connect-4-token-red: 0 calc(var(--connect-4-size)*.375) var(--connect-4-red);
+    --connect-4-token-yellow: 0 calc(var(--connect-4-size)*.375) var(--connect-4-yellow);
+
+    --connect-4-tokens-d-1: calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-2: var(--connect-4-tokens-d-1), calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-3: var(--connect-4-tokens-d-2), calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-4: var(--connect-4-tokens-d-3), calc(var(--connect-4-size)*1) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-5: var(--connect-4-tokens-d-4), calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-6: var(--connect-4-tokens-d-5), calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-7: var(--connect-4-tokens-d-6), calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-8: var(--connect-4-tokens-d-7), calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*1.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-9: var(--connect-4-tokens-d-8), calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-10: var(--connect-4-tokens-d-9), calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-11: var(--connect-4-tokens-d-10), calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-12: var(--connect-4-tokens-d-11), calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*1.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-13: var(--connect-4-tokens-d-12), calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-14: var(--connect-4-tokens-d-13), calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-15: var(--connect-4-tokens-d-14), calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-.5) var(--connect-4-token-red);
+
+    --connect-4-tokens-u-1: calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-10) var(--connect-4-token-red);
+    --connect-4-tokens-u-2: calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-1);
+    --connect-4-tokens-u-3: calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-2);
+    --connect-4-tokens-u-4: calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-3);
+    --connect-4-tokens-u-5: calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-4);
+    --connect-4-tokens-u-6: calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-5);
+    --connect-4-tokens-u-7: calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-6);
+    --connect-4-tokens-u-8: calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-7);
+    --connect-4-tokens-u-9: calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-8);
+    --connect-4-tokens-u-10: calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-9);
+    --connect-4-tokens-u-11: calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-10);
+    --connect-4-tokens-u-12: calc(var(--connect-4-size)*1) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-11);
+    --connect-4-tokens-u-13: calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-12);
+    --connect-4-tokens-u-14: calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-13);
+    --connect-4-tokens-u-15: calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-14);
+
+    --connect-4-tokens-win:
+        calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*2.5) var(--connect-4-token-win),
+        calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red),
+        calc(var(--connect-4-size)*1) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red),
+        calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red),
+        calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*1.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red),
+        calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*1.5) var(--connect-4-token-win),
+        calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*1.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*.5) var(--connect-4-token-win),
+        calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-.5) var(--connect-4-token-win);
+
+    /* background: #434343; */
+}
+.art#connect-4 div {
+    height: calc(var(--connect-4-size)*.1);
+    width: calc(var(--connect-4-size)*.1);
+    margin-top: calc(var(--connect-4-size)*-.05);
+    margin-left: calc(var(--connect-4-size)*-.05);
+    border-radius: 50%;
+
+    animation: connect-4-game 10s infinite linear;
+}
+.art#connect-4 div::before {
+    content: "";
+    position: inherit;
+    height: calc(var(--connect-4-size)*6);
+    width: calc(var(--connect-4-size)*7);
+
+    margin-top: calc(var(--connect-4-size)*-3.05);
+    margin-left: calc(var(--connect-4-size)*-3.6);
+
+    background: radial-gradient(circle, transparent 55%, var(--connect-4-blue) 55%);
+    background-size: var(--connect-4-size) var(--connect-4-size);
+
+    border: var(--connect-4-border) solid var(--connect-4-blue);
+    border-radius: calc(var(--connect-4-size)*.2);
+}
+@keyframes connect-4-game {
+    0%{ box-shadow: var(--connect-4-tokens-u-15); }
+    6%{ box-shadow: var(--connect-4-tokens-d-1), var(--connect-4-tokens-u-14); }
+    12%{ box-shadow: var(--connect-4-tokens-d-2), var(--connect-4-tokens-u-13); }
+    18%{ box-shadow: var(--connect-4-tokens-d-3), var(--connect-4-tokens-u-12); }
+    24%{ box-shadow: var(--connect-4-tokens-d-4), var(--connect-4-tokens-u-11); }
+    30%{ box-shadow: var(--connect-4-tokens-d-5), var(--connect-4-tokens-u-10); }
+    36%{ box-shadow: var(--connect-4-tokens-d-6), var(--connect-4-tokens-u-9); }
+    42%{ box-shadow: var(--connect-4-tokens-d-7), var(--connect-4-tokens-u-8); }
+    48%{ box-shadow: var(--connect-4-tokens-d-8), var(--connect-4-tokens-u-7); }
+    54%{ box-shadow: var(--connect-4-tokens-d-9), var(--connect-4-tokens-u-6); }
+    60%{ box-shadow: var(--connect-4-tokens-d-10), var(--connect-4-tokens-u-5); }
+    66%{ box-shadow: var(--connect-4-tokens-d-11), var(--connect-4-tokens-u-4); }
+    72%{ box-shadow: var(--connect-4-tokens-d-12), var(--connect-4-tokens-u-3); }
+    78%{ box-shadow: var(--connect-4-tokens-d-13), var(--connect-4-tokens-u-2); }
+    84%{ box-shadow: var(--connect-4-tokens-d-14), var(--connect-4-tokens-u-1); }
+    90%{ box-shadow: var(--connect-4-tokens-d-15); }
+    91.25%{ box-shadow: var(--connect-4-tokens-win); }
+    92.5% { box-shadow: var(--connect-4-tokens-d-15); }
+    93.75% { box-shadow: var(--connect-4-tokens-win); }
+    95% { box-shadow: var(--connect-4-tokens-d-15); }
+    100%{ box-shadow: var(--connect-4-tokens-u-15); }
+}
+
+/* ##### March 19, 2021 - Avocado ##### */
+.art#avocado {
+    --avocado-size: 250px;
+    --avocado-border: calc(var(--avocado-size)*.02);
+
+    --avocado-core: #b67f4f;
+    /* --avocado-green: #b9cc2d; */
+
+    /* --avocado-core: #4C2F13; */
+    --avocado-green: #A4BF49;
+    
+    --avocado-peel: #556b2f;
+    --avocado-mouth: #51682c;
+    --avocado-tongue: #c65353;
+    --avocado-eyes: #000;
+    --avocado-reflect: #fff;
+    --avocado-white: #fff;
+
+    --spider-man-animation: spiderman-eyes 4s infinite cubic-bezier(1,-0.4, 0, 1.4), 5s infinite cubic-bezier(1,-0.4, 0, 1.4);
+
+    background: #c1e2ff;
+}
+.art#avocado div {
+    height: var(--avocado-size);
+    width: calc(var(--avocado-size)*.8);
+    margin-top: calc(var(--avocado-size)*-.5 - var(--avocado-border));
+    margin-left: calc(var(--avocado-size)*-.4 - var(--avocado-border));
+    border-radius: 50% / 65% 65% 35% 35%;
+    border: var(--avocado-border) solid var(--avocado-peel);
+
+    background:
+    radial-gradient(circle at 61% 27%, var(--avocado-reflect) calc(var(--avocado-size)*.01), transparent calc(var(--avocado-size)*.01)),
+    radial-gradient(circle at 41% 27%, var(--avocado-reflect) calc(var(--avocado-size)*.01), transparent calc(var(--avocado-size)*.01)),
+    radial-gradient(circle at 59.5% 28.5%, var(--avocado-reflect) calc(var(--avocado-size)*.005), transparent calc(var(--avocado-size)*.005)),
+    radial-gradient(circle at 39.5% 28.5%, var(--avocado-reflect) calc(var(--avocado-size)*.005), transparent calc(var(--avocado-size)*.005)),
+    radial-gradient(circle at 60% 28%, var(--avocado-eyes) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.05), transparent calc(var(--avocado-size)*.05)),
+    radial-gradient(circle at 40% 28%, var(--avocado-eyes) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.05), transparent calc(var(--avocado-size)*.05)),
+    radial-gradient(circle at 50% 66%, var(--avocado-core) calc(var(--avocado-size)*.2), transparent calc(var(--avocado-size)*.2)),
+    var(--avocado-green);
+    
+    background:
+    radial-gradient(circle at 61% 27%, var(--avocado-reflect) calc(var(--avocado-size)*.01), transparent calc(var(--avocado-size)*.015)),
+    radial-gradient(circle at 41% 27%, var(--avocado-reflect) calc(var(--avocado-size)*.01), transparent calc(var(--avocado-size)*.015)),
+    radial-gradient(circle at 59.5% 28.5%, var(--avocado-reflect) calc(var(--avocado-size)*.005), transparent calc(var(--avocado-size)*.01)),
+    radial-gradient(circle at 39.5% 28.5%, var(--avocado-reflect) calc(var(--avocado-size)*.005), transparent calc(var(--avocado-size)*.01)),
+    radial-gradient(circle at 60% 28%, var(--avocado-eyes) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.035), var(--avocado-white) calc(var(--avocado-size)*.05), transparent calc(var(--avocado-size)*.055)),
+    radial-gradient(circle at 40% 28%, var(--avocado-eyes) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.035), var(--avocado-white) calc(var(--avocado-size)*.05), transparent calc(var(--avocado-size)*.055)),
+    radial-gradient(circle at 50% 66%, var(--avocado-core) calc(var(--avocado-size)*.2), transparent calc(var(--avocado-size)*.205)),
+    var(--avocado-green);
+}
+.art#avocado div::before,
+.art#avocado div::after {
+    position: inherit;
+    content: "";
+}
+.art#avocado div::before {
+    border-radius: 50% / 20% 20% 80% 80%;
+    width: calc(var(--avocado-size)*.1);
+    height: calc(var(--avocado-size)*.07);
+    margin-top: calc(var(--avocado-size)*.36);
+    margin-left: calc(var(--avocado-size)*-.05);
+
+    background:
+    radial-gradient(circle at 50% 100%, var(--avocado-tongue) 50%, transparent 55%)
+    var(--avocado-mouth);
+}
+
 /* ##### March 19, 2021 - Spider-Man ##### */
 .art#spider-man {
     --spider-man-blue: #195386;
@@ -865,6 +1652,7 @@
 /* ##### August 17, 2020 - Geometry ##### */
 .art#geometry {
     --geometry-background: rgb(58, 37, 73);
+    --geometry-background: black;
     --geometry-border-color: white;
     background: var(--geometry-background);
 }
