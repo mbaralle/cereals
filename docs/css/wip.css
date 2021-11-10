@@ -8,6 +8,7 @@
     font-size: 1.5em;
     font-weight: 700;
     display: inline-block;
+    display: none;
 
     text-align: center;
 }
@@ -20,6 +21,335 @@
 }
 .wip-banner a:hover {
     opacity: .7;
+}
+
+
+
+
+/* ##### November 4, 2021 - pi ##### */
+.art#pi {
+    --pi-background: #d4b869;
+    --pi-decimal: #9b813a;
+    --pi-blur: #fff5;
+    --pi-size: 150px;
+    --pi-height: var(--pi-size);
+    --pi-width: calc(3 * var(--pi-size));
+
+    background: var(--pi-background);
+}
+.art#pi div {
+    height: var(--pi-height);
+    width: var(--pi-width);
+
+    margin-top: calc(var(--pi-height) / -2);
+    margin-left: calc(var(--pi-width) / -2);
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(0deg, transparent 49.5%, red 49.5%, red 50.5%, transparent 50.5%),
+        linear-gradient(
+            90deg,
+            transparent var(--pi-size), var(--pi-blur) var(--pi-size),
+            var(--pi-blur) calc(var(--pi-size) * 2),
+            transparent calc(var(--pi-size) * 2)
+        );
+        animation: pi-angle 10s cubic-bezier(1, 0, 0, 1) infinite alternate;
+}
+.art#pi div::before {
+    content: "\0003C0   3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679·····";
+    white-space: pre;
+    line-height: var(--pi-size);
+    font-size: var( --pi-size);
+    font-family: monospace;
+    color: var(--pi-decimal);
+    position: absolute;
+    left: calc(var( --pi-size) * 1.25);
+    letter-spacing: calc(.45 * var( --pi-size));
+
+    animation: pi 10s cubic-bezier(1, 0, 0, 1) infinite alternate;
+}
+.art#pi div::before::first-letter {
+    color: red;
+}
+.art#pi div::after {
+    content: "";
+    height: var(--pi-height);
+    width: var(--pi-width);
+    position: absolute;
+    margin-left: -50%;
+    background: linear-gradient(90deg, var(--pi-background), transparent 30%, transparent 70%, var(--pi-background));
+}
+@keyframes pi {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(-99.1%);
+        opacity: 30%;
+    }
+}
+
+/* ##### October 24, 2021 - Metro ##### */
+.art#metro2 {
+    --metro-primary: firebrick;
+    --metro-secondary: white;
+
+    filter: drop-shadow(0 0 60px rgba(50, 50, 0, 0.5));
+}
+.art#metro2 div {
+    height: 140px;
+    width: 121px;
+    margin-top: -70px;
+    margin-left: -60.5px;
+
+    --metro-tile: 4.762%;
+
+    --metro-circle-1: var(--metro-tile);
+    --metro-circle-2: calc(var(--metro-circle-1) + var(--metro-tile));
+    --metro-circle-3: calc(var(--metro-circle-2) + 4 * var(--metro-tile));
+    --metro-circle-4: calc(var(--metro-circle-3) + 2 * var(--metro-tile));
+    --metro-circle-5: calc(var(--metro-circle-4) + 3 * var(--metro-tile));
+    --metro-circle-6: calc(var(--metro-circle-5) + 3 * var(--metro-tile));
+    --metro-circle-7: calc(var(--metro-circle-6) + 2 * var(--metro-tile));
+    --metro-circle-8: calc(var(--metro-circle-7) + 4 * var(--metro-tile));
+    --metro-circle-9: calc(var(--metro-circle-8) + var(--metro-tile));
+
+    background: linear-gradient(
+        270deg,
+        var(--metro-primary) var(--metro-circle-1),
+        var(--metro-secondary) var(--metro-circle-1), var(--metro-secondary) var(--metro-circle-2),
+        var(--metro-primary) var(--metro-circle-2), var(--metro-primary) var(--metro-circle-3),
+        var(--metro-secondary) var(--metro-circle-3), var(--metro-secondary) var(--metro-circle-4),
+        var(--metro-primary) var(--metro-circle-4), var(--metro-primary) var(--metro-circle-5),
+        var(--metro-secondary) var(--metro-circle-5), var(--metro-secondary) var(--metro-circle-6),
+        var(--metro-primary) var(--metro-circle-6), var(--metro-primary) var(--metro-circle-7),
+        var(--metro-secondary) var(--metro-circle-7), var(--metro-secondary) var(--metro-circle-8),
+        var(--metro-primary) var(--metro-circle-8)
+    );
+/* 
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 50%); */
+}
+.art#metro2 div::before,
+.art#metro2 div::after {
+    content: "";
+    position: inherit;
+    background: inherit;
+    height: inherit;
+    width: inherit;
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+}
+
+.art#metro2 div::after {
+    transform: rotate(180deg);
+}
+/* ##### October 24, 2021 - Metro ##### */
+.art#metro {
+    --metro-primary: firebrick;
+    --metro-secondary: white;
+
+    filter: drop-shadow(0 0 60px rgba(50, 50, 0, 0.5));
+}
+.art#metro div {
+    height: 240px;
+    width: 208px;
+    margin-top: -120px;
+    margin-left: -104px;
+
+    --metro-circle-1: 1;
+    --metro-circle-2: calc(var(--metro-circle-1) + 1);
+    --metro-circle-3: calc(var(--metro-circle-2) + 4);
+    --metro-circle-4: calc(var(--metro-circle-3) + 2);
+    --metro-circle-5: calc(var(--metro-circle-4) + 3);
+    --metro-circle-6: calc(var(--metro-circle-5) + 3);
+    --metro-circle-7: calc(var(--metro-circle-6) + 2);
+    --metro-circle-8: calc(var(--metro-circle-7) + 4);
+    --metro-circle-9: calc(var(--metro-circle-8) + 1);
+
+    --metro-tile-h: calc(50/var(--metro-circle-9))%;
+    --metro-tile-d: calc(.866 * var(--metro-tile-h));
+
+    --metro-circle-1-h: calc(var(--metro-circle-1) * var(--metro-tile-h));
+    --metro-circle-2-h: calc(var(--metro-circle-2) * var(--metro-tile-h));
+    --metro-circle-3-h: calc(var(--metro-circle-3) * var(--metro-tile-h));
+    --metro-circle-4-h: calc(var(--metro-circle-4) * var(--metro-tile-h));
+    --metro-circle-5-h: calc(var(--metro-circle-5) * var(--metro-tile-h));
+    --metro-circle-6-h: calc(var(--metro-circle-6) * var(--metro-tile-h));
+    --metro-circle-7-h: calc(var(--metro-circle-7) * var(--metro-tile-h));
+    --metro-circle-8-h: calc(var(--metro-circle-8) * var(--metro-tile-h));
+    --metro-circle-9-h: calc(var(--metro-circle-9) * var(--metro-tile-h));
+
+    --metro-circle-1-d: calc(var(--metro-circle-1) * var(--metro-tile-d));
+    --metro-circle-2-d: calc(var(--metro-circle-2) * var(--metro-tile-d));
+    --metro-circle-3-d: calc(var(--metro-circle-3) * var(--metro-tile-d));
+    --metro-circle-4-d: calc(var(--metro-circle-4) * var(--metro-tile-d));
+    --metro-circle-5-d: calc(var(--metro-circle-5) * var(--metro-tile-d));
+    --metro-circle-6-d: calc(var(--metro-circle-6) * var(--metro-tile-d));
+    --metro-circle-7-d: calc(var(--metro-circle-7) * var(--metro-tile-d));
+    --metro-circle-8-d: calc(var(--metro-circle-8) * var(--metro-tile-d));
+    --metro-circle-9-d: calc(var(--metro-circle-9) * var(--metro-tile-d));
+
+    background:
+        /* linear-gradient(330deg, var(--metro-secondary) 22%, transparent 22%, transparent 78%, var(--metro-secondary) 78%),
+        linear-gradient(210deg, var(--metro-secondary) 22%, transparent 22%, transparent 78%, var(--metro-secondary) 78%),
+        linear-gradient(90deg, var(--metro-secondary) 10%, transparent 10%, transparent 90%, var(--metro-secondary) 90%), */
+
+        linear-gradient(330deg, var(--metro-primary) 18%, transparent 16.75%, transparent 83.25%, var(--metro-primary) 83.25%),
+        linear-gradient(210deg, var(--metro-primary) 16.75%, transparent 16.75%, transparent 83.25%, var(--metro-primary) 83.25%),
+        linear-gradient(90deg, var(--metro-primary) 2.5%, transparent 2.5%, transparent 97.5%, var(--metro-primary) 97.5%),
+
+        
+
+        linear-gradient(330deg, var(--metro-secondary) 22%, transparent 22%, transparent 78%, var(--metro-secondary) 78%),
+        linear-gradient(210deg, var(--metro-secondary) 22%, transparent 22%, transparent 78%, var(--metro-secondary) 78%),
+        linear-gradient(90deg, var(--metro-secondary) 10%, transparent 10%, transparent 90%, var(--metro-secondary) 90%),
+
+        linear-gradient(330deg, var(--metro-primary) 25.5%, transparent 25.5%, transparent 74.5%, var(--metro-primary) 74.5%),
+        linear-gradient(210deg, var(--metro-primary) 25.5%, transparent 25.5%, transparent 74.5%, var(--metro-primary) 74.5%),
+        linear-gradient(90deg, var(--metro-primary) 15%, transparent 15%, transparent 85%, var(--metro-primary) 85%),
+
+        linear-gradient(330deg, var(--metro-secondary) 30.75%, transparent 30.75%, transparent 69.25%, var(--metro-secondary) 69.25%),
+        linear-gradient(210deg, var(--metro-secondary) 30.75%, transparent 30.75%, transparent 69.25%, var(--metro-secondary) 69.25%),
+        linear-gradient(90deg, var(--metro-secondary) 22.5%, transparent 22.5%, transparent 77.5%, var(--metro-secondary) 77.5%),
+
+        linear-gradient(330deg, var(--metro-primary) 36%, transparent 36%, transparent 64%, var(--metro-primary) 64%),
+        linear-gradient(210deg, var(--metro-primary) 36%, transparent 36%, transparent 64%, var(--metro-primary) 64%),
+        linear-gradient(90deg, var(--metro-primary) 30%, transparent 30%, transparent 70%, var(--metro-primary) 70%),
+
+        linear-gradient(330deg, var(--metro-secondary) 39.5%, transparent 39.5%, transparent 60.5%, var(--metro-secondary) 60.5%),
+        linear-gradient(210deg, var(--metro-secondary) 39.5%, transparent 39.5%, transparent 60.5%, var(--metro-secondary) 60.5%),
+        linear-gradient(90deg, var(--metro-secondary) 35%, transparent 35%, transparent 65%, var(--metro-secondary) 65%),
+
+        linear-gradient(330deg, var(--metro-primary) 46.5%, transparent 46.5%, transparent 53.5%, var(--metro-primary) 53.5%),
+        linear-gradient(210deg, var(--metro-primary) 46.5%, transparent 46.5%, transparent 53.5%, var(--metro-primary) 53.5%),
+        linear-gradient(90deg, var(--metro-primary) 45%, transparent 45%, transparent 55%, var(--metro-primary) 55%),
+
+        linear-gradient(330deg, var(--metro-secondary) 48.25%, transparent 48.25%, transparent 51.75%, var(--metro-secondary) 51.75%),
+        linear-gradient(210deg, var(--metro-secondary) 48.25%, transparent 48.25%, transparent 51.75%, var(--metro-secondary) 51.75%),
+        linear-gradient(90deg, var(--metro-secondary) 47.5%, transparent 47.5%, transparent 52.5%, var(--metro-secondary) 52.5%),
+        var(--metro-primary);
+
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* ##### May 24, 2021 - Caffetiera ##### */
+.art#caffetiera {
+    --caffetiera-red: #f00;
+}
+.art#caffetiera div {
+    height: 200px;
+    width: 240px;
+    margin-top: -100px;
+    margin-left: -120px;
+
+    background:
+    conic-gradient(at 50% -150%, red 47.75%, blue 37.5%, blue 50%, green 50%, green 75%, yellow 75%),
+    var(--caffetiera-red);
+
+
+    clip-path: polygon(80% 0, 100% 85%, 80% 95%, 50% 100%, 20% 95%, 0 85%, 20% 0);
+}
+
+/* ##### May 17, 2021 - Guillotine ##### */
+.art#guillotine {
+    --guillotine-background: #931817;
+    --guillotine-wood-light: #aa8855;
+    --guillotine-wood-dark: #816842;
+    --guillotine-blade-light: #bfbfbf;
+    --guillotine-blade-dark: #999;
+
+    --guillotine-size: 250px;
+
+    background: var(--guillotine-background);
+}
+.art#guillotine div {
+    height: var(--guillotine-size);
+    width: calc(var(--guillotine-size)*.5);
+
+    margin-top: calc(var(--guillotine-size) * -.5);
+    margin-left: calc(var(--guillotine-size) * -.25);
+
+    background:
+    linear-gradient(
+        transparent 2%, var(--guillotine-wood-dark) 2%, var(--guillotine-wood-dark) 7%, transparent 7%,
+        transparent 97%, var(--guillotine-wood-dark) 97%
+    ),
+    linear-gradient(
+        90deg,
+        var(--guillotine-background) 5%,
+        var(--guillotine-wood-dark) 5%, var(--guillotine-wood-dark) 15%,
+        transparent 15%, transparent 85%,
+        var(--guillotine-wood-dark) 85%, var(--guillotine-wood-dark) 95%,
+        var(--guillotine-background) 95%
+    ),
+    radial-gradient(circle at center 81%, var(--guillotine-background) 7.5%, transparent 7.5%),
+    linear-gradient(
+        transparent 70%,
+        var(--guillotine-wood-light) 70%, var(--guillotine-wood-light) 80.5%,
+        transparent 80.5%, transparent 81.5%,
+        var(--guillotine-wood-light) 81.5%, var(--guillotine-wood-light) 92%,
+        transparent 92%
+    );
+}
+.art#guillotine div::before,
+.art#guillotine div::after {
+    content: "";
+    position: inherit;
+
+    width: calc(var(--guillotine-size)*.35);
+    margin-left: calc(var(--guillotine-size)*-.175);
+}
+.art#guillotine div::before {
+    height: calc(var(--guillotine-size)*.25);
+    margin-top: calc(var(--guillotine-size)*.07);
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent 30%,
+        var(--guillotine-blade-dark) 30%, var(--guillotine-blade-dark) 33%,
+        transparent 33%, transparent 67%,
+        var(--guillotine-blade-dark) 67%, var(--guillotine-blade-dark) 70%,
+        transparent 70%
+    );
+    animation: guillotine-cables 3s infinite linear both;
+}
+.art#guillotine div::after {
+    height: calc(var(--guillotine-size)*.25);
+
+    background:
+    linear-gradient(
+        -20deg,
+        transparent 33%,
+        var(--guillotine-blade-light) 33%, var(--guillotine-blade-light) 43%,
+        var(--guillotine-blade-dark) 43%
+    );
+    animation: guillotine-blade 3s infinite linear both;
+}
+@keyframes guillotine-cables {
+    0% {
+        height: 0px;
+    }
+    33% {
+        height: calc(var(--guillotine-size)*.65);
+    }
+    100% {
+        height: 0px;
+    }
+}
+@keyframes guillotine-blade {
+    0% {
+        margin-top: calc(var(--guillotine-size)*.07);
+    }
+    33% {
+        margin-top: calc(var(--guillotine-size)*.72);
+    }
+    100% {
+        margin-top: calc(var(--guillotine-size)*.07);
+    }
 }
 
 /* ##### December 25, 2020 - Christmas sock ##### */
@@ -106,6 +436,17 @@
     animation: zodiac-sky infinite linear var(--zodiac-duration);
 }
 .art#zodiac-3 div::after {
+    content: "";
+    height: calc(var(--zodiac-size)*.0045);
+    width: calc(var(--zodiac-size)*.0045);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+
+    animation: zodiac-shooting-stars infinite ease-in-out var(--zodiac-duration);
+}
+.art#zodiac-3 div::before {
     content: "";
     height: calc(var(--zodiac-size)*.0045);
     width: calc(var(--zodiac-size)*.0045);

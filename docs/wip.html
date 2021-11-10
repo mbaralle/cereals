@@ -96,6 +96,33 @@
         Work in progress
         <a href="/">Go back</a>
       </div>
+      <!-- November 4, 2021 - pi -->
+      <div class="art wide" id="pi">
+        <div></div>
+      </div>
+      <!-- October 24, 2021 - Metro -->
+      <div class="art wide" id="metro2">
+        <div></div>
+      </div>
+      <!-- October 24, 2021 - Metro -->
+      <div class="art wide" id="metro">
+        <div></div>
+      </div>
+      <!-- May 24, 2021 - Caffetiera -->
+      <div class="art wide" id="caffetiera">
+        <div></div>
+      </div>
+      <!-- May 17, 2021 - Guillotine -->
+      <div class="art wide" id="guillotine">
+        <a
+          href="https://www.amnesty.org/en/what-we-do/death-penalty/"
+          title="Amnesty International about death penalty"
+          target="_blank"
+          rel="noopener"
+        >
+          <div></div>
+        </a>
+      </div>
       <!-- December 25, 2020 - Christmas sock -->
       <div class="art wide" id="christmas-sock">
         <div></div>
@@ -124,10 +151,6 @@
       [].forEach.call(this.document.getElementsByClassName("art"), (art) =>
         art.after(wipBanner.cloneNode(true))
       );
-
-      alert(`userAgent: ${navigator.userAgent}\nappName: ${navigator.appName}\nvendor: ${navigator.vendor}\nproduct: ${navigator.product}`);
-      if(!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/))
-        alert("Consider using a modern browser (Chrome, Edge, Firefox, Opera...) to have the best experience on this website 🎨");
     </script>
   </body>
 </html>
