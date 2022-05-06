@@ -40,21 +40,12 @@ header {
 header h3 {
     animation: title-animation 4s linear infinite;
     padding: 5px;
-    font-size: 200%;
+    font-size: 300%;
 }
 
-header h3 svg {
-    height: 64px;
-    width: 64px;
-    vertical-align: middle;
-}
-
-header h3 svg path#rect {
-    animation: logo-rect-animation 4s linear infinite;
-}
-
-header h3 svg path#letter {
-    animation: logo-letter-animation 4s linear infinite;
+header h3 a {
+    text-decoration: none;
+    color: inherit;
 }
 
 @keyframes title-animation {
@@ -64,23 +55,6 @@ header h3 svg path#letter {
     75%{ color: salmon; }
     100%{ color: violet; }
 }
-
-@keyframes logo-rect-animation {
-    0%{ stroke: violet; }
-    25%{ stroke: skyblue; }
-    50%{ stroke: khaki; }
-    75%{ stroke: salmon; }
-    100%{ stroke: violet; }
-}
-
-@keyframes logo-letter-animation {
-    0%{ fill: violet; }
-    25%{ fill: skyblue; }
-    50%{ fill: khaki; }
-    75%{ fill: salmon; }
-    100%{ fill: violet; }
-}
-
 
 #menu-button {
     height: 1.3em;
