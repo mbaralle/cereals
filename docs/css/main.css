@@ -38,22 +38,14 @@ header {
 }
 
 header h3 {
-    animation: title-animation 4s linear infinite;
     padding: 5px;
     font-size: 300%;
+    text-shadow: 0 0 .5em #333;
 }
 
 header h3 a {
     text-decoration: none;
     color: inherit;
-}
-
-@keyframes title-animation {
-    0%{ color: violet; }
-    25%{ color: skyblue; }
-    50%{ color: khaki; }
-    75%{ color: salmon; }
-    100%{ color: violet; }
 }
 
 #menu-button {
