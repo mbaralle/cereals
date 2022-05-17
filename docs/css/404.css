@@ -12,18 +12,6 @@ body {
 header {
     background: none;
 }
-header h3,
-header h3 svg path#rect,
-header h3 svg path#letter {
-    animation: none;
-}
-header h3 svg path#rect {
-    fill: none;
-    stroke: white;
-}
-header h3 svg path#letter {
-    fill: white;
-}
 
 main {
     font-family: sans-serif;
@@ -60,9 +48,12 @@ main {
     line-height: 50px;
     
     
-    font-style: italic;
     color: greenyellow;
-    background-color: black;
+    letter-spacing: 1px;
+    background-color: #0006;
+
+    transition: .3s;
+    border-radius: 3px;
 }
 #links-container div:hover {
     opacity: .8;
