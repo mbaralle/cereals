@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Martel Sans';
+    font-weight: 200;
+    src: url("/fonts/MartelSans-ExtraLight.ttf");
+}
+@font-face {
+    font-family: 'Average';
+    font-weight: 400;
+    src: url("/fonts/Average-Regular.ttf");
+}
+
 /* ##### October 17, 2020 - SKIN ##### */
 .art#skin {
     background: black;

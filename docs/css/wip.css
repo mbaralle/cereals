@@ -9,6 +9,12 @@
 @import "art/wip/thanksgiving.css";
 @import "art/wip/zodiac.css";
 
+@font-face {
+    font-family: 'Advent Pro';
+    font-weight: 700;
+    src: url("/fonts/AdventPro-Bold.ttf");
+}
+
 .wip-banner {
     width: 100%;
     background-color: gold;
