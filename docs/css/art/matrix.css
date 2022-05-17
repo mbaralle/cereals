@@ -1,0 +1,114 @@
+/* ##### June 18, 2020 - Matrix ##### */
+.art#matrix {
+    background: linear-gradient(47deg, rgb(79, 93, 116) 20%, rgb(149, 162, 49) 98%);
+}
+.art#matrix div {
+    width: 160px;
+    height: 90px;
+    margin-top: -52.5px;
+    margin-left: -87.5px;
+    border: 7px solid #333;
+    border-radius: 3px;
+    
+    animation: matrixFlare 2.5s infinite, matrixBg .5s infinite;
+}
+.art#matrix div::before,
+.art#matrix div::after {
+    content: "";
+    position: inherit;
+    
+    margin-left: -102px;
+    margin-top: 62px;
+    border-radius: 5px;
+    height: 104px;
+    width: 204px;
+    transform: perspective(250px) rotateX(65deg);
+}
+.art#matrix div::after {
+    background: radial-gradient(circle at 93% 4%, white 0.1%, transparent .5%);
+    animation: matrixPower 1.5s infinite;
+}
+.art#matrix div::before {
+    background-image:
+    radial-gradient(circle at 37.5% 41%, transparent 0%, rgba(0,0,0,.3) 1.5%, transparent 1.5%),
+    radial-gradient(circle at 37.5% 41%, darkred 1.5%, transparent 1.5%),
+    linear-gradient(90deg,
+    #222 3.7%,
+    transparent 3.7%, transparent 96.3%,
+    #222 96.3%),
+    linear-gradient(
+    #222 2.3%,
+    transparent 2.3%, transparent 6.5%,
+    #222 6.5%, #222 8.8%,
+    grey 8.8%, black 11.1%,
+    
+    transparent 11.1%, transparent 15.5%,
+    grey 15.5%, black 17.8%,
+    
+    transparent 17.8%, transparent 23.7%,
+    grey 23.7%, black 26%,
+    
+    transparent 26%, transparent 31.9%,
+    grey 31.9%, black 34.2%,
+    
+    transparent 34.2%, transparent 40.1%,
+    grey 40.1%, black 42.4%,
+    
+    transparent 42.4%, transparent 48.3%,
+    grey 48.3%, black 50.6%,
+    
+    transparent 50.6%, transparent 56.5%,
+    grey 56.5%, black 58.8%,
+    
+    #222 58.8%, #222 61.1%,
+    transparent 61.1%, transparent 97.7%,
+    #222 97.7%),
+    linear-gradient(#333 7%, #272727 7%, #272727 60%, transparent 60%),
+    linear-gradient(90deg, #222 24.1%, transparent 24.1%, transparent 50%, #222 50%),
+    linear-gradient(
+    transparent 67%, darkred 67%, black 68%, #333 68%,
+    #333 92%, black 93%, transparent 93%),
+    radial-gradient(circle at 37.5% 63%, transparent 3%, black 3%, black 3.3%, transparent 3.3%),
+    linear-gradient(#333 67%, transparent 67%),
+    linear-gradient(90deg, transparent 34.7%, black 34.7%, black 35%, transparent 35%, transparent 40%, black 40%, black 40.3%, transparent 40.3%),
+    linear-gradient(transparent 93%, #333 93%);
+}
+@keyframes matrixFlare {
+    0% {
+        box-shadow: inset 0px 20px 300px 0px rgba(0,100,0,.3);
+    }
+    50% {
+        box-shadow: inset 20px 0px 300px 0px rgba(0,100,0,.4);
+    }
+    100% {
+        box-shadow: inset 0px 20px 300px 0px rgba(0,100,0,.3);
+    }
+}
+@keyframes matrixPower {
+    0% {
+        background: radial-gradient(circle at 93% 4%, white 0.1%, transparent .5%);
+    }
+    50% {
+        background: none;
+    }
+    100% {
+        background: radial-gradient(circle at 93% 4%, white 0.1%, transparent .5%);
+    }
+}
+@keyframes matrixBg {
+    0% {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='2' y='2'>6ds54r5 6f33f564f56x4b6</tspan><tspan x='10' y='0'>g4t6848fd4 v6f 5d46g4</tspan><tspan x='18' y='2'>tb6g46468 r4fd5grd4</tspan><tspan x='26' y='0'>4768fd464s6re4 dsf64s55</tspan><tspan x='34' y='2'>4tr 5yg4564fdsf e001</tspan><tspan x='42' y='0'>00110011 00100110</tspan><tspan x='50' y='2'>010111111 1000110156</tspan><tspan x='58' y='0'>8t5d4gf 5s3d456465</tspan><tspan x='66' y='2'>4 346546534456 854ytu</tspan><tspan x='74' y='0'>fglfjqiezruyk gtr6d4g</tspan><tspan x='82' y='2'>56ers3 6ds54r5 6f33f</tspan><tspan x='90' y='0'>564f56x4b6 g4t6848fd4</tspan><tspan x='98' y='2'>v6f 5d46g4 tb6g46468</tspan><tspan x='106' y='0'>r4fd5grd4 4768fd464s6</tspan><tspan x='114' y='2'>re4 dsf64s55 4tr 5yg45</tspan><tspan x='122' y='0'>64fdsf e00100110011</tspan><tspan x='130' y='2'>00100110 010111111</tspan><tspan x='138' y='0'>10001101568t5d4gf</tspan><tspan x='146' y='2'>5s3d456465 4 6ds54r5</tspan><tspan x='154' y='0'>6f33f564f56x4b6 g4t68</tspan></text></svg>") black;
+    }
+    25% {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='0' y='0'>Why are you reading</tspan><tspan x='8' y='2'>this? You know you're</tspan><tspan x='16' y='0'>not supposed to read</tspan><tspan x='24' y='2'>this, right? I mean,</tspan><tspan x='32' y='0'>you can if you want</tspan><tspan x='40' y='2'>to, but it's completely</tspan><tspan x='48' y='0'>useless. Unless you've</tspan><tspan x='56' y='2'>got plenty of time,</tspan><tspan x='64' y='0'>say during a pandemic</tspan><tspan x='72' y='2'>or a lockdown ...</tspan><tspan x='80' y='0'>Know what I'm talking</tspan><tspan x='88' y='2'>about eh? That's how</tspan><tspan x='96' y='0'>I started this project.</tspan><tspan x='104' y='2'>Spring 2020, I woke</tspan><tspan x='112' y='0'>up one morning and</tspan><tspan x='120' y='2'>thought  \"Today I start</tspan><tspan x='128' y='0'>a CSS project! \",</tspan><tspan x='136' y='2'>and that was it.</tspan><tspan x='144' y='0'>One more sentence</tspan><tspan x='152' y='2'>and I'm done with</tspan><tspan x='160' y='0'>this nonsense.</tspan></text></svg>") black;
+    }
+    50% {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='6' y='2'>¯\\_(ツ)_/¯ (╯°□°）╯︵ ┻━┻</tspan><tspan x='14' y='0'>(¬_¬ ) (❁´◡`❁) (●'◡'●)</tspan><tspan x='22' y='2'>╰(*°▽°*)╯ ☆*: .｡.</tspan><tspan x='30' y='0'>o(≧▽≦)o  .｡.:*☆(*/ω＼*)</tspan><tspan x='38' y='2'>(^///^) :-D ^_^ :-)</tspan><tspan x='46' y='0'>ᓚᘏᗢ (┬┬﹏┬┬) ಥ_ಥ</tspan><tspan x='54' y='2'>༼ つ ◕_◕ ༽つ ( ´･･)</tspan><tspan x='62' y='0'>ﾉ(._.`) ಠ_ಠ (ˉ﹃ˉ)</tspan><tspan x='70' y='2'>(•_•) :-( ( •_•)</tspan><tspan x='78' y='0'>>⌐■-■ ;-) :-P (⌐■_■)</tspan><tspan x='86' y='2'>(☞ﾟヮﾟ)☞ ☜(ﾟヮﾟ☜) (¬‿¬)</tspan><tspan x='94' y='0'>(T_T) (⊙_⊙;) ¯\\_(ツ)_/¯</tspan><tspan x='102' y='2'>(╯°□°）╯︵ ┻━┻ (¬_¬ )</tspan><tspan x='110' y='0'>(❁´◡`❁) (●'◡'●) ╰(*°▽°*)╯</tspan><tspan x='118' y='2'>☆*: .｡.  o(≧▽≦)o  .｡.:*☆(*/ω＼*)</tspan><tspan x='126' y='0'>(^///^) :-D ^_^ :-)</tspan><tspan x='134' y='2'>ᓚᘏᗢ (┬┬﹏┬┬) ಥ_ಥ ༼ つ ◕_◕ ༽つ</tspan><tspan x='142' y='0'>( ´･･) ﾉ(._.`) ಠ_ಠ</tspan><tspan x='150' y='2'>(ˉ﹃ˉ) (•_•) :-( ( •_•)</tspan><tspan x='158' y='0'>>⌐■-■ ;-) :-P (⌐■_■)</tspan></text></svg>") black;
+    }
+    75% {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='4' y='0'>10101010010 1010110</tspan><tspan x='12' y='2'>0110010 0010010 0010</tspan><tspan x='20' y='0'>010 100 010101010101</tspan><tspan x='28' y='2'>1010101 10101 01011</tspan><tspan x='36' y='0'>110101010 101010101011111</tspan><tspan x='44' y='2'>001000000 100 10</tspan><tspan x='52' y='0'>101111011 10110101011011</tspan><tspan x='60' y='2'>1111010101010 1101010</tspan><tspan x='68' y='0'>001100110110 0101001</tspan><tspan x='76' y='2'>0111 000101110101</tspan><tspan x='84' y='0'>010101001 010101001</tspan><tspan x='92' y='2'>001101010 01010101</tspan><tspan x='100' y='0'>10 01 011101010 10101</tspan><tspan x='108' y='2'>010 1011111 0101010</tspan><tspan x='116' y='0'>0111010011 0101010100</tspan><tspan x='124' y='2'>010101010 0100101010010101</tspan><tspan x='132' y='0'>011010101010101 0100</tspan><tspan x='140' y='2'>1010 010110 10101010</tspan><tspan x='148' y='0'>010 1010110 0110010</tspan><tspan x='156' y='2'>0010010 0010 11101</tspan></text></svg>") black;
+    }
+    100% {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='90px' width='160px'><text fill='rgb(133, 182, 74)' font-size='5px' style='text-orientation: upright; writing-mode: vertical-lr;'><tspan x='2' y='2'>6ds54r5 6f33f564f56x4b6</tspan><tspan x='10' y='0'>g4t6848fd4 v6f 5d46g4</tspan><tspan x='18' y='2'>tb6g46468 r4fd5grd4</tspan><tspan x='26' y='0'>4768fd464s6re4 dsf64s55</tspan><tspan x='34' y='2'>4tr 5yg4564fdsf e001</tspan><tspan x='42' y='0'>00110011 00100110</tspan><tspan x='50' y='2'>010111111 1000110156</tspan><tspan x='58' y='0'>8t5d4gf 5s3d456465</tspan><tspan x='66' y='2'>4 346546534456 854ytu</tspan><tspan x='74' y='0'>fglfjqiezruyk gtr6d4g</tspan><tspan x='82' y='2'>56ers3 6ds54r5 6f33f</tspan><tspan x='90' y='0'>564f56x4b6 g4t6848fd4</tspan><tspan x='98' y='2'>v6f 5d46g4 tb6g46468</tspan><tspan x='106' y='0'>r4fd5grd4 4768fd464s6</tspan><tspan x='114' y='2'>re4 dsf64s55 4tr 5yg45</tspan><tspan x='122' y='0'>64fdsf e00100110011</tspan><tspan x='130' y='2'>00100110 010111111</tspan><tspan x='138' y='0'>10001101568t5d4gf</tspan><tspan x='146' y='2'>5s3d456465 4 6ds54r5</tspan><tspan x='154' y='0'>6f33f564f56x4b6 g4t68</tspan></text></svg>") black;
+    }
+}

@@ -1,0 +1,112 @@
+/* ##### April 10, 2021 - Connect 4 ##### */
+.art#connect-4 {
+    --connect-4-size: 40px;
+    --connect-4-border: calc(var(--connect-4-size)*.1);
+
+    --connect-4-blue: #1D62D9;
+    
+    --connect-4-win: #ffffff;
+    --connect-4-red: #E12625;
+    --connect-4-yellow: #F0C714;
+    --connect-4-token-win: 0 calc(var(--connect-4-size)*.375) var(--connect-4-win);
+    --connect-4-token-red: 0 calc(var(--connect-4-size)*.375) var(--connect-4-red);
+    --connect-4-token-yellow: 0 calc(var(--connect-4-size)*.375) var(--connect-4-yellow);
+
+    --connect-4-tokens-d-1: calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-2: var(--connect-4-tokens-d-1), calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-3: var(--connect-4-tokens-d-2), calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-4: var(--connect-4-tokens-d-3), calc(var(--connect-4-size)*1) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-5: var(--connect-4-tokens-d-4), calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-6: var(--connect-4-tokens-d-5), calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-7: var(--connect-4-tokens-d-6), calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-8: var(--connect-4-tokens-d-7), calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*1.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-9: var(--connect-4-tokens-d-8), calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-10: var(--connect-4-tokens-d-9), calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-11: var(--connect-4-tokens-d-10), calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-12: var(--connect-4-tokens-d-11), calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*1.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-13: var(--connect-4-tokens-d-12), calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*.5) var(--connect-4-token-red);
+    --connect-4-tokens-d-14: var(--connect-4-tokens-d-13), calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-.5) var(--connect-4-token-yellow);
+    --connect-4-tokens-d-15: var(--connect-4-tokens-d-14), calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-.5) var(--connect-4-token-red);
+
+    --connect-4-tokens-u-1: calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-10) var(--connect-4-token-red);
+    --connect-4-tokens-u-2: calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-1);
+    --connect-4-tokens-u-3: calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-2);
+    --connect-4-tokens-u-4: calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-3);
+    --connect-4-tokens-u-5: calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-4);
+    --connect-4-tokens-u-6: calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-5);
+    --connect-4-tokens-u-7: calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-6);
+    --connect-4-tokens-u-8: calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-7);
+    --connect-4-tokens-u-9: calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-8);
+    --connect-4-tokens-u-10: calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-9);
+    --connect-4-tokens-u-11: calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-10);
+    --connect-4-tokens-u-12: calc(var(--connect-4-size)*1) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-11);
+    --connect-4-tokens-u-13: calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-12);
+    --connect-4-tokens-u-14: calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*-10) var(--connect-4-token-yellow), var(--connect-4-tokens-u-13);
+    --connect-4-tokens-u-15: calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*-10) var(--connect-4-token-red), var(--connect-4-tokens-u-14);
+
+    --connect-4-tokens-win:
+        calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*2.5) var(--connect-4-token-win),
+        calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red),
+        calc(var(--connect-4-size)*1) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*2.5) var(--connect-4-token-red),
+        calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*2.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red),
+        calc(var(--connect-4-size)*3) calc(var(--connect-4-size)*1.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*1.5) var(--connect-4-token-red),
+        calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-1) calc(var(--connect-4-size)*1.5) var(--connect-4-token-win),
+        calc(var(--connect-4-size)*0) calc(var(--connect-4-size)*1.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*.5) var(--connect-4-token-win),
+        calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-.5) var(--connect-4-token-yellow),
+        calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-.5) var(--connect-4-token-win);
+
+    /* background: #434343; */
+}
+.art#connect-4 div {
+    height: calc(var(--connect-4-size)*.1);
+    width: calc(var(--connect-4-size)*.1);
+    margin-top: calc(var(--connect-4-size)*-.05);
+    margin-left: calc(var(--connect-4-size)*-.05);
+    border-radius: 50%;
+
+    animation: connect-4-game 10s infinite linear;
+}
+.art#connect-4 div::before {
+    content: "";
+    position: inherit;
+    height: calc(var(--connect-4-size)*6);
+    width: calc(var(--connect-4-size)*7);
+
+    margin-top: calc(var(--connect-4-size)*-3.05);
+    margin-left: calc(var(--connect-4-size)*-3.6);
+
+    background: radial-gradient(circle, transparent 55%, var(--connect-4-blue) 55%);
+    background-size: var(--connect-4-size) var(--connect-4-size);
+
+    border: var(--connect-4-border) solid var(--connect-4-blue);
+    border-radius: calc(var(--connect-4-size)*.2);
+}
+@keyframes connect-4-game {
+    0%{ box-shadow: var(--connect-4-tokens-u-15); }
+    6%{ box-shadow: var(--connect-4-tokens-d-1), var(--connect-4-tokens-u-14); }
+    12%{ box-shadow: var(--connect-4-tokens-d-2), var(--connect-4-tokens-u-13); }
+    18%{ box-shadow: var(--connect-4-tokens-d-3), var(--connect-4-tokens-u-12); }
+    24%{ box-shadow: var(--connect-4-tokens-d-4), var(--connect-4-tokens-u-11); }
+    30%{ box-shadow: var(--connect-4-tokens-d-5), var(--connect-4-tokens-u-10); }
+    36%{ box-shadow: var(--connect-4-tokens-d-6), var(--connect-4-tokens-u-9); }
+    42%{ box-shadow: var(--connect-4-tokens-d-7), var(--connect-4-tokens-u-8); }
+    48%{ box-shadow: var(--connect-4-tokens-d-8), var(--connect-4-tokens-u-7); }
+    54%{ box-shadow: var(--connect-4-tokens-d-9), var(--connect-4-tokens-u-6); }
+    60%{ box-shadow: var(--connect-4-tokens-d-10), var(--connect-4-tokens-u-5); }
+    66%{ box-shadow: var(--connect-4-tokens-d-11), var(--connect-4-tokens-u-4); }
+    72%{ box-shadow: var(--connect-4-tokens-d-12), var(--connect-4-tokens-u-3); }
+    78%{ box-shadow: var(--connect-4-tokens-d-13), var(--connect-4-tokens-u-2); }
+    84%{ box-shadow: var(--connect-4-tokens-d-14), var(--connect-4-tokens-u-1); }
+    90%{ box-shadow: var(--connect-4-tokens-d-15); }
+    91.25%{ box-shadow: var(--connect-4-tokens-win); }
+    92.5% { box-shadow: var(--connect-4-tokens-d-15); }
+    93.75% { box-shadow: var(--connect-4-tokens-win); }
+    95% { box-shadow: var(--connect-4-tokens-d-15); }
+    100%{ box-shadow: var(--connect-4-tokens-u-15); }
+}

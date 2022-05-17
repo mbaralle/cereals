@@ -1,0 +1,74 @@
+/* ##### May 22, 2021 - Coffee to go ##### */
+.art#coffee-to-go {
+    --coffee-to-go-background: #fedafe;
+    --coffee-to-go-straw: #22a37d;
+    --coffee-to-go-straw-shadow: #1c8767;
+    --coffee-to-go-cup: #e7c192;
+    --coffee-to-go-cup-light: #fadcbf;
+    --coffee-to-go-cream: #fff;
+    --coffee-to-go-lid: #ddf8;
+    --coffee-to-go-shadow: #0002;
+
+    --coffee-to-go-size: 275px;
+    --coffee-to-go-border-size: calc(var(--coffee-to-go-size) * .01);
+    --coffee-to-go-border-color: #555;
+    --coffee-to-go-border: var(--coffee-to-go-border-size) solid var(--coffee-to-go-border-color);
+
+    background: var(--coffee-to-go-background);
+}
+.art#coffee-to-go div {
+    height: var(--coffee-to-go-size);
+    width: calc(var(--coffee-to-go-size)*.03);
+
+    margin-top: calc(var(--coffee-to-go-size) * -.5 - var(--coffee-to-go-border-size));
+    margin-left: calc(var(--coffee-to-go-size) * -.015 - var(--coffee-to-go-border-size));
+
+    background: linear-gradient(90deg, var(--coffee-to-go-straw) 60%, var(--coffee-to-go-straw-shadow) 60%);
+
+    border: var(--coffee-to-go-border);
+    border-radius: var(--coffee-to-go-border-size);
+}
+.art#coffee-to-go div::before,
+.art#coffee-to-go div::after {
+    content: "";
+    position: inherit;
+}
+.art#coffee-to-go div::before {
+    --size: calc(var(--coffee-to-go-size) * .5);
+
+    height: calc(var(--size) *1.25);
+    width: var(--size);
+    margin-top: calc(var(--size) * .25 + calc(var(--coffee-to-go-size) * .25) + var(--coffee-to-go-border-size) * 1.5);
+    margin-left: calc(var(--size) * -.5);
+
+    clip-path: polygon(0 0, 100% 0, 83% 100%, 15% 100%);
+    border-radius: 0 0 50% 50% / 0 0 15% 15%;
+    
+    --stop: calc(var(--coffee-to-go-size) * .616);
+    background:
+    radial-gradient(circle at top, transparent var(--stop), var(--coffee-to-go-border-color) var(--stop)),
+    linear-gradient(83deg, var(--coffee-to-go-border-color) 15%, transparent 15%),
+    linear-gradient(-82.5deg, var(--coffee-to-go-border-color) 16%, var(--coffee-to-go-shadow) 16%, var(--coffee-to-go-shadow) 23%, transparent 23%),
+    linear-gradient(var(--coffee-to-go-cup-light) calc(var(--coffee-to-go-border-size) * 2), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 2), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 3), var(--coffee-to-go-cup) calc(var(--coffee-to-go-border-size) * 3));
+}
+.art#coffee-to-go div::after {
+    --size: calc(var(--coffee-to-go-size) * .5);
+
+    height: calc(var(--size) *.5);
+    width: var(--size);
+    margin-top: calc(var(--size) * .25);
+    margin-left: calc(var(--size) * -.5 - var(--coffee-to-go-border-size));
+
+    border-radius: 42.5% 42.5% var(--coffee-to-go-border-size) var(--coffee-to-go-border-size) / 100% 100% var(--coffee-to-go-border-size) var(--coffee-to-go-border-size);
+
+    --stop: calc(var(--size) * .75);
+    background:
+    radial-gradient(circle at 10% 100%, transparent var(--stop), var(--coffee-to-go-shadow) var(--stop)),
+    linear-gradient(0deg, var(--coffee-to-go-cup) calc(var(--coffee-to-go-border-size) * 1.5), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 1.5), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 2.5), transparent calc(var(--coffee-to-go-border-size) * 2.5)),
+    radial-gradient(circle at 82% 88%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .055), transparent calc(var(--coffee-to-go-size) * .055)),
+    radial-gradient(circle at 55% 85%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .13), transparent calc(var(--coffee-to-go-size) * .13)),
+    radial-gradient(circle at 37% 68%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .055), transparent calc(var(--coffee-to-go-size) * .055)),
+    radial-gradient(circle at 27% 100%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .091), transparent calc(var(--coffee-to-go-size) * .091)),
+    var(--coffee-to-go-lid);
+    border: var(--coffee-to-go-border);
+}

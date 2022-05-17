@@ -1,0 +1,75 @@
+/* ##### November 24, 2020 - Le Règlement */
+.art#le-reglement {
+    --reglement-color-1: #3200ff;
+    --reglement-color-2: #5106ff;
+    --reglement-color-3: #540aff;
+    --reglement-color-4: #6e24ff;
+    --reglement-color-5: #903ffe;
+    --reglement-color-6: #b558ff;
+    --reglement-color-7: #9e39ff;
+    --reglement-color-8: #bc57ff;
+    --reglement-color-9: #ca65ff;
+    --reglement-color-10: #d974ff;
+    --reglement-color-11: #fd8fff;
+    --reglement-color-12: #ffaaff;
+    --reglement-color-13: #ff88fe;
+    --reglement-color-14: #ffaaff;
+    --reglement-color-15: #ffadff;
+
+    --reglement-color-5-bis: #711fff;
+    --reglement-color-11-bis: #e070ff;
+
+    --reglement-size: 225px;
+
+    background: #000;
+}
+.art#le-reglement div {
+    height: var(--reglement-size);
+    width: var(--reglement-size);
+
+    margin-top: calc(var(--reglement-size)*-.5);
+    margin-left: calc(var(--reglement-size)*-.5);
+
+    border-radius: 50%;
+    transform: rotate(60deg);
+    overflow: hidden;
+
+    box-shadow: var(--reglement-color-10) 0 0 calc(var(--reglement-size)*.35);
+}
+.art#le-reglement div::before,
+.art#le-reglement div::after {
+    content: "";
+    position: inherit;
+    height: inherit;
+    margin-left: -50%;
+    --reglement-color-5: var(--reglement-color-5-bis);
+}
+.art#le-reglement div::before {
+    width: calc(var(--reglement-size)*.2);
+}
+.art#le-reglement div::after {
+    width: calc(var(--reglement-size)*.13);
+    --reglement-color-11: var(--reglement-color-11-bis);
+}
+.art#le-reglement div,
+.art#le-reglement div::before,
+.art#le-reglement div::after {
+    background:
+    linear-gradient(
+        var(--reglement-color-1) 4.5%,
+        var(--reglement-color-2) 4.5%, var(--reglement-color-2) 11.5%,
+        var(--reglement-color-3) 11.5%, var(--reglement-color-3) 18.5%,
+        var(--reglement-color-4) 18.5%, var(--reglement-color-4) 25.5%,
+        var(--reglement-color-5) 25.5%, var(--reglement-color-5) 32.5%,
+        var(--reglement-color-6) 32.5%, var(--reglement-color-6) 39.5%,
+        var(--reglement-color-7) 39.5%, var(--reglement-color-7) 46.5%,
+        var(--reglement-color-8) 46.5%, var(--reglement-color-8) 53.5%,
+        var(--reglement-color-9) 53.5%, var(--reglement-color-9) 60.5%,
+        var(--reglement-color-10) 60.5%, var(--reglement-color-10) 67.5%,
+        var(--reglement-color-11) 67.5%, var(--reglement-color-11) 74.5%,
+        var(--reglement-color-12) 74.5%, var(--reglement-color-12) 81.5%,
+        var(--reglement-color-13) 81.5%, var(--reglement-color-13) 88.5%,
+        var(--reglement-color-14) 88.5%, var(--reglement-color-14) 95.5%,
+        var(--reglement-color-15) 95.5%
+    );
+}

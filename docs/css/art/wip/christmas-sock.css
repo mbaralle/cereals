@@ -1,0 +1,64 @@
+/* ##### December 25, 2020 - Christmas sock ##### */
+.art#christmas-sock {
+    --christmas-sock-red: #a00000;
+    --christmas-sock-white: #fffaee;
+    --christmas-sock-background: #003900;
+    --christmas-sock-size: 120px;
+
+    background: var(--christmas-sock-background);
+}
+.art#christmas-sock div {
+    height: calc(var(--christmas-sock-size)*1.7);
+    width: calc(var(--christmas-sock-size)*.75);
+    margin-top: calc(var(--christmas-sock-size)*-.84);
+    margin-left: calc(var(--christmas-sock-size)*-.2);
+    border-radius: calc(var(--christmas-sock-size)*.15);
+
+    transform: rotate(15deg);
+    transform-origin: 20px -25px;
+    animation: christmas-sock 2s ease-in-out infinite;
+
+    background: var(--christmas-sock-red);
+    box-shadow:
+    calc(var(--christmas-sock-size)*-.2) calc(var(--christmas-sock-size)*-.6) 0 calc(var(--christmas-sock-size)*-.35) var(--christmas-sock-red),
+    calc(var(--christmas-sock-size)*-.22) calc(var(--christmas-sock-size)*-0.6) 5px calc(var(--christmas-sock-size)*-.35) black,
+    inset calc(var(--christmas-sock-size)*-.19) calc(var(--christmas-sock-size)*.24) calc(var(--christmas-sock-size)*.175) calc(var(--christmas-sock-size)*-.22) white,
+    calc(var(--christmas-sock-size)*-.025) calc(var(--christmas-sock-size)*.025) calc(var(--christmas-sock-size)*.04) black;
+}
+@keyframes christmas-sock {
+    0% { transform: rotate(15deg); }
+    50% { transform: rotate(17deg); }
+}
+.art#christmas-sock div::before,
+.art#christmas-sock div::after {
+    position: inherit;
+    content: "";
+}
+.art#christmas-sock div::before {
+    width: calc(var(--christmas-sock-size)*.9);
+    height: calc(var(--christmas-sock-size)*.45);
+    margin-left: calc(var(--christmas-sock-size)*-.45);
+    margin-top: calc(var(--christmas-sock-size)*-.05);
+
+    border-radius: calc(var(--christmas-sock-size)*.15) calc(var(--christmas-sock-size)*.15) calc(var(--christmas-sock-size)*.1) calc(var(--christmas-sock-size)*.1);
+
+    background: var(--christmas-sock-white);
+    box-shadow:
+    calc(var(--christmas-sock-size)*-.025) calc(var(--christmas-sock-size)*.01) calc(var(--christmas-sock-size)*.04) 0 black,
+    inset calc(var(--christmas-sock-size)*.025) calc(var(--christmas-sock-size)*-.025) calc(var(--christmas-sock-size)*.04) calc(var(--christmas-sock-size)*-.025) black;
+}
+.art#christmas-sock div::after {
+    height: calc(var(--christmas-sock-size)*.55);
+    width: calc(var(--christmas-sock-size)*1.15);
+    margin-top: calc(var(--christmas-sock-size)*1.2);
+    margin-left: calc(var(--christmas-sock-size)*-.37);
+
+    border-radius: 0 calc(var(--christmas-sock-size)*.35) calc(var(--christmas-sock-size)*.15) calc(var(--christmas-sock-size)*.15);
+
+    transform: rotate(5deg);
+
+    background: var(--christmas-sock-red);
+    box-shadow:
+    inset calc(var(--christmas-sock-size)*-.19) 0 calc(var(--christmas-sock-size)*.17) calc(var(--christmas-sock-size)*-.21) white,
+    0 calc(var(--christmas-sock-size)*.07) calc(var(--christmas-sock-size)*.04) calc(var(--christmas-sock-size)*-.04) black;
+}

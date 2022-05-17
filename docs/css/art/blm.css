@@ -1,0 +1,85 @@
+/* ##### June 15, 2020 - Black Lives Matter ##### */
+.art#blm {
+    background: #926557;
+    background-image:
+    linear-gradient(90deg,
+    #dabaab 16.67%,
+    #c29e8f 16.67%, #c29e8f 33.33%,
+    #aa8173 33.33%, #aa8173 50%,
+    #926557 50%, #926557 66.67%,
+    #79483b 66.67%, #79483b 83.33%,
+    #612b1f 83.33%);
+}
+.art#blm div:hover {
+    opacity: .85;
+}
+.art#blm div {
+    --blm-bg-color: #2f463f;
+    --blm-fist-color: #000;
+    --blm-lines-color: #fff;
+    width: 300px;
+    height: 300px;
+    margin-top: -70px;
+    margin-left: -160px;
+    border-radius: 50%;
+    border: 10px solid white;
+    background-color: var(--blm-bg-color);
+    overflow: hidden;
+}
+.art#blm div::before {
+    content: "";
+    position: inherit;
+    width: 210px;
+    height: 350px;
+    margin-top: -10px;
+    margin-left: -105px;
+    border-radius: 50% 50% 0 0;
+    background-color: var(--blm-fist-color);
+    background-image:
+    linear-gradient(40deg, transparent 76%, var(--blm-bg-color) 76%),
+    linear-gradient(-55deg, transparent 79%, var(--blm-bg-color) 79%),
+    linear-gradient(-45deg, transparent 80%, var(--blm-bg-color) 80%),
+    
+    radial-gradient(circle at 38% 12.8%, var(--blm-fist-color) 7%, transparent 7%),
+    radial-gradient(ellipse at 41% -21.5%, transparent 24.5%, var(--blm-lines-color) 24.5%, var(--blm-lines-color) 25%, transparent 25%),
+    
+    radial-gradient(ellipse at 64.7% 41.5%, var(--blm-fist-color) 15.8%, transparent 15.8%),
+    radial-gradient(circle at 97% 42%, var(--blm-bg-color) 15%, transparent 15%),
+    radial-gradient(circle at 72.5% 28%, var(--blm-fist-color) 10%, transparent 10%),
+    
+    linear-gradient(-80deg, var(--blm-bg-color) 26.7%, transparent 26.7%),
+    linear-gradient(25deg, transparent 70.8%, var(--blm-fist-color) 70.8%),
+    
+    radial-gradient(ellipse at 31% 24.5%, var(--blm-fist-color) 5%, transparent 5%),
+    radial-gradient(circle at 20% 29%, var(--blm-fist-color) 8%, transparent 8%),
+    radial-gradient(circle at 31% 31%, transparent 1%, var(--blm-lines-color) 1%, var(--blm-lines-color) 2%, transparent 2%),
+    radial-gradient(circle at 44% 24%, transparent 10%, var(--blm-lines-color) 10%, var(--blm-lines-color) 11%, transparent 11%),
+    
+    linear-gradient(25deg, transparent 59.2%, var(--blm-lines-color) 59.2%, var(--blm-lines-color) 60%, var(--blm-fist-color) 60%, var(--blm-fist-color) 70%, var(--blm-lines-color) 70%, var(--blm-lines-color) 70.8%, var(--blm-fist-color) 70.8%),
+    
+    linear-gradient(85deg, transparent 54.04%, var(--blm-fist-color) 54.04%,var(--blm-fist-color) 67%, var(--blm-bg-color) 67%),
+    
+    linear-gradient(65deg, transparent 51%, var(--blm-lines-color) 51%, var(--blm-lines-color) 52%, transparent 52%),
+    
+    linear-gradient(-80deg, transparent 45%, var(--blm-lines-color) 45%, var(--blm-lines-color) 46%, transparent 46%),
+    linear-gradient(-80deg, transparent 35%, var(--blm-fist-color) 35%, var(--blm-fist-color) 63%, transparent 63%),
+    linear-gradient(60deg, var(--blm-bg-color) 38%, transparent 38%)
+    ;
+}
+.art#blm div::after {
+    content: "";
+    position: inherit;
+    width: 60px;
+    height: 75px;
+    margin-top: 73px;
+    margin-left: 7.5px;
+    transform: rotate(40deg);
+    border-top-right-radius: 5px;
+    border-left: 3px solid var(--blm-lines-color);
+    background-image:
+    radial-gradient(circle at 30% 198%, var(--blm-fist-color) 50%,var(--blm-lines-color) 50%, var(--blm-lines-color) 52%, transparent 52%),
+    linear-gradient(-75deg, transparent 11.6%, var(--blm-lines-color) 11.6%, var(--blm-lines-color) 16%, transparent 16%),
+    linear-gradient(90deg, transparent 47%, var(--blm-lines-color) 47%, var(--blm-lines-color) 53%, transparent 53%),
+    linear-gradient(10deg, transparent 17%, var(--blm-fist-color) 17%)
+    ;
+}

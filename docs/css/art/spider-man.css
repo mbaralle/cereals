@@ -1,0 +1,113 @@
+/* ##### March 19, 2021 - Spider-Man ##### */
+.art#spider-man {
+    --spider-man-blue: #195386;
+    --spider-man-red: #940505;
+    --spider-man-pattern: #3e7a8e;
+    --spider-man-border: #000000;
+    --spider-man-white: #ffffff;
+    --spider-man-size: 250px;
+
+    --spider-man-animation: spiderman-eyes 4s infinite cubic-bezier(1,-0.4, 0, 1.4), 5s infinite cubic-bezier(1,-0.4, 0, 1.4);
+
+    background: var(--spider-man-blue);
+}
+.art#spider-man div {
+    height: var(--spider-man-size);
+    width: calc(var(--spider-man-size)*.8);
+    margin-top: calc(var(--spider-man-size)*-.5);
+    margin-left: calc(var(--spider-man-size)*-.4);
+    border-radius: 50% 50% / 40% 40% 60% 60%;
+
+    background:
+    radial-gradient(
+        ellipse at 50% 47.5%,
+        transparent calc(var(--spider-man-size)*.0625), var(--spider-man-pattern) calc(var(--spider-man-size)*.0625), var(--spider-man-pattern) calc(var(--spider-man-size)*.0725), transparent calc(var(--spider-man-size)*.0725),
+        transparent calc(var(--spider-man-size)*.1875), var(--spider-man-pattern) calc(var(--spider-man-size)*.1875), var(--spider-man-pattern) calc(var(--spider-man-size)*.1975), transparent calc(var(--spider-man-size)*.1975),
+        transparent calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3225), transparent calc(var(--spider-man-size)*.3225)
+    ),
+    radial-gradient(
+        circle at 129% 48%,
+        transparent calc(var(--spider-man-size)*.625), var(--spider-man-pattern) calc(var(--spider-man-size)*.625), var(--spider-man-pattern) calc(var(--spider-man-size)*.635), transparent calc(var(--spider-man-size)*.635)
+    ),
+    radial-gradient(
+        circle at -29% 48%,
+        transparent calc(var(--spider-man-size)*.625), var(--spider-man-pattern) calc(var(--spider-man-size)*.625), var(--spider-man-pattern) calc(var(--spider-man-size)*.635), transparent calc(var(--spider-man-size)*.635)
+    ),
+    radial-gradient(
+        circle at 89% 48%,
+        transparent calc(var(--spider-man-size)*.31), var(--spider-man-pattern) calc(var(--spider-man-size)*.31), var(--spider-man-pattern) calc(var(--spider-man-size)*.32), transparent calc(var(--spider-man-size)*.32)
+    ),
+    radial-gradient(
+        circle at 11% 48%,
+        transparent calc(var(--spider-man-size)*.31), var(--spider-man-pattern) calc(var(--spider-man-size)*.31), var(--spider-man-pattern) calc(var(--spider-man-size)*.32), transparent calc(var(--spider-man-size)*.32)
+    ),
+    linear-gradient(
+        90deg, transparent 49.25%, var(--spider-man-pattern) 49.25%, var(--spider-man-pattern) 50.75%, transparent 50.75%
+    ),
+    linear-gradient(
+        var(--spider-man-red) calc(var(--spider-man-size)*.46), var(--spider-man-pattern) calc(var(--spider-man-size)*.46), var(--spider-man-pattern) calc(var(--spider-man-size)*.475), transparent calc(var(--spider-man-size)*.475)
+    ),
+    radial-gradient(
+        circle at 13% 35%,
+        transparent calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3225), transparent calc(var(--spider-man-size)*.3225)
+    ),
+    radial-gradient(
+        circle at 87% 35%,
+        transparent calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3125), var(--spider-man-pattern) calc(var(--spider-man-size)*.3225), transparent calc(var(--spider-man-size)*.3225)
+    ),
+    var(--spider-man-red);
+}
+.art#spider-man div::before,
+.art#spider-man div::after {
+    position: inherit;
+    content: "";
+
+    width: calc(var(--spider-man-size)*.25);
+    height: calc(var(--spider-man-size)*.19);
+    margin-top: calc(var(--spider-man-size)*.30);
+
+    border: calc(var(--spider-man-size)*.025) solid var(--spider-man-border);
+    background: var(--spider-man-white);
+}
+.art#spider-man div::before {
+    margin-left: calc(var(--spider-man-size)*-.33);
+
+    border-radius: 2% 100% 29% 100% / 0% 66% 37% 100%;
+    transform: rotate(12deg);
+    animation: var(--spider-man-animation) spiderman-expression-before;
+}
+.art#spider-man div::after {
+    margin-left: calc(var(--spider-man-size)*.04);
+
+    border-radius: 100% 2% 100% 29% / 66% 0% 100% 37%;
+    transform: rotate(-12deg);
+    animation: var(--spider-man-animation) spiderman-expression-after;
+}
+
+@keyframes spiderman-eyes {
+    0% {
+        width: calc(var(--spider-man-size)*.25);
+        height: calc(var(--spider-man-size)*.19);
+        border: calc(var(--spider-man-size)*.025) solid var(--spider-man-border);
+    }
+    50% {
+        width: calc(var(--spider-man-size)*.2);
+        height: calc(var(--spider-man-size)*.14);
+        border: calc(var(--spider-man-size)*.05) solid var(--spider-man-border);
+    }
+    100% {
+        width: calc(var(--spider-man-size)*.25);
+        height: calc(var(--spider-man-size)*.19);
+        border: calc(var(--spider-man-size)*.025) solid var(--spider-man-border);
+    }
+}
+@keyframes spiderman-expression-before {
+    0% { transform: rotate(12deg) }
+    50% { transform: rotate(3deg) }
+    100% { transform: rotate(12deg) }
+}
+@keyframes spiderman-expression-after {
+    0% { transform: rotate(-12deg) }
+    50% { transform: rotate(-3deg) }
+    100% { transform: rotate(-12deg) }
+}

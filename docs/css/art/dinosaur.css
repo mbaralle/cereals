@@ -1,0 +1,67 @@
+/* ##### December 20, 2020 - Dinosaur ##### */
+.art#dinosaur {
+    --dinosaur-background: #f1e2c3;
+    --dinosaur-color: #57ad57;
+    --dinosaur-shadow: #4a8d4a;
+    --dinosaur-size: 120px;
+    --dinosaur-eye-size: calc(var(--dinosaur-size)*.06);
+
+    background: var(--dinosaur-background);
+}
+.art#dinosaur div {
+    height: calc(var(--dinosaur-size)*2.5);
+    width: calc(var(--dinosaur-size)*2);
+    margin-top: calc(var(--dinosaur-size)*-1.1);
+    margin-left: calc(var(--dinosaur-size)*-1.1);
+
+    background:
+    radial-gradient(circle at 81.5% 7%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.075), transparent calc(var(--dinosaur-size)*.075)),
+    radial-gradient(circle at 72.5% 5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.1), transparent calc(var(--dinosaur-size)*.1)),
+    radial-gradient(circle at 62% 5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.1), transparent calc(var(--dinosaur-size)*.1)),
+    radial-gradient(circle at 51% 8.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 43% 15.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 41% 25.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 40% 36%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 39% 46.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 36% 56.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.125), transparent calc(var(--dinosaur-size)*.125)),
+    radial-gradient(circle at 30% 64.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.1), transparent calc(var(--dinosaur-size)*.1)),
+    radial-gradient(circle at 24.5% 70.5%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.075), transparent calc(var(--dinosaur-size)*.075)),
+    radial-gradient(circle at 19% 75%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.075), transparent calc(var(--dinosaur-size)*.075)),
+    radial-gradient(circle at 13.5% 78%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.05), transparent calc(var(--dinosaur-size)*.05)),
+    radial-gradient(circle at 9.5% 81%, var(--dinosaur-shadow) calc(var(--dinosaur-size)*.05), transparent calc(var(--dinosaur-size)*.05));
+}
+.art#dinosaur div::before,
+.art#dinosaur div::after {
+    content: "";
+    position: inherit;
+}
+.art#dinosaur div::before {
+    height: calc(var(--dinosaur-size)*1.5);
+    width: calc(var(--dinosaur-size)*1.7);
+    margin-top: calc(var(--dinosaur-size)*1);
+    margin-left: calc(var(--dinosaur-size)*-1);
+
+    background:
+    radial-gradient(circle at 35% 10%, transparent 60%, var(--dinosaur-background) 0%),
+    radial-gradient(circle at -20% 0%, transparent 45%, var(--dinosaur-color) 45%);
+}
+.art#dinosaur div::after {
+    height: calc(var(--dinosaur-size)*.9375);
+    width: calc(var(--dinosaur-size)*1.25);
+    margin-top: calc(var(--dinosaur-size)*.12);
+    margin-left: calc(var(--dinosaur-size)*-.2);
+    border-radius: 55% 75% 45% 0;
+
+    background:
+    radial-gradient(circle at 83% 45%, black var(--dinosaur-eye-size), transparent var(--dinosaur-eye-size)),
+    radial-gradient(circle at 68% 48%, black var(--dinosaur-eye-size), transparent var(--dinosaur-eye-size)),
+    var(--dinosaur-color);
+
+    box-shadow:
+    calc(var(--dinosaur-size)*.23) calc(var(--dinosaur-size)*.58) 0 calc(var(--dinosaur-size)*-.42) var(--dinosaur-color),
+    calc(var(--dinosaur-size)*-.24) calc(var(--dinosaur-size)*.675) 0 calc(var(--dinosaur-size)*-.325) var(--dinosaur-color),
+    calc(var(--dinosaur-size)*.17) calc(var(--dinosaur-size)*.72) 0 calc(var(--dinosaur-size)*-.42) var(--dinosaur-shadow),
+    calc(var(--dinosaur-size)*-.08) calc(var(--dinosaur-size)*1.375) 0 calc(var(--dinosaur-size)*-.375) var(--dinosaur-shadow),
+    0 calc(var(--dinosaur-size)*1.375) 0 calc(var(--dinosaur-size)*-.375) var(--dinosaur-shadow),
+    calc(var(--dinosaur-size)*.125) calc(var(--dinosaur-size)*1.25) 0 calc(var(--dinosaur-size)*-.375) var(--dinosaur-color);
+}

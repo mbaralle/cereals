@@ -1,0 +1,61 @@
+/* ##### October 31, 2020 - Potato ##### */
+.art#potato {
+    --potato-color-primary: #ffe0b7;
+    --potato-color-shadow: #fdcb89;
+    --potato-color-blush: #ff83b4;
+    --potato-color-details: #454545;
+    --potato-color-stains: #fc8978;
+    --potato-color-arms: #c74b36;
+    
+    background: #a1e6c8;
+}
+.art#potato div {
+    height: 270px;
+    width: 15px;
+    margin-top: -135px;
+    margin-left: -7.5px;
+    border-radius: 35px;
+    transform: rotate(45deg);
+
+    background: var(--potato-color-arms);
+}
+
+.art#potato div::before,
+.art#potato div::after {
+    position: inherit;
+    content: "";
+}
+.art#potato div::before {
+    height: 250px;
+    width: 186px;
+    margin-top: 0px;
+    margin-left: -110px;
+    border-radius: 45% 76% 50% 60%;
+    transform: rotate(-30deg);
+
+    background:
+    radial-gradient(10px 5px at 47% 37%, var(--potato-color-details) 90%, transparent 100%),
+    radial-gradient(5px 10px at 32% 32%, var(--potato-color-details) 90%, transparent 100%),
+    radial-gradient(5px 10px at 62% 32%, var(--potato-color-details) 90%, transparent 100%),
+    radial-gradient(13px 10px at 29% 37%, var(--potato-color-blush) 90%, transparent 100%),
+    radial-gradient(13px 10px at 65% 36%, var(--potato-color-blush) 90%, transparent 100%),
+    radial-gradient(circle at 96% 64%, var(--potato-color-stains) 13%, transparent 14%),
+    radial-gradient(circle at 50% 55%, var(--potato-color-stains) 7%, transparent 8%),
+    radial-gradient(circle at 38% 77%, var(--potato-color-stains) 7%, transparent 8%),
+    radial-gradient(circle at -61% 84%, var(--potato-color-shadow) 55%, transparent 5%),
+    radial-gradient(circle at 165% 51%, transparent 77%, var(--potato-color-shadow) 77%),
+    var(--potato-color-primary);
+}
+.art#potato div::after {
+    height: 280px;
+    width: inherit;
+    margin-top: 5px;
+    margin-left: -25px;
+    border-radius: 50px;
+    transform: rotate(-75deg);
+
+    background:
+    linear-gradient(180deg, var(--potato-color-arms) 40px, transparent 40px, transparent 250px, var(--potato-color-arms) 250px),
+    radial-gradient(circle 150px at center 40px, var(--potato-color-arms) 5%, transparent 5%),
+    radial-gradient(circle 150px at center 250px, var(--potato-color-arms) 5%, transparent 5%);
+}

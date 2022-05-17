@@ -1,0 +1,57 @@
+/* ##### November 9, 2020 - Peach ##### */
+.art#peach {
+    --peach-background: white;
+    --peach-orange: peachpuff;
+    --peach-pink: lightpink;
+    --peach-stem: rosybrown;
+    --peach-leaf-dark: mediumseagreen;
+    --peach-leaf-light: limegreen;
+
+    background: var(--peach-background);
+}
+.art#peach div {
+    height: 200px;
+    width: 170px;
+
+    border-radius: 50%;
+
+    margin-top: -100px;
+    margin-left: -112.5px;
+
+    background: var(--peach-orange);
+    box-shadow: 
+    inset var(--peach-pink) 15px 10px 45px 5px,
+    rgba(0 0 0 / .5) 30px 50px 50px -32px;
+}
+.art#peach div::before,
+.art#peach div::after {
+    content: "";
+    position: inherit;
+}
+.art#peach div::before {
+    height: 75px;
+    width: 75px;
+    margin-left: 0px;
+    margin-top: -73px;
+
+    border-radius: 25% 50% 0% 10%;
+
+    transform: rotateZ(60deg);
+    background:
+    radial-gradient(circle at 70% 5%, var(--peach-background) 7%, transparent 7%),
+    radial-gradient(circle at 37% 250%, var(--peach-stem) 65%, transparent 65%),
+    radial-gradient(circle at 165% 0%, transparent 30%, var(--peach-leaf-light) 30%, transparent 60%),
+    radial-gradient(circle at 165% 0%, var(--peach-leaf-dark) 60%, transparent 60%),
+    radial-gradient(circle at 110% 35%, transparent 15%, var(--peach-leaf-dark) 55%, transparent 55%),
+    radial-gradient(circle at 110% 35%, var(--peach-leaf-light) 55%, transparent 55%),
+    rgba(0 0 255 / .0);
+}
+.art#peach div::after {
+    height: inherit;
+    width: inherit;
+    margin-left: -30px;
+    border-radius: inherit;
+
+    background: inherit;
+    box-shadow: inherit;
+}

@@ -1,0 +1,66 @@
+/* ##### March 19, 2021 - Avocado ##### */
+.art#avocado {
+    --avocado-size: 250px;
+    --avocado-border: calc(var(--avocado-size)*.02);
+
+    --avocado-core: #b67f4f;
+    /* --avocado-green: #b9cc2d; */
+
+    /* --avocado-core: #4C2F13; */
+    --avocado-green: #A4BF49;
+    
+    --avocado-peel: #556b2f;
+    --avocado-mouth: #51682c;
+    --avocado-tongue: #c65353;
+    --avocado-eyes: #000;
+    --avocado-reflect: #fff;
+    --avocado-white: #fff;
+
+    --spider-man-animation: spiderman-eyes 4s infinite cubic-bezier(1,-0.4, 0, 1.4), 5s infinite cubic-bezier(1,-0.4, 0, 1.4);
+
+    background: #c1e2ff;
+}
+.art#avocado div {
+    height: var(--avocado-size);
+    width: calc(var(--avocado-size)*.8);
+    margin-top: calc(var(--avocado-size)*-.5 - var(--avocado-border));
+    margin-left: calc(var(--avocado-size)*-.4 - var(--avocado-border));
+    border-radius: 50% / 65% 65% 35% 35%;
+    border: var(--avocado-border) solid var(--avocado-peel);
+
+    background:
+    radial-gradient(circle at 61% 27%, var(--avocado-reflect) calc(var(--avocado-size)*.01), transparent calc(var(--avocado-size)*.01)),
+    radial-gradient(circle at 41% 27%, var(--avocado-reflect) calc(var(--avocado-size)*.01), transparent calc(var(--avocado-size)*.01)),
+    radial-gradient(circle at 59.5% 28.5%, var(--avocado-reflect) calc(var(--avocado-size)*.005), transparent calc(var(--avocado-size)*.005)),
+    radial-gradient(circle at 39.5% 28.5%, var(--avocado-reflect) calc(var(--avocado-size)*.005), transparent calc(var(--avocado-size)*.005)),
+    radial-gradient(circle at 60% 28%, var(--avocado-eyes) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.05), transparent calc(var(--avocado-size)*.05)),
+    radial-gradient(circle at 40% 28%, var(--avocado-eyes) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.05), transparent calc(var(--avocado-size)*.05)),
+    radial-gradient(circle at 50% 66%, var(--avocado-core) calc(var(--avocado-size)*.2), transparent calc(var(--avocado-size)*.2)),
+    var(--avocado-green);
+    
+    background:
+    radial-gradient(circle at 61% 27%, var(--avocado-reflect) calc(var(--avocado-size)*.01), transparent calc(var(--avocado-size)*.015)),
+    radial-gradient(circle at 41% 27%, var(--avocado-reflect) calc(var(--avocado-size)*.01), transparent calc(var(--avocado-size)*.015)),
+    radial-gradient(circle at 59.5% 28.5%, var(--avocado-reflect) calc(var(--avocado-size)*.005), transparent calc(var(--avocado-size)*.01)),
+    radial-gradient(circle at 39.5% 28.5%, var(--avocado-reflect) calc(var(--avocado-size)*.005), transparent calc(var(--avocado-size)*.01)),
+    radial-gradient(circle at 60% 28%, var(--avocado-eyes) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.035), var(--avocado-white) calc(var(--avocado-size)*.05), transparent calc(var(--avocado-size)*.055)),
+    radial-gradient(circle at 40% 28%, var(--avocado-eyes) calc(var(--avocado-size)*.03), var(--avocado-white) calc(var(--avocado-size)*.035), var(--avocado-white) calc(var(--avocado-size)*.05), transparent calc(var(--avocado-size)*.055)),
+    radial-gradient(circle at 50% 66%, var(--avocado-core) calc(var(--avocado-size)*.2), transparent calc(var(--avocado-size)*.205)),
+    var(--avocado-green);
+}
+.art#avocado div::before,
+.art#avocado div::after {
+    position: inherit;
+    content: "";
+}
+.art#avocado div::before {
+    border-radius: 50% / 20% 20% 80% 80%;
+    width: calc(var(--avocado-size)*.1);
+    height: calc(var(--avocado-size)*.07);
+    margin-top: calc(var(--avocado-size)*.36);
+    margin-left: calc(var(--avocado-size)*-.05);
+
+    background:
+    radial-gradient(circle at 50% 100%, var(--avocado-tongue) 50%, transparent 55%)
+    var(--avocado-mouth);
+}
