@@ -1,0 +1,75 @@
+/* ##### June 16, 2022 - Bridget Riley - Untitled (Fragment 1) from Fragments ##### */
+/* Inspired by Bridget Riley's artwork - https://www.moma.org/collection/works/99701 */
+.art#riley {
+    --riley-size: 280px;
+
+    --riley-paper: #eeeee2;
+    --riley-ink: #121011;
+}
+.art#riley div {
+    height: calc(var(--riley-size)*.8);
+    width: var(--riley-size);
+    margin-left: calc(var(--riley-size)*-.5);
+    margin-top: calc(var(--riley-size)*-.4);
+
+    background: var(--riley-paper);
+    box-shadow:
+    0 0 0 1px #c0ab9c,
+    5px 5px 20px -10px #333,
+    inset 0 0 3px #333;
+}
+.art#riley div::before,
+.art#riley div::after {
+    content: '';
+    position: inherit;
+    left: 12%;
+    top: 14%;
+    width: 77%;
+    height: 71%;
+}
+.art#riley div::before {
+    clip-path: polygon(6% 0, 49% 46%, 78% 27%, 96% 0);
+    background:
+    linear-gradient(129deg, transparent 57.25%, var(--riley-ink) 57.25%),
+    linear-gradient(125deg, transparent 57.25%, var(--riley-paper) 57.25%),
+    linear-gradient(120deg, transparent 57.5%, var(--riley-ink) 57.5%),
+    linear-gradient(115deg, transparent 57.5%, var(--riley-paper) 57.5%),
+    linear-gradient(109deg, transparent 57.75%, var(--riley-ink) 57.75%),
+    linear-gradient(103deg, transparent 57.75%, var(--riley-paper) 57.75%),
+    linear-gradient(97deg, transparent 57.75%, var(--riley-ink) 57.75%),
+    linear-gradient(90deg, transparent 58%, var(--riley-paper) 58%),
+    linear-gradient(83deg, transparent 57%, var(--riley-ink) 57%),
+    linear-gradient(77deg, transparent 56%, var(--riley-paper) 56%),
+    linear-gradient(71deg, transparent 55.25%, var(--riley-ink) 55.25%),
+    linear-gradient(65deg, transparent 54.75%, var(--riley-paper) 54.75%),
+    linear-gradient(60deg, transparent 54%, var(--riley-ink) 54%),
+    linear-gradient(55deg, transparent 53.5%, var(--riley-paper) 53.5%),
+    linear-gradient(51deg, transparent 52.75%, var(--riley-ink) 52.75%),
+    linear-gradient(47deg, transparent 52.5%, var(--riley-paper) 52.5%),
+    linear-gradient(44deg, transparent 52%, var(--riley-ink) 52%),
+    linear-gradient(40.75deg, transparent 51.75%, var(--riley-paper) 51.75%),
+    var(--riley-ink);
+}
+.art#riley div::after {
+    clip-path: polygon(0 100%, 49% 46%, 78% 27%, 100% 100%);
+    background:
+    linear-gradient(67.5deg, transparent 72.75%, var(--riley-ink) 0%),
+    linear-gradient(69deg, transparent 69.75%, var(--riley-paper) 0%),
+    linear-gradient(71deg, transparent 67.25%, var(--riley-ink) 0%),
+    linear-gradient(74deg, transparent 65%, var(--riley-paper) 0%),
+    linear-gradient(77deg, transparent 63.1%, var(--riley-ink) 0%),
+    linear-gradient(81deg, transparent 61.2%, var(--riley-paper) 0%),
+    linear-gradient(85.5deg, transparent 59.5%, var(--riley-ink) 0%),
+    linear-gradient(90deg, transparent 58%, var(--riley-paper) 0%),
+    linear-gradient(95.5deg, transparent 55.75%, var(--riley-ink) 0%),
+    linear-gradient(100.5deg, transparent 53.9%, var(--riley-paper) 0%),
+    linear-gradient(106deg, transparent 52.5%, var(--riley-ink) 0%),
+    linear-gradient(111.25deg, transparent 51.4%, var(--riley-paper) 0%),
+    linear-gradient(116.5deg, transparent 50.35%, var(--riley-ink) 0%),
+    linear-gradient(122deg, transparent 49.55%, var(--riley-paper) 0%),
+    linear-gradient(126deg, transparent 48.85%, var(--riley-ink) 48.85%),
+    linear-gradient(130.5deg, transparent 48.45%, var(--riley-paper) 48.45%),
+    linear-gradient(134.75deg, transparent 48%, var(--riley-ink) 48%),
+    linear-gradient(137.55deg, transparent 47.8%, var(--riley-paper) 47.75%),
+    var(--riley-ink);
+}
