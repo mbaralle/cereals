@@ -183,6 +183,13 @@ header h3 a:hover {
     }
 }
 
+.art a {
+    transition: .2s;
+}
+.art a:hover {
+    opacity: .85;
+}
+
 .art div {
     position: absolute;
     left: 50%;

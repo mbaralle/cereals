@@ -10,9 +10,6 @@
     #79483b 66.67%, #79483b 83.33%,
     #612b1f 83.33%);
 }
-.art#blm div:hover {
-    opacity: .85;
-}
 .art#blm div {
     --blm-bg-color: #2f463f;
     --blm-fist-color: #000;
