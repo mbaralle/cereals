@@ -1,0 +1,17 @@
+@import "moma/colors-for-a-large-wall.css";
+@import "moma/concrete-61.css";
+@import "moma/herrera.css";
+@import "moma/hlito.css";
+@import "moma/riley.css";
+
+#moma {
+    background:
+    linear-gradient(45deg, #c1adef55, #de88af55);
+    height: 2000px;
+}
+
+@media (min-width: 960px) {
+    #moma {
+        height: 1200px;
+    }
+}

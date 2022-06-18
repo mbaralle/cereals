@@ -1,0 +1,64 @@
+/* ##### June 16, 2022 - Judith Lauand - Concrete 61 ##### */
+/* Inspired by Judith Lauand's artwork - https://www.moma.org/collection/works/205955 */
+.art#concrete-61 {
+    --concrete-61-size: 240px;
+
+    --concrete-61-bg: #e2d0a8;
+    --concrete-61-dark: #1b1617;
+}
+.art#concrete-61 div {
+    height: var(--concrete-61-size);
+    width: var(--concrete-61-size);
+    margin-left: calc(var(--concrete-61-size)*-.5);
+    margin-top: calc(var(--concrete-61-size)*-.5);
+
+    box-shadow:
+    -5px 5px 15px -10px #777,
+    5px 5px 15px -10px #777;
+}
+.art#concrete-61 div::after {
+    transform: rotate(90deg);
+}
+.art#concrete-61 div::before,
+.art#concrete-61 div::after {
+    content: '';
+    position: inherit;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    clip-path: polygon(0 0, 100% 100%, 100% 0, 0 100%);
+
+    background:
+    url("data:image/svg+xml,%3Csvg opacity='0.2' viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.5' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 47% 57%, var(--concrete-61-bg) 4%, transparent 4%),
+    radial-gradient(ellipse at 40% 60%, var(--concrete-61-bg) 6%, transparent 6%),
+    radial-gradient(ellipse at 33% 64%, var(--concrete-61-bg) 8%, transparent 8%),
+    radial-gradient(ellipse at 24% 68%, var(--concrete-61-bg) 8%, transparent 8%),
+    radial-gradient(ellipse at 13% 80%, var(--concrete-61-bg) 10%, transparent 10%),
+
+    radial-gradient(ellipse at 31% -10%, var(--concrete-61-bg) 34%, transparent 34%),
+    radial-gradient(ellipse at 40% 0%, var(--concrete-61-bg) 35%, transparent 35%),
+    linear-gradient(50deg, transparent 44.75%, var(--concrete-61-dark) 44.75%, var(--concrete-61-dark) 46.25%, transparent 46.25%),
+    linear-gradient(56deg, transparent 39.25%, var(--concrete-61-dark) 39.25%, var(--concrete-61-dark) 40.75%, transparent 40.75%),
+    linear-gradient(63deg, transparent 32.75%, var(--concrete-61-dark) 32.75%, var(--concrete-61-dark) 34.25%, transparent 34.25%),
+    linear-gradient(71.75deg, transparent 24%, var(--concrete-61-dark) 24%, var(--concrete-61-dark) 25.75%, transparent 25.75%),
+    linear-gradient(80.25deg, transparent 13.5%, var(--concrete-61-dark) 13.5%, var(--concrete-61-dark) 15.25%, transparent 15.25%),
+
+    
+    radial-gradient(ellipse at 53% 43%, var(--concrete-61-bg) 4%, transparent 4%),
+    radial-gradient(ellipse at 60% 40%, var(--concrete-61-bg) 6%, transparent 6%),
+    radial-gradient(ellipse at 67% 36%, var(--concrete-61-bg) 8%, transparent 8%),
+    radial-gradient(ellipse at 76% 32%, var(--concrete-61-bg) 8%, transparent 8%),
+    radial-gradient(ellipse at 87% 20%, var(--concrete-61-bg) 10%, transparent 10%),
+    
+    radial-gradient(ellipse at 69% 110%, var(--concrete-61-bg) 34%, transparent 34%),
+    radial-gradient(ellipse at 60% 100%, var(--concrete-61-bg) 35%, transparent 35%),
+    linear-gradient(230deg, transparent 44.75%, var(--concrete-61-dark) 44.75%, var(--concrete-61-dark) 46.25%, transparent 46.25%),
+    linear-gradient(236deg, transparent 39.25%, var(--concrete-61-dark) 39.25%, var(--concrete-61-dark) 40.75%, transparent 40.75%),
+    linear-gradient(243deg, transparent 32.75%, var(--concrete-61-dark) 32.75%, var(--concrete-61-dark) 34.25%, transparent 34.25%),
+    linear-gradient(251.75deg, transparent 24%, var(--concrete-61-dark) 24%, var(--concrete-61-dark) 25.75%, transparent 25.75%),
+    linear-gradient(260.25deg, transparent 13.5%, var(--concrete-61-dark) 13.5%, var(--concrete-61-dark) 15.25%, transparent 15.25%),
+    
+    var(--concrete-61-bg);
+}

@@ -1,0 +1,44 @@
+/* ##### June 14, 2022 - Herrera ##### */
+/* Inspired by Carmen Herrera's artwork - https://www.moma.org/collection/works/101471 */
+.art#herrera {
+    --herrera-dark: #333;
+    --herrera-light: #ffe;
+
+    --herrera-border-color: #999;
+    --herrera-border-size: 3px;
+
+    --herrera-size: 300px;
+
+    --herrera-path: 0 0, 25% 60%, 50% 0, 75% 100%, 100% 0;
+
+    /* background: linear-gradient(45deg, #de88af55, #c1adef55); */
+}
+.art#herrera div {
+    height: calc(var(--herrera-size) / 2.5);
+    width: var(--herrera-size);
+
+    margin-top: calc(var(--herrera-size) * -.25 - var(--herrera-border-size));
+    margin-left: calc(var(--herrera-size) * -.5 - var(--herrera-border-size));
+
+    border: var(--herrera-border-size) solid var(--herrera-border-color);
+    box-shadow: 5px 5px 10px -5px #666;
+}
+.art#herrera div::before,
+.art#herrera div::after {
+    content: "";
+    position: inherit;
+
+    height: inherit;
+    width: inherit;
+    margin-left: calc(var(--herrera-size) * -.5);
+
+    background-size: calc(var(--herrera-size) / 14) calc(var(--herrera-size) / 2.5);
+}
+.art#herrera div::before {
+    background-image: linear-gradient(90deg, var(--herrera-dark) 50%, var(--herrera-light) 50%);
+    clip-path: polygon(var(--herrera-path));
+}
+.art#herrera div::after {
+    background-image: linear-gradient(90deg, var(--herrera-light) 50%, var(--herrera-dark) 50%);
+    clip-path: polygon(0 100%, var(--herrera-path), 100% 100%);
+}
