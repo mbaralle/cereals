@@ -26,7 +26,6 @@
             var(--pi-blur) calc(var(--pi-size) * 2),
             transparent calc(var(--pi-size) * 2)
         );
-        animation: pi-angle 10s cubic-bezier(1, 0, 0, 1) infinite alternate;
 }
 .art#pi div::before {
     content: "\0003C0   3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679·····";
