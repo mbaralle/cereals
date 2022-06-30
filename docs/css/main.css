@@ -77,12 +77,12 @@ header h1 {
     top: 1em;
     right: 1em;
     z-index: 3;
-    transition: all .7s;
+    transition: .7s, opacity .2s;
     cursor: pointer;
 }
 
 #menu-button:hover {
-    opacity: .8;
+    opacity: .75;
 }
 
 #menu-button::before,
