@@ -48,19 +48,19 @@ header {
     padding: 5px;
 }
 
-header h3 {
+header h1 {
     padding: 5px;
     font-size: 300%;
     text-shadow: 0 0 .5em #333;
 }
 
-header h3 a {
+header h1 a {
     text-decoration: none;
     color: inherit;
     transition: .3s;
 }
 
-header h3 a:hover {
+header h1 a:hover {
     opacity: .8;
 }
 
