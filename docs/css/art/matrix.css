@@ -1,6 +1,6 @@
 /* ##### June 18, 2020 - Matrix ##### */
 .art#matrix {
-    background: linear-gradient(47deg, rgb(79, 93, 116) 20%, rgb(149, 162, 49) 98%);
+    background: linear-gradient(47deg, #4f5d74aa 20%, #95a231aa 98%) white;
 }
 .art#matrix div {
     width: 160px;

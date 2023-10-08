@@ -1,6 +1,6 @@
 /* ##### June 15, 2020 - Hoverboard ##### */
 .art#hoverboard {
-    background: linear-gradient(165deg, rgb(16, 115, 55) 3%, rgb(244, 100, 238) 98%);
+    background: linear-gradient(165deg, #1073374d 3%, #f464ee4d 98%) white;
 }
 .art#hoverboard div {
     width: 312px;

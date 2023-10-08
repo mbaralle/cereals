@@ -61,7 +61,7 @@
         calc(var(--connect-4-size)*-2) calc(var(--connect-4-size)*-.5) var(--connect-4-token-yellow),
         calc(var(--connect-4-size)*-3) calc(var(--connect-4-size)*-.5) var(--connect-4-token-win);
 
-    /* background: #434343; */
+    background: #fff9e7;
 }
 .art#connect-4 div {
     height: calc(var(--connect-4-size)*.1);

@@ -1,6 +1,7 @@
 /* ##### May 24, 2021 - Caffetiera ##### */
 .art#caffetiera {
     --caffetiera-red: #f00;
+    background: #fff9e7;
 }
 .art#caffetiera div {
     height: 200px;

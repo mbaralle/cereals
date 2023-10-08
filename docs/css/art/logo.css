@@ -1,6 +1,6 @@
 /* ##### May 30, 2020 - Logo ##### */
 .art#logo {
-    background: linear-gradient(193deg, rgb(63, 75, 105) 20%, rgb(249, 247, 185) 95%);
+    background: linear-gradient(193deg, #3f4b6988 20%, #f9f7b988 95%) white;
 }
 .art#logo div {
     margin-top: -108px;
