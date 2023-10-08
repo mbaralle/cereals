@@ -1,18 +1,23 @@
 /* ##### May 24, 2021 - Caffetiera ##### */
 .art#caffetiera {
-    --caffetiera-red: #f00;
-    background: #fff9e7;
+  --caffetiera-red: #f00;
+  background: #fff9e7;
 }
-.art#caffetiera div {
-    height: 200px;
-    width: 240px;
-    margin-top: -100px;
-    margin-left: -120px;
 
-    background:
-    conic-gradient(at 50% -150%, red 47.75%, blue 37.5%, blue 50%, green 50%, green 75%, yellow 75%),
+.art#caffetiera div {
+  height: 200px;
+  width: 240px;
+  margin-top: -100px;
+  margin-left: -120px;
+
+  background: conic-gradient(at 50% -150%,
+      red 47.75%,
+      blue 37.5%,
+      blue 50%,
+      green 50%,
+      green 75%,
+      yellow 75%),
     var(--caffetiera-red);
 
-
-    clip-path: polygon(80% 0, 100% 85%, 80% 95%, 50% 100%, 20% 95%, 0 85%, 20% 0);
+  clip-path: polygon(80% 0, 100% 85%, 80% 95%, 50% 100%, 20% 95%, 0 85%, 20% 0);
 }

@@ -2,6 +2,7 @@
 .art#hoverboard {
     background: linear-gradient(165deg, #1073374d 3%, #f464ee4d 98%) white;
 }
+
 .art#hoverboard div {
     width: 312px;
     height: 67px;
@@ -11,34 +12,36 @@
     border: 4px solid #fa517e;
     background-color: pink;
     background-image:
-    linear-gradient(90deg, transparent 92%, rgba(50,50,50,.05) 95%),
-    
-    linear-gradient(60deg, transparent 93.5%, white 93.5%, white 95%, #ffd000 95%, #ffd000 99%, transparent 99%),
-    linear-gradient(55deg, transparent 49.5%, white 49.5%, white 51%, #ffd000 51%, #ffd000 55%, transparent 55%, transparent 56%, #ffd000 56%, #ffd000 60%, white 60%, white 61.5%, transparent 61.5%),
-    
-    linear-gradient(-45deg, transparent 65.5%, white 65.5%, white 67%, #fa517e 67%, #fa517e 71%, transparent 71%, transparent 72%, #fa517e 72%, #fa517e 76%, white 76%, white 77.5%, transparent 77.5%),
-    linear-gradient(-45deg, transparent 22.5%, white 22.5%, white 24%, #fa517e 24%, #fa517e 28%, transparent 28%, transparent 29%, #fa517e 29%, #fa517e 33%, white 33%, white 34.5%, transparent 34.5%),
-    linear-gradient(55deg, transparent 2.5%, #ffd000 2.5%, #ffd000 6.5%, white 6.5%, white 8%, transparent 8%),
-    
-    linear-gradient(35deg, transparent 80%, #85b64a 80%, #85b64a 83%, transparent 83%),
-    linear-gradient(-35deg, pink 50%, transparent 50%),
-    linear-gradient(25deg, pink 30%, #85b64a 30%, #85b64a 34%, transparent 34%),
-    linear-gradient(-35deg, transparent 50%, #85b64a 50%, #85b64a 53%, transparent 53%);
-    
+        linear-gradient(90deg, transparent 92%, rgba(50, 50, 50, .05) 95%),
+
+        linear-gradient(60deg, transparent 93.5%, white 93.5%, white 95%, #ffd000 95%, #ffd000 99%, transparent 99%),
+        linear-gradient(55deg, transparent 49.5%, white 49.5%, white 51%, #ffd000 51%, #ffd000 55%, transparent 55%, transparent 56%, #ffd000 56%, #ffd000 60%, white 60%, white 61.5%, transparent 61.5%),
+
+        linear-gradient(-45deg, transparent 65.5%, white 65.5%, white 67%, #fa517e 67%, #fa517e 71%, transparent 71%, transparent 72%, #fa517e 72%, #fa517e 76%, white 76%, white 77.5%, transparent 77.5%),
+        linear-gradient(-45deg, transparent 22.5%, white 22.5%, white 24%, #fa517e 24%, #fa517e 28%, transparent 28%, transparent 29%, #fa517e 29%, #fa517e 33%, white 33%, white 34.5%, transparent 34.5%),
+        linear-gradient(55deg, transparent 2.5%, #ffd000 2.5%, #ffd000 6.5%, white 6.5%, white 8%, transparent 8%),
+
+        linear-gradient(35deg, transparent 80%, #85b64a 80%, #85b64a 83%, transparent 83%),
+        linear-gradient(-35deg, pink 50%, transparent 50%),
+        linear-gradient(25deg, pink 30%, #85b64a 30%, #85b64a 34%, transparent 34%),
+        linear-gradient(-35deg, transparent 50%, #85b64a 50%, #85b64a 53%, transparent 53%);
+
     animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
     0% {
-        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
         transform: translatey(0px);
     }
+
     50% {
-        box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.2);
         transform: translatey(-20px);
     }
+
     100% {
-        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6);
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
         transform: translatey(0px);
     }
 }

@@ -9,6 +9,7 @@
 
     background: var(--lotus-background);
 }
+
 .art#lotus div {
     height: calc(var(--lotus-size)*.5);
     width: calc(var(--lotus-size)*.6);
@@ -16,10 +17,11 @@
     margin-left: calc(var(--lotus-size)*-.3);
 
     background:
-    radial-gradient(circle at left, transparent 60%, var(--lotus-background) 60%),
-    radial-gradient(circle at right, transparent 60%, var(--lotus-background) 60%),
-    var(--lotus-green-dark);
+        radial-gradient(circle at left, transparent 60%, var(--lotus-background) 60%),
+        radial-gradient(circle at right, transparent 60%, var(--lotus-background) 60%),
+        var(--lotus-green-dark);
 }
+
 .art#lotus div::before,
 .art#lotus div::after {
     content: "";
@@ -31,12 +33,13 @@
     transform-origin: left bottom;
     transform: translateX(-15px) rotateZ(20deg);
     background:
-    radial-gradient(circle at -30% -5%, transparent 59%, var(--lotus-background) 59%),
-    radial-gradient(circle at 65% 115%, var(--lotus-green-light) 58%, transparent 58%),
-    radial-gradient(circle at -50% 30%, transparent 50%, var(--lotus-background) 50%),
-    radial-gradient(circle at 75% 72%, transparent 81%, var(--lotus-background) 81%),
-    var(--lotus-green-normal);
+        radial-gradient(circle at -30% -5%, transparent 59%, var(--lotus-background) 59%),
+        radial-gradient(circle at 65% 115%, var(--lotus-green-light) 58%, transparent 58%),
+        radial-gradient(circle at -50% 30%, transparent 50%, var(--lotus-background) 50%),
+        radial-gradient(circle at 75% 72%, transparent 81%, var(--lotus-background) 81%),
+        var(--lotus-green-normal);
 }
+
 .art#lotus div::after {
     transform: rotateY(180deg) translateX(15px) rotateZ(20deg);
 }

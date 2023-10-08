@@ -5,44 +5,50 @@
     --geometry-border-color: white;
     background: var(--geometry-background);
 }
+
 .art#geometry div {
     animation: geometry 5s .6s infinite linear both;
     height: 200px;
     width: 230.96px;
     margin: -100px auto auto -115.48px;
 }
+
 @keyframes geometry {
     0% {
         background:
-        radial-gradient(circle 115.47px, transparent 85%, var(--geometry-border-color) 85%, var(--geometry-border-color) 87%, transparent 87%);
+            radial-gradient(circle 115.47px, transparent 85%, var(--geometry-border-color) 85%, var(--geometry-border-color) 87%, transparent 87%);
         transform: rotateY(0deg);
     }
+
     25% {
         background:
-        linear-gradient(transparent 99%, var(--geometry-border-color) 99%),
-        linear-gradient(60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%),
-        linear-gradient(-60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%);
+            linear-gradient(transparent 99%, var(--geometry-border-color) 99%),
+            linear-gradient(60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%),
+            linear-gradient(-60deg, transparent 66%, var(--geometry-border-color) 66%, var(--geometry-border-color) 67%, transparent 67%);
         transform: rotateY(180deg);
     }
+
     50% {
         background:
-        linear-gradient(90deg, var(--geometry-background) 6.5%, var(--geometry-border-color) 6.5%, var(--geometry-border-color) 7.5%, transparent 7.5%, transparent 92.5%, var(--geometry-border-color) 92.5%, var(--geometry-border-color) 93.5%, var(--geometry-background) 93.5%),
-        linear-gradient(0deg, var(--geometry-border-color) 1%, transparent 1%, transparent 99%, var(--geometry-border-color) 99%);
+            linear-gradient(90deg, var(--geometry-background) 6.5%, var(--geometry-border-color) 6.5%, var(--geometry-border-color) 7.5%, transparent 7.5%, transparent 92.5%, var(--geometry-border-color) 92.5%, var(--geometry-border-color) 93.5%, var(--geometry-background) 93.5%),
+            linear-gradient(0deg, var(--geometry-border-color) 1%, transparent 1%, transparent 99%, var(--geometry-border-color) 99%);
         transform: rotateY(360deg);
     }
+
     75% {
         background:
-        radial-gradient(circle at 50% 55%, transparent 68.6%, var(--geometry-background) 65%),
-        linear-gradient(0deg, var(--geometry-border-color) 1%, transparent 1%),
-        linear-gradient(72deg, transparent 17.2%, var(--geometry-border-color) 17.2%, var(--geometry-border-color) 18%, transparent 18%),
-        linear-gradient(144deg, transparent 22.5%, var(--geometry-border-color) 22.5%, var(--geometry-border-color) 23.2%, transparent 23.2%),
-        linear-gradient(216deg, transparent 22.5%, var(--geometry-border-color) 22.5%, var(--geometry-border-color) 23.2%, transparent 23.2%),
-        linear-gradient(288deg, transparent 17.2%, var(--geometry-border-color) 17.2%, var(--geometry-border-color) 18%, transparent 18%);
+            radial-gradient(circle at 50% 55%, transparent 68.6%, var(--geometry-background) 65%),
+            linear-gradient(0deg, var(--geometry-border-color) 1%, transparent 1%),
+            linear-gradient(72deg, transparent 17.2%, var(--geometry-border-color) 17.2%, var(--geometry-border-color) 18%, transparent 18%),
+            linear-gradient(144deg, transparent 22.5%, var(--geometry-border-color) 22.5%, var(--geometry-border-color) 23.2%, transparent 23.2%),
+            linear-gradient(216deg, transparent 22.5%, var(--geometry-border-color) 22.5%, var(--geometry-border-color) 23.2%, transparent 23.2%),
+            linear-gradient(288deg, transparent 17.2%, var(--geometry-border-color) 17.2%, var(--geometry-border-color) 18%, transparent 18%);
         transform: rotateY(180deg);
     }
+
     100% {
         background:
-        radial-gradient(circle 115.47px, transparent 85%, var(--geometry-border-color) 85%, var(--geometry-border-color) 87%, transparent 87%);
+            radial-gradient(circle 115.47px, transparent 85%, var(--geometry-border-color) 85%, var(--geometry-border-color) 87%, transparent 87%);
         transform: rotateY(0deg);
     }
 }

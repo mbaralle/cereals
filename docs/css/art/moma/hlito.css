@@ -1,85 +1,120 @@
 /* ##### June 17, 2022 - Alfredo Hlito - Curves and Straight Series ##### */
 /* Inspired by Alfredo Hlito's artwork - https://www.moma.org/collection/works/205953 */
 .art#hlito {
-    --hlito-blue: #0a499c;
-    --hlito-dark: #2f2f2e;
-    --hlito-green: #71a21f;
-    --hlito-paper: #e5dece;
-    --hlito-red: #d1331b;
-    --hlito-yellow: #c5b94e;
+  --hlito-blue: #0a499c;
+  --hlito-dark: #2f2f2e;
+  --hlito-green: #71a21f;
+  --hlito-paper: #e5dece;
+  --hlito-red: #d1331b;
+  --hlito-yellow: #c5b94e;
 
-    --hlito-dark: #333;
-    --hlito-light: #ffe;
+  --hlito-dark: #333;
+  --hlito-light: #ffe;
 
-    --hlito-border-color: #999;
-    --hlito-border-size: 3px;
+  --hlito-border-color: #999;
+  --hlito-border-size: 3px;
 
-    --hlito-size: 240px;
+  --hlito-size: 240px;
 
-    --hlito-path: 0 0, 25% 60%, 50% 0, 75% 100%, 100% 0;
+  --hlito-path: 0 0, 25% 60%, 50% 0, 75% 100%, 100% 0;
 }
+
 .art#hlito img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: var(--hlito-size);
-    width: var(--hlito-size);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: var(--hlito-size);
+  width: var(--hlito-size);
 
-    margin: calc(var(--hlito-size) * -.5);
+  margin: calc(var(--hlito-size) * -0.5);
 }
-.art#hlito div {
-    height: var(--hlito-size);
-    width: var(--hlito-size);
 
-    margin: calc(var(--hlito-size) * -.5);
-    background:
-    linear-gradient(45deg, var(--hlito-paper) 33%, transparent 33%),
-    radial-gradient(circle at -1.75% 27.5%, transparent 42%, var(--hlito-yellow) 42%, var(--hlito-yellow) 42.5%, transparent 42.5%),
-    linear-gradient(-45deg, var(--hlito-paper) 33.5%, transparent 33.5%, transparent 57.25%, var(--hlito-paper) 57.25%),
-    linear-gradient(45deg, transparent 50%, var(--hlito-dark) 50%, var(--hlito-dark) 50.5%, var(--hlito-paper) 50.5%),
-    radial-gradient(circle at 67% 66.5%, transparent 25%, var(--hlito-blue) 25%, var(--hlito-blue) 25.5%, transparent 25.5%),
+.art#hlito div {
+  height: var(--hlito-size);
+  width: var(--hlito-size);
+
+  margin: calc(var(--hlito-size) * -0.5);
+  background: linear-gradient(45deg, var(--hlito-paper) 33%, transparent 33%),
+    radial-gradient(circle at -1.75% 27.5%,
+      transparent 42%,
+      var(--hlito-yellow) 42%,
+      var(--hlito-yellow) 42.5%,
+      transparent 42.5%),
+    linear-gradient(-45deg,
+      var(--hlito-paper) 33.5%,
+      transparent 33.5%,
+      transparent 57.25%,
+      var(--hlito-paper) 57.25%),
+    linear-gradient(45deg,
+      transparent 50%,
+      var(--hlito-dark) 50%,
+      var(--hlito-dark) 50.5%,
+      var(--hlito-paper) 50.5%),
+    radial-gradient(circle at 67% 66.5%,
+      transparent 25%,
+      var(--hlito-blue) 25%,
+      var(--hlito-blue) 25.5%,
+      transparent 25.5%),
     var(--hlito-paper);
 
-    box-shadow:
-    0 0 0 2px #ab9478,
-    0 5px 15px -5px #333;
+  box-shadow: 0 0 0 2px #ab9478, 0 5px 15px -5px #333;
 }
+
 .art#hlito div::before,
 .art#hlito div::after {
-    content: "";
-    position: inherit;
+  content: "";
+  position: inherit;
 
-    height: inherit;
-    width: 10%;
+  height: inherit;
+  width: 10%;
 }
+
 .art#hlito div::before {
-    margin-left: calc(var(--hlito-size) * -.26);
-    background:
-    linear-gradient(
-        to top,
-        transparent 25%, var(--hlito-red) 25%, var(--hlito-red) 25.5%, transparent 25.5%,
-        transparent 47.5%, var(--hlito-dark) 47.5%, var(--hlito-dark) 48%, transparent 48%,
-        transparent 49.5%, var(--hlito-blue) 49.5%, var(--hlito-blue) 50%, transparent 50%
-    ),
-    linear-gradient(
-        to top,
-        transparent 51.5%, var(--hlito-red) 51.5%, var(--hlito-red) 52%, transparent 52%,
-        transparent 57%, var(--hlito-green) 57%, var(--hlito-green) 57.5%, transparent 57.5%
-    );
-    clip-path: polygon(0 0, 94% 0, 93% 100%, 0 100%);
+  margin-left: calc(var(--hlito-size) * -0.26);
+  background: linear-gradient(to top,
+      transparent 25%,
+      var(--hlito-red) 25%,
+      var(--hlito-red) 25.5%,
+      transparent 25.5%,
+      transparent 47.5%,
+      var(--hlito-dark) 47.5%,
+      var(--hlito-dark) 48%,
+      transparent 48%,
+      transparent 49.5%,
+      var(--hlito-blue) 49.5%,
+      var(--hlito-blue) 50%,
+      transparent 50%),
+    linear-gradient(to top,
+      transparent 51.5%,
+      var(--hlito-red) 51.5%,
+      var(--hlito-red) 52%,
+      transparent 52%,
+      transparent 57%,
+      var(--hlito-green) 57%,
+      var(--hlito-green) 57.5%,
+      transparent 57.5%);
+  clip-path: polygon(0 0, 94% 0, 93% 100%, 0 100%);
 }
+
 .art#hlito div::after {
-    margin-left: calc(var(--hlito-size) * .16);
-    background:
-    linear-gradient(
-        to top,
-        transparent 57.25%, var(--hlito-red) 57.25%, var(--hlito-red) 57.75%, transparent 57.75%,
-        transparent 62.75%, var(--hlito-green) 62.75%, var(--hlito-green) 63.25%, transparent 63.25%
-    ),
-    linear-gradient(
-        to top,
-        transparent 64.75%, var(--hlito-blue) 64.75%, var(--hlito-blue) 65.25%, transparent 65.25%,
-        transparent 66.625%, var(--hlito-dark) 66.625%, var(--hlito-dark) 67.125%, transparent 67.125%
-    );
-    clip-path: polygon(0 0, 95% 0, 95% 100%, 7% 100%);
+  margin-left: calc(var(--hlito-size) * 0.16);
+  background: linear-gradient(to top,
+      transparent 57.25%,
+      var(--hlito-red) 57.25%,
+      var(--hlito-red) 57.75%,
+      transparent 57.75%,
+      transparent 62.75%,
+      var(--hlito-green) 62.75%,
+      var(--hlito-green) 63.25%,
+      transparent 63.25%),
+    linear-gradient(to top,
+      transparent 64.75%,
+      var(--hlito-blue) 64.75%,
+      var(--hlito-blue) 65.25%,
+      transparent 65.25%,
+      transparent 66.625%,
+      var(--hlito-dark) 66.625%,
+      var(--hlito-dark) 67.125%,
+      transparent 67.125%);
+  clip-path: polygon(0 0, 95% 0, 95% 100%, 7% 100%);
 }

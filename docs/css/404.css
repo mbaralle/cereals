@@ -2,10 +2,10 @@
 
 body {
     background: linear-gradient(129deg, #6d3f93 23%, #eb8393 96%), #6d3f93;
-    
+
     background-attachment: fixed;
     height: 100vh;
-    
+
     text-align: center;
 }
 
@@ -26,11 +26,13 @@ main {
 #error-404 {
     font-size: 25vh;
 }
+
 #error-message {
     margin: 10px;
     font-size: 2.5vh;
     letter-spacing: 1vw;
 }
+
 #error-message::before,
 #error-message::after {
     content: " ◬ ";
@@ -39,15 +41,16 @@ main {
 #links-container {
     margin-top: 50px;
 }
+
 #links-container div {
     display: inline-block;
     margin: 20px;
-    
+
     width: 150px;
     height: 50px;
     line-height: 50px;
-    
-    
+
+
     color: greenyellow;
     letter-spacing: 1px;
     background-color: #0006;
@@ -55,12 +58,15 @@ main {
     transition: .3s;
     border-radius: 3px;
 }
+
 #links-container div:hover {
     opacity: .8;
 }
+
 #links-container div::before {
     content: "→ ";
 }
+
 #links-container div::after {
     content: " ←";
 }

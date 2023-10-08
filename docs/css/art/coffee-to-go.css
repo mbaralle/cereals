@@ -16,6 +16,7 @@
 
     background: var(--coffee-to-go-background);
 }
+
 .art#coffee-to-go div {
     height: var(--coffee-to-go-size);
     width: calc(var(--coffee-to-go-size)*.03);
@@ -28,11 +29,13 @@
     border: var(--coffee-to-go-border);
     border-radius: var(--coffee-to-go-border-size);
 }
+
 .art#coffee-to-go div::before,
 .art#coffee-to-go div::after {
     content: "";
     position: inherit;
 }
+
 .art#coffee-to-go div::before {
     --size: calc(var(--coffee-to-go-size) * .5);
 
@@ -43,14 +46,15 @@
 
     clip-path: polygon(0 0, 100% 0, 83% 100%, 15% 100%);
     border-radius: 0 0 50% 50% / 0 0 15% 15%;
-    
+
     --stop: calc(var(--coffee-to-go-size) * .616);
     background:
-    radial-gradient(circle at top, transparent var(--stop), var(--coffee-to-go-border-color) var(--stop)),
-    linear-gradient(83deg, var(--coffee-to-go-border-color) 15%, transparent 15%),
-    linear-gradient(-82.5deg, var(--coffee-to-go-border-color) 16%, var(--coffee-to-go-shadow) 16%, var(--coffee-to-go-shadow) 23%, transparent 23%),
-    linear-gradient(var(--coffee-to-go-cup-light) calc(var(--coffee-to-go-border-size) * 2), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 2), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 3), var(--coffee-to-go-cup) calc(var(--coffee-to-go-border-size) * 3));
+        radial-gradient(circle at top, transparent var(--stop), var(--coffee-to-go-border-color) var(--stop)),
+        linear-gradient(83deg, var(--coffee-to-go-border-color) 15%, transparent 15%),
+        linear-gradient(-82.5deg, var(--coffee-to-go-border-color) 16%, var(--coffee-to-go-shadow) 16%, var(--coffee-to-go-shadow) 23%, transparent 23%),
+        linear-gradient(var(--coffee-to-go-cup-light) calc(var(--coffee-to-go-border-size) * 2), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 2), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 3), var(--coffee-to-go-cup) calc(var(--coffee-to-go-border-size) * 3));
 }
+
 .art#coffee-to-go div::after {
     --size: calc(var(--coffee-to-go-size) * .5);
 
@@ -63,12 +67,12 @@
 
     --stop: calc(var(--size) * .75);
     background:
-    radial-gradient(circle at 10% 100%, transparent var(--stop), var(--coffee-to-go-shadow) var(--stop)),
-    linear-gradient(0deg, var(--coffee-to-go-cup) calc(var(--coffee-to-go-border-size) * 1.5), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 1.5), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 2.5), transparent calc(var(--coffee-to-go-border-size) * 2.5)),
-    radial-gradient(circle at 82% 88%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .055), transparent calc(var(--coffee-to-go-size) * .055)),
-    radial-gradient(circle at 55% 85%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .13), transparent calc(var(--coffee-to-go-size) * .13)),
-    radial-gradient(circle at 37% 68%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .055), transparent calc(var(--coffee-to-go-size) * .055)),
-    radial-gradient(circle at 27% 100%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .091), transparent calc(var(--coffee-to-go-size) * .091)),
-    var(--coffee-to-go-lid);
+        radial-gradient(circle at 10% 100%, transparent var(--stop), var(--coffee-to-go-shadow) var(--stop)),
+        linear-gradient(0deg, var(--coffee-to-go-cup) calc(var(--coffee-to-go-border-size) * 1.5), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 1.5), var(--coffee-to-go-border-color) calc(var(--coffee-to-go-border-size) * 2.5), transparent calc(var(--coffee-to-go-border-size) * 2.5)),
+        radial-gradient(circle at 82% 88%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .055), transparent calc(var(--coffee-to-go-size) * .055)),
+        radial-gradient(circle at 55% 85%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .13), transparent calc(var(--coffee-to-go-size) * .13)),
+        radial-gradient(circle at 37% 68%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .055), transparent calc(var(--coffee-to-go-size) * .055)),
+        radial-gradient(circle at 27% 100%, var(--coffee-to-go-cream) calc(var(--coffee-to-go-size) * .091), transparent calc(var(--coffee-to-go-size) * .091)),
+        var(--coffee-to-go-lid);
     border: var(--coffee-to-go-border);
 }

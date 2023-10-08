@@ -1,99 +1,88 @@
 /* ##### June 16, 2022 - Ellsworth Kelly - Colors for a Large Wall ##### */
 /* Inspired by Ellsworth Kelly's artwork - https://www.moma.org/collection/works/80528 */
 .art#colors-for-a-large-wall {
-    --colors-size: 35px;
-    --colors-size-2: calc(var(--colors-size) * 2);
-    --colors-size-3: calc(var(--colors-size) * 3);
-    --colors-size-4: calc(var(--colors-size) * 4);
-    --colors-size-5: calc(var(--colors-size) * 5);
-    --colors-size-6: calc(var(--colors-size) * 6);
-    --colors-size-7: calc(var(--colors-size) * 7);
+  --colors-size: 35px;
+  --colors-size-2: calc(var(--colors-size) * 2);
+  --colors-size-3: calc(var(--colors-size) * 3);
+  --colors-size-4: calc(var(--colors-size) * 4);
+  --colors-size-5: calc(var(--colors-size) * 5);
+  --colors-size-6: calc(var(--colors-size) * 6);
+  --colors-size-7: calc(var(--colors-size) * 7);
 }
+
 .art#colors-for-a-large-wall div {
-    height: var(--colors-size);
-    width: var(--colors-size);
-    margin-left: calc(var(--colors-size)*-4);
-    margin-top: calc(var(--colors-size)*-4);
+  height: var(--colors-size);
+  width: var(--colors-size);
+  margin-left: calc(var(--colors-size) * -4);
+  margin-top: calc(var(--colors-size) * -4);
 
-    box-shadow:
-        inset var(--colors-size) 0 #4f403b,
-        var(--colors-size) 0 #f2f3ee,
-        var(--colors-size-2) 0 #8777a7,
-        var(--colors-size-3) 0 #eff0eb,
-        var(--colors-size-4) 0 #363533,
-        var(--colors-size-5) 0 #bb7036,
-        var(--colors-size-6) 0 #eeeeec,
-        var(--colors-size-7) 0 #5393b6,
-
-        0 var(--colors-size) #f4f6f1,
-        var(--colors-size) var(--colors-size) #396b4e,
-        var(--colors-size-2) var(--colors-size) #373536,
-        var(--colors-size-3) var(--colors-size) #f2f4ef,
-        var(--colors-size-4) var(--colors-size) #e6d956,
-        var(--colors-size-5) var(--colors-size) #f1f3ee,
-        var(--colors-size-6) var(--colors-size) #be7183,
-        var(--colors-size-7) var(--colors-size) #363433,
-
-        0 var(--colors-size-2) #373534,
-        var(--colors-size) var(--colors-size-2) #f3f5f0,
-        var(--colors-size-2) var(--colors-size-2) #f4f5f0,
-        var(--colors-size-3) var(--colors-size-2) #354f88,
-        var(--colors-size-4) var(--colors-size-2) #eff1ec,
-        var(--colors-size-5) var(--colors-size-2) #f3f4ef,
-        var(--colors-size-6) var(--colors-size-2) #eff1ee,
-        var(--colors-size-7) var(--colors-size-2) #c17333,
-
-        0 var(--colors-size-3) #8f3a35,
-        var(--colors-size) var(--colors-size-3) #f1f3ef,
-        var(--colors-size-2) var(--colors-size-3) #5496b9,
-        var(--colors-size-3) var(--colors-size-3) #f1f3ee,
-        var(--colors-size-4) var(--colors-size-3) #91bd8b,
-        var(--colors-size-5) var(--colors-size-3) #353333,
-        var(--colors-size-6) var(--colors-size-3) #4c3e5d,
-        var(--colors-size-7) var(--colors-size-3) #f1f2ec,
-
-        0 var(--colors-size-4) #f0f1eb,
-        var(--colors-size) var(--colors-size-4) #473b5c,
-        var(--colors-size-2) var(--colors-size-4) #343233,
-        var(--colors-size-3) var(--colors-size-4) #f0f2ed,
-        var(--colors-size-4) var(--colors-size-4) #eff1ec,
-        var(--colors-size-5) var(--colors-size-4) #903932,
-        var(--colors-size-6) var(--colors-size-4) #eff0eb,
-        var(--colors-size-7) var(--colors-size-4) #335185,
-
-        0 var(--colors-size-5) #2e634f,
-        var(--colors-size) var(--colors-size-5) #edeee9,
-        var(--colors-size-2) var(--colors-size-5) #eef0eb,
-        var(--colors-size-3) var(--colors-size-5) #5293b4,
-        var(--colors-size-4) var(--colors-size-5) #eef0eb,
-        var(--colors-size-5) var(--colors-size-5) #eeefea,
-        var(--colors-size-6) var(--colors-size-5) #2d6550,
-        var(--colors-size-7) var(--colors-size-5) #32312f,
-
-        0 var(--colors-size-6) #edeee7,
-        var(--colors-size) var(--colors-size-6) #b97081,
-        var(--colors-size-2) var(--colors-size-6) #8db785,
-        var(--colors-size-3) var(--colors-size-6) #eef0ea,
-        var(--colors-size-4) var(--colors-size-6) #312f2f,
-        var(--colors-size-5) var(--colors-size-6) #8578a6,
-        var(--colors-size-6) var(--colors-size-6) #ecede7,
-        var(--colors-size-7) var(--colors-size-6) #eaebe5,
-
-        0 var(--colors-size-7) #32312f,
-        var(--colors-size) var(--colors-size-7) #edf0e9,
-        var(--colors-size-2) var(--colors-size-7) #483c5b,
-        var(--colors-size-3) var(--colors-size-7) #e1d34f,
-        var(--colors-size-4) var(--colors-size-7) #eceee8,
-        var(--colors-size-5) var(--colors-size-7) #323130,
-        var(--colors-size-6) var(--colors-size-7) #b76e80,
-        var(--colors-size-7) var(--colors-size-7) #303142;
+  box-shadow: inset var(--colors-size) 0 #4f403b, var(--colors-size) 0 #f2f3ee,
+    var(--colors-size-2) 0 #8777a7, var(--colors-size-3) 0 #eff0eb,
+    var(--colors-size-4) 0 #363533, var(--colors-size-5) 0 #bb7036,
+    var(--colors-size-6) 0 #eeeeec, var(--colors-size-7) 0 #5393b6,
+    0 var(--colors-size) #f4f6f1, var(--colors-size) var(--colors-size) #396b4e,
+    var(--colors-size-2) var(--colors-size) #373536,
+    var(--colors-size-3) var(--colors-size) #f2f4ef,
+    var(--colors-size-4) var(--colors-size) #e6d956,
+    var(--colors-size-5) var(--colors-size) #f1f3ee,
+    var(--colors-size-6) var(--colors-size) #be7183,
+    var(--colors-size-7) var(--colors-size) #363433,
+    0 var(--colors-size-2) #373534,
+    var(--colors-size) var(--colors-size-2) #f3f5f0,
+    var(--colors-size-2) var(--colors-size-2) #f4f5f0,
+    var(--colors-size-3) var(--colors-size-2) #354f88,
+    var(--colors-size-4) var(--colors-size-2) #eff1ec,
+    var(--colors-size-5) var(--colors-size-2) #f3f4ef,
+    var(--colors-size-6) var(--colors-size-2) #eff1ee,
+    var(--colors-size-7) var(--colors-size-2) #c17333,
+    0 var(--colors-size-3) #8f3a35,
+    var(--colors-size) var(--colors-size-3) #f1f3ef,
+    var(--colors-size-2) var(--colors-size-3) #5496b9,
+    var(--colors-size-3) var(--colors-size-3) #f1f3ee,
+    var(--colors-size-4) var(--colors-size-3) #91bd8b,
+    var(--colors-size-5) var(--colors-size-3) #353333,
+    var(--colors-size-6) var(--colors-size-3) #4c3e5d,
+    var(--colors-size-7) var(--colors-size-3) #f1f2ec,
+    0 var(--colors-size-4) #f0f1eb,
+    var(--colors-size) var(--colors-size-4) #473b5c,
+    var(--colors-size-2) var(--colors-size-4) #343233,
+    var(--colors-size-3) var(--colors-size-4) #f0f2ed,
+    var(--colors-size-4) var(--colors-size-4) #eff1ec,
+    var(--colors-size-5) var(--colors-size-4) #903932,
+    var(--colors-size-6) var(--colors-size-4) #eff0eb,
+    var(--colors-size-7) var(--colors-size-4) #335185,
+    0 var(--colors-size-5) #2e634f,
+    var(--colors-size) var(--colors-size-5) #edeee9,
+    var(--colors-size-2) var(--colors-size-5) #eef0eb,
+    var(--colors-size-3) var(--colors-size-5) #5293b4,
+    var(--colors-size-4) var(--colors-size-5) #eef0eb,
+    var(--colors-size-5) var(--colors-size-5) #eeefea,
+    var(--colors-size-6) var(--colors-size-5) #2d6550,
+    var(--colors-size-7) var(--colors-size-5) #32312f,
+    0 var(--colors-size-6) #edeee7,
+    var(--colors-size) var(--colors-size-6) #b97081,
+    var(--colors-size-2) var(--colors-size-6) #8db785,
+    var(--colors-size-3) var(--colors-size-6) #eef0ea,
+    var(--colors-size-4) var(--colors-size-6) #312f2f,
+    var(--colors-size-5) var(--colors-size-6) #8578a6,
+    var(--colors-size-6) var(--colors-size-6) #ecede7,
+    var(--colors-size-7) var(--colors-size-6) #eaebe5,
+    0 var(--colors-size-7) #32312f,
+    var(--colors-size) var(--colors-size-7) #edf0e9,
+    var(--colors-size-2) var(--colors-size-7) #483c5b,
+    var(--colors-size-3) var(--colors-size-7) #e1d34f,
+    var(--colors-size-4) var(--colors-size-7) #eceee8,
+    var(--colors-size-5) var(--colors-size-7) #323130,
+    var(--colors-size-6) var(--colors-size-7) #b76e80,
+    var(--colors-size-7) var(--colors-size-7) #303142;
 }
-.art#colors-for-a-large-wall div::before {
-    content: "";
-    position: inherit;
-    left: 0;
-    width: calc(var(--colors-size) * 8);
-    height: calc(var(--colors-size) * 8);
 
-    box-shadow: 0 0 var(--colors-size) calc(var(--colors-size)*-.5) #333;
+.art#colors-for-a-large-wall div::before {
+  content: "";
+  position: inherit;
+  left: 0;
+  width: calc(var(--colors-size) * 8);
+  height: calc(var(--colors-size) * 8);
+
+  box-shadow: 0 0 var(--colors-size) calc(var(--colors-size) * -0.5) #333;
 }

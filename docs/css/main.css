@@ -1,24 +1,24 @@
 @font-face {
-    font-family: 'MuseoModerno';
-    src: url("/fonts/MuseoModerno-Regular.ttf");
+  font-family: "MuseoModerno";
+  src: url("/fonts/MuseoModerno-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'Advent Pro';
-    font-weight: 500;
-    src: url("/fonts/AdventPro-Medium.ttf");
+  font-family: "Advent Pro";
+  font-weight: 500;
+  src: url("/fonts/AdventPro-Medium.ttf");
 }
 
 html,
 body,
 div {
-    user-select: none;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 body {
@@ -32,149 +32,147 @@ body.no-scroll {
 
 body::-webkit-scrollbar,
 body::-webkit-scrollbar-thumb {
-    width: 12px;
-    border: 4px solid transparent;
-    border-radius: 1000px;
+  width: 12px;
+  border: 4px solid transparent;
+  border-radius: 1000px;
 }
+
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 0 6px #3337;
+  box-shadow: inset 0 0 0 6px #3337;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    transition: .2s;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
 }
 
 a:hover {
-    opacity: .75;
+  opacity: 0.75;
 }
 
 header {
-    background: linear-gradient(30deg, violet, skyblue, khaki, salmon);
-    text-align: center;
-    font-family: 'MuseoModerno', cursive;
-    color: white;
-    padding: 5px;
+  background: linear-gradient(30deg, violet, skyblue, khaki, salmon);
+  text-align: center;
+  font-family: "MuseoModerno", cursive;
+  color: white;
+  padding: 5px;
 }
 
 header h1 {
-    padding: 5px;
-    font-size: 300%;
-    letter-spacing: 0.1em;
-    text-shadow: 0 0 .5em #333;
-    text-shadow:
-        1px 1px #222, -1px 1px #222, -1px -1px #222, 1px -1px #222,
-        3px 3px 1px #8888;
+  padding: 5px;
+  font-size: 300%;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 0.5em #333;
+  text-shadow: 1px 1px #222, -1px 1px #222, -1px -1px #222, 1px -1px #222,
+    3px 3px 1px #8888;
 }
 
 #menu-button {
-    height: 1.3em;
-    width: 1.5em;
-    
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    z-index: 3;
-    transition: .7s, opacity .2s;
-    cursor: pointer;
+  height: 1.3em;
+  width: 1.5em;
+
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 3;
+  transition: 0.7s, opacity 0.2s;
+  cursor: pointer;
 }
 
 #menu-button:hover {
-    opacity: .75;
+  opacity: 0.75;
 }
 
 #menu-button::before,
 #menu-button::after {
-    position: absolute;
-    left: 0;
-    content: "";
-    background: white;
-    height: .25em;
-    width: inherit;
-    transition: inherit;
-    transform-origin: 0% 50%;
+  position: absolute;
+  left: 0;
+  content: "";
+  background: white;
+  height: 0.25em;
+  width: inherit;
+  transition: inherit;
+  transform-origin: 0% 50%;
 }
 
 #menu-button::before {
-    top: 0%;
-    --angle: 45deg;
+  top: 0%;
+  --angle: 45deg;
 }
 
 #menu-button::after {
-    bottom: 0%;
-    --angle: -45deg;
+  bottom: 0%;
+  --angle: -45deg;
 }
 
 #menu-button.opened {
-    transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 #menu-button.opened::before,
 #menu-button.opened::after {
-    transform: rotate(var(--angle));
+  transform: rotate(var(--angle));
 }
 
-
 #menu {
-    position: absolute;
-    left: 0;
-    top: -100%;
-    
-    opacity: 0;
-    
-    height: fit-content;
-    width: 100%;    
-    
-    background: #000c;
-    box-shadow: 0 0 10px grey;
-    z-index: 2;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    text-align: left;
-    
-    font-family: 'Advent Pro', sans-serif;
-    text-transform: uppercase;
-    font-size: 2em;
-    transition: all .7s;
+  position: absolute;
+  left: 0;
+  top: -100%;
+
+  opacity: 0;
+
+  height: fit-content;
+  width: 100%;
+
+  background: #000c;
+  box-shadow: 0 0 10px grey;
+  z-index: 2;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: left;
+
+  font-family: "Advent Pro", sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  transition: all 0.7s;
 }
 
 @media (min-width: 720px) {
-    #menu {
-        width: fit-content;
-        left: initial;
-        right: 0;
-        border-bottom-left-radius: 1em;
-    }
+  #menu {
+    width: fit-content;
+    left: initial;
+    right: 0;
+    border-bottom-left-radius: 1em;
+  }
 }
 
 #menu.opened {
-    top: 0;
-    opacity: 1;
+  top: 0;
+  opacity: 1;
 }
 
 #menu a {
-    width: fit-content;
-    display: block;
-    margin: 10px 64px 0 32px;
-}
-
-#menu a#wip {
-    font-size: 40%;
-    margin-top: 32px;
+  width: fit-content;
+  display: block;
+  margin: 10px 64px 0 32px;
 }
 
 #menu a span {
   text-shadow: 2px 2px #8888;
 }
 
+#menu a#wip {
+  font-size: 40%;
+  margin-top: 32px;
+}
 
 .art {
-    text-align: center;
-    min-height: 400px;
-    position: relative;
-    overflow: hidden;
+  text-align: center;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
 }
 
 .art.full-screen {
@@ -235,18 +233,18 @@ header h1 {
 }
 
 @media (min-width: 960px) {
-    .art {
-        float: left;
-        width: 50%;
-    }
-    
-    .art.wide {
-        width: 100%;
-    }
+  .art {
+    float: left;
+    width: 50%;
+  }
+
+  .art.wide {
+    width: 100%;
+  }
 }
 
 .art div {
-    position: absolute;
-    left: 50%;
-    top: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }

@@ -7,14 +7,17 @@
 
     background: #e2ccb1;
 }
+
 .art#pool div {
     position: relative;
 }
+
 .art#pool div::before,
 .art#pool div::after {
     content: "";
     position: absolute;
 }
+
 .art#pool div::before {
     height: 275px;
     width: 150px;
@@ -24,6 +27,7 @@
     transform: perspective(250px) rotateX(45deg);
     animation: pool-bg 8s infinite linear both;
 }
+
 .art#pool div::after {
     height: 40px;
     width: 40px;
@@ -38,171 +42,201 @@
 
     animation: pool-sun 8s infinite linear both;
 }
+
 @keyframes pool-sun {
     0% {
         transform: rotateZ(0deg);
         background-position: 50% 50%;
     }
+
     25% {
         opacity: 1;
     }
+
     35% {
         background-position: 30% 30%;
         opacity: 0;
     }
+
     40% {
         background-position: 0% 0%;
         transform: rotateZ(60deg);
     }
+
     60% {
         background-position: 100% 100%;
         transform: rotateZ(300deg);
     }
+
     65% {
         background-position: 100% 100%;
         opacity: 0;
     }
+
     75% {
         opacity: 1;
     }
+
     100% {
         background-position: 50% 50%;
         transform: rotateZ(360deg);
     }
 }
+
 @keyframes pool-bg {
     0% {
         background:
-        radial-gradient(circle at 78% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 78% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     2.857% {
         background:
-        radial-gradient(circle at 71% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 71% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     5.714% {
         background:
-        radial-gradient(circle at 64% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 64% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     8.571% {
         background:
-        radial-gradient(circle at 57% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 57% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     11.426% {
         background:
-        radial-gradient(circle at 50% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 50% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     14.286% {
         background:
-        radial-gradient(circle at 43% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 43% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     17.143% {
         background:
-        radial-gradient(circle at 36% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 36% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     20% {
         background:
-        radial-gradient(circle at 29% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 29% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     22.857% {
         background:
-        radial-gradient(circle at 22% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 22% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     25.714% {
         background:
-        radial-gradient(circle at 15% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 15% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     28.571% {
         background:
-        radial-gradient(circle at 8% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 8% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     31.426% {
         background:
-        radial-gradient(circle at 1% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 1% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     34.286% {
         background:
-        radial-gradient(circle at -6% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at -6% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     37.143% {
         background:
-        radial-gradient(circle at -13% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at -13% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     40% {
         background:
-        radial-gradient(circle at -20% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at -20% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
         box-shadow: var(--pool-shadow);
     }
+
     88% {
         background:
-        radial-gradient(circle at 120% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 120% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
         box-shadow: var(--pool-shadow);
     }
+
     90% {
         background:
-        radial-gradient(circle at 113% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 113% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     92% {
         background:
-        radial-gradient(circle at 106% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 106% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     94% {
         background:
-        radial-gradient(circle at 99% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 99% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     96% {
         background:
-        radial-gradient(circle at 92% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 92% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     98% {
         background:
-        radial-gradient(circle at 85% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 85% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
+
     100% {
         background:
-        radial-gradient(circle at 78% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
-        radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
-        conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
+            radial-gradient(circle at 78% 42%, transparent 6px, var(--pool-blue-shadow) 8px, var(--pool-blue-shadow) 15px, transparent 18px),
+            radial-gradient(circle at 70% 25%, var(--pool-blue) 9px, transparent 9px, transparent 20px, var(--pool-blue) 20px),
+            conic-gradient(at 70% 25%, red 14.5%, white 14.5%, white 28%, red 28%, red 40.5%, white 40.5%, white 53%, red 53%, red 65.5%, white 65.5%, white 78%, red 78%, red 90.5%, white 90.5%);
     }
 }

@@ -5,16 +5,15 @@
 
     --old-lift-size: 15px;
 
-    --old-lift-animation:  10s alternate infinite linear;
+    --old-lift-animation: 10s alternate infinite linear;
 
     background:
-    linear-gradient(
-        90deg,
-        transparent 48.5%, var(--old-lift-color) 48.5%, var(--old-lift-color) 49%, transparent 49%,
-        transparent 51%, var(--old-lift-color) 51%, var(--old-lift-color) 51.5%, transparent 51.5%
-        ),
-    var(--old-lift-background);
+        linear-gradient(90deg,
+            transparent 48.5%, var(--old-lift-color) 48.5%, var(--old-lift-color) 49%, transparent 49%,
+            transparent 51%, var(--old-lift-color) 51%, var(--old-lift-color) 51.5%, transparent 51.5%),
+        var(--old-lift-background);
 }
+
 .art#old-lift div {
     height: calc(var(--old-lift-size)*16);
     width: calc(var(--old-lift-size)*8);
@@ -26,7 +25,7 @@
     box-shadow:
         var(--old-lift-background) 0 5px 0 calc(var(--old-lift-size)*1.3),
         var(--old-lift-color) 0 5px 0 calc(var(--old-lift-size)*1.4);
-    
+
     --old-lift-diagonals:
         transparent 9.5%, var(--old-lift-color) 9.5%, var(--old-lift-color) 10%, transparent 10%,
         transparent 15.75%, var(--old-lift-color) 15.75%, var(--old-lift-color) 16.25%, transparent 16.25%,
@@ -43,32 +42,30 @@
         transparent 84.5%, var(--old-lift-color) 84.5%, var(--old-lift-color) 85%, transparent 85%;
 
     background:
-    linear-gradient(
-        90deg,
-        transparent 12.25%, var(--old-lift-color) 12.25%, var(--old-lift-color) 12.75%, transparent 12.75%,
-        transparent 24.75%, var(--old-lift-color) 24.75%, var(--old-lift-color) 25.25%, transparent 25.25%,
-        transparent 37.25%, var(--old-lift-color) 37.25%, var(--old-lift-color) 37.75%, transparent 37.75%,
-        transparent 49.75%, var(--old-lift-color) 49.75%, var(--old-lift-color) 50.25%, transparent 50.25%,
-        transparent 62.25%, var(--old-lift-color) 62.25%, var(--old-lift-color) 62.75%, transparent 62.75%,
-        transparent 74.75%, var(--old-lift-color) 74.75%, var(--old-lift-color) 75.25%, transparent 75.25%,
-        transparent 87.25%, var(--old-lift-color) 87.25%, var(--old-lift-color) 87.75%, transparent 87.75%
-    ),
-    linear-gradient(
-        var(--old-lift-background) calc(var(--old-lift-size)*3), transparent  calc(var(--old-lift-size)*3),
-        transparent calc(var(--old-lift-size)*7), var(--old-lift-background) calc(var(--old-lift-size)*7), var(--old-lift-background) calc(var(--old-lift-size)*11), transparent calc(var(--old-lift-size)*11),
-        transparent calc(var(--old-lift-size)*15), var(--old-lift-background) calc(var(--old-lift-size)*15), var(--old-lift-background)
-    ),
-    linear-gradient(63.4349deg, var(--old-lift-diagonals)),
-    linear-gradient(-63.4349deg, var(--old-lift-diagonals)),
-    var(--old-lift-background);
+        linear-gradient(90deg,
+            transparent 12.25%, var(--old-lift-color) 12.25%, var(--old-lift-color) 12.75%, transparent 12.75%,
+            transparent 24.75%, var(--old-lift-color) 24.75%, var(--old-lift-color) 25.25%, transparent 25.25%,
+            transparent 37.25%, var(--old-lift-color) 37.25%, var(--old-lift-color) 37.75%, transparent 37.75%,
+            transparent 49.75%, var(--old-lift-color) 49.75%, var(--old-lift-color) 50.25%, transparent 50.25%,
+            transparent 62.25%, var(--old-lift-color) 62.25%, var(--old-lift-color) 62.75%, transparent 62.75%,
+            transparent 74.75%, var(--old-lift-color) 74.75%, var(--old-lift-color) 75.25%, transparent 75.25%,
+            transparent 87.25%, var(--old-lift-color) 87.25%, var(--old-lift-color) 87.75%, transparent 87.75%),
+        linear-gradient(var(--old-lift-background) calc(var(--old-lift-size)*3), transparent calc(var(--old-lift-size)*3),
+            transparent calc(var(--old-lift-size)*7), var(--old-lift-background) calc(var(--old-lift-size)*7), var(--old-lift-background) calc(var(--old-lift-size)*11), transparent calc(var(--old-lift-size)*11),
+            transparent calc(var(--old-lift-size)*15), var(--old-lift-background) calc(var(--old-lift-size)*15), var(--old-lift-background)),
+        linear-gradient(63.4349deg, var(--old-lift-diagonals)),
+        linear-gradient(-63.4349deg, var(--old-lift-diagonals)),
+        var(--old-lift-background);
 
     animation: old-lift-up-and-down var(--old-lift-animation);
 }
+
 .art#old-lift div::before,
 .art#old-lift div::after {
     content: "";
     position: inherit;
 }
+
 .art#old-lift div::before {
     --size: calc(var(--old-lift-size)*1.2);
     height: var(--size);
@@ -77,19 +74,18 @@
     top: -13%;
     left: 113%;
 
-    border-radius: 30% 40% 100% 0% / 100% 40% 30% 0% ;
+    border-radius: 30% 40% 100% 0% / 100% 40% 30% 0%;
     background:
-    radial-gradient(
-        circle at left bottom,
-        transparent 42%,
-        var(--old-lift-color) 42%, var(--old-lift-color) 48%,
-        transparent 48%, transparent 62%,
-        var(--old-lift-color) 62%, var(--old-lift-color) 68%,
-        transparent 68%
-    );
+        radial-gradient(circle at left bottom,
+            transparent 42%,
+            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+            transparent 48%, transparent 62%,
+            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+            transparent 68%);
 
     animation: old-lift-bip var(--old-lift-animation);
 }
+
 .art#old-lift div::after {
     height: calc(var(--old-lift-size)*.8);
     width: calc(var(--old-lift-size)*.8);
@@ -98,84 +94,111 @@
     left: -15%;
 
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        var(--old-lift-background) calc(var(--old-lift-size)*.175),
-        var(--old-lift-color) calc(var(--old-lift-size)*.175), var(--old-lift-color) calc(var(--old-lift-size)*.25),
-        var(--old-lift-background) calc(var(--old-lift-size)*.25), var(--old-lift-background) calc(var(--old-lift-size)*.325),
-        var(--old-lift-color) calc(var(--old-lift-size)*.325)
-    );
+    background: radial-gradient(circle,
+            var(--old-lift-background) calc(var(--old-lift-size)*.175),
+            var(--old-lift-color) calc(var(--old-lift-size)*.175), var(--old-lift-color) calc(var(--old-lift-size)*.25),
+            var(--old-lift-background) calc(var(--old-lift-size)*.25), var(--old-lift-background) calc(var(--old-lift-size)*.325),
+            var(--old-lift-color) calc(var(--old-lift-size)*.325));
 }
 
 @keyframes old-lift-up-and-down {
-    0% { margin-top: calc(var(--old-lift-size)*-30); }
-    10% { margin-top: calc(var(--old-lift-size)*-30); }
-    40% { margin-top: calc(var(--old-lift-size)*-8.05); }
-    60% { margin-top: calc(var(--old-lift-size)*-8.05); }
-    90% { margin-top: calc(var(--old-lift-size)*13); }
-    100% { margin-top: calc(var(--old-lift-size)*13); }
+    0% {
+        margin-top: calc(var(--old-lift-size)*-30);
+    }
+
+    10% {
+        margin-top: calc(var(--old-lift-size)*-30);
+    }
+
+    40% {
+        margin-top: calc(var(--old-lift-size)*-8.05);
+    }
+
+    60% {
+        margin-top: calc(var(--old-lift-size)*-8.05);
+    }
+
+    90% {
+        margin-top: calc(var(--old-lift-size)*13);
+    }
+
+    100% {
+        margin-top: calc(var(--old-lift-size)*13);
+    }
 }
 
 @keyframes old-lift-bip {
-    0% { background: none; }
-    44% { background: none; }
+    0% {
+        background: none;
+    }
+
+    44% {
+        background: none;
+    }
+
     45% {
         background:
-        radial-gradient(
-            circle at left bottom,
-            transparent 42%,
-            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
-            transparent 48%, transparent 62%,
-            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
-            transparent 68%
-        );
+            radial-gradient(circle at left bottom,
+                transparent 42%,
+                var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+                transparent 48%, transparent 62%,
+                var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+                transparent 68%);
     }
-    48% { background: none; }
+
+    48% {
+        background: none;
+    }
+
     49% {
         background:
-        radial-gradient(
-            circle at left bottom,
-            transparent 42%,
-            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
-            transparent 48%, transparent 62%,
-            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
-            transparent 68%
-        );
+            radial-gradient(circle at left bottom,
+                transparent 42%,
+                var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+                transparent 48%, transparent 62%,
+                var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+                transparent 68%);
     }
+
     50% {
         background:
-        radial-gradient(
-            circle at left bottom,
-            transparent 42%,
-            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
-            transparent 48%, transparent 62%,
-            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
-            transparent 68%
-        );
+            radial-gradient(circle at left bottom,
+                transparent 42%,
+                var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+                transparent 48%, transparent 62%,
+                var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+                transparent 68%);
     }
-    51% { background: none; }
+
+    51% {
+        background: none;
+    }
+
     52% {
         background:
-        radial-gradient(
-            circle at left bottom,
-            transparent 42%,
-            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
-            transparent 48%, transparent 62%,
-            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
-            transparent 68%
-        );
+            radial-gradient(circle at left bottom,
+                transparent 42%,
+                var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+                transparent 48%, transparent 62%,
+                var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+                transparent 68%);
     }
+
     55% {
         background:
-        radial-gradient(
-            circle at left bottom,
-            transparent 42%,
-            var(--old-lift-color) 42%, var(--old-lift-color) 48%,
-            transparent 48%, transparent 62%,
-            var(--old-lift-color) 62%, var(--old-lift-color) 68%,
-            transparent 68%
-        );
+            radial-gradient(circle at left bottom,
+                transparent 42%,
+                var(--old-lift-color) 42%, var(--old-lift-color) 48%,
+                transparent 48%, transparent 62%,
+                var(--old-lift-color) 62%, var(--old-lift-color) 68%,
+                transparent 68%);
     }
-    56% { background: none; }
-    100% { background: none; }
+
+    56% {
+        background: none;
+    }
+
+    100% {
+        background: none;
+    }
 }

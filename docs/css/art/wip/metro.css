@@ -1,144 +1,244 @@
 /* ##### October 24, 2021 - Metro ##### */
 .art#metro2 {
-    --metro-primary: firebrick;
-    --metro-secondary: white;
+  --metro-primary: firebrick;
+  --metro-secondary: white;
 
-    background: #fff9e7;
+  background: #fff9e7;
 }
+
 .art#metro2 div {
-    height: 140px;
-    width: 121px;
-    margin-top: -70px;
-    margin-left: -60.5px;
+  height: 140px;
+  width: 121px;
+  margin-top: -70px;
+  margin-left: -60.5px;
 
-    --metro-tile: 4.762%;
+  --metro-tile: 4.762%;
 
-    --metro-circle-1: var(--metro-tile);
-    --metro-circle-2: calc(var(--metro-circle-1) + var(--metro-tile));
-    --metro-circle-3: calc(var(--metro-circle-2) + 4 * var(--metro-tile));
-    --metro-circle-4: calc(var(--metro-circle-3) + 2 * var(--metro-tile));
-    --metro-circle-5: calc(var(--metro-circle-4) + 3 * var(--metro-tile));
-    --metro-circle-6: calc(var(--metro-circle-5) + 3 * var(--metro-tile));
-    --metro-circle-7: calc(var(--metro-circle-6) + 2 * var(--metro-tile));
-    --metro-circle-8: calc(var(--metro-circle-7) + 4 * var(--metro-tile));
-    --metro-circle-9: calc(var(--metro-circle-8) + var(--metro-tile));
+  --metro-circle-1: var(--metro-tile);
+  --metro-circle-2: calc(var(--metro-circle-1) + var(--metro-tile));
+  --metro-circle-3: calc(var(--metro-circle-2) + 4 * var(--metro-tile));
+  --metro-circle-4: calc(var(--metro-circle-3) + 2 * var(--metro-tile));
+  --metro-circle-5: calc(var(--metro-circle-4) + 3 * var(--metro-tile));
+  --metro-circle-6: calc(var(--metro-circle-5) + 3 * var(--metro-tile));
+  --metro-circle-7: calc(var(--metro-circle-6) + 2 * var(--metro-tile));
+  --metro-circle-8: calc(var(--metro-circle-7) + 4 * var(--metro-tile));
+  --metro-circle-9: calc(var(--metro-circle-8) + var(--metro-tile));
 
-    background: linear-gradient(
-        270deg,
-        var(--metro-primary) var(--metro-circle-1),
-        var(--metro-secondary) var(--metro-circle-1), var(--metro-secondary) var(--metro-circle-2),
-        var(--metro-primary) var(--metro-circle-2), var(--metro-primary) var(--metro-circle-3),
-        var(--metro-secondary) var(--metro-circle-3), var(--metro-secondary) var(--metro-circle-4),
-        var(--metro-primary) var(--metro-circle-4), var(--metro-primary) var(--metro-circle-5),
-        var(--metro-secondary) var(--metro-circle-5), var(--metro-secondary) var(--metro-circle-6),
-        var(--metro-primary) var(--metro-circle-6), var(--metro-primary) var(--metro-circle-7),
-        var(--metro-secondary) var(--metro-circle-7), var(--metro-secondary) var(--metro-circle-8),
-        var(--metro-primary) var(--metro-circle-8)
-    );
-/* 
+  background: linear-gradient(270deg,
+      var(--metro-primary) var(--metro-circle-1),
+      var(--metro-secondary) var(--metro-circle-1),
+      var(--metro-secondary) var(--metro-circle-2),
+      var(--metro-primary) var(--metro-circle-2),
+      var(--metro-primary) var(--metro-circle-3),
+      var(--metro-secondary) var(--metro-circle-3),
+      var(--metro-secondary) var(--metro-circle-4),
+      var(--metro-primary) var(--metro-circle-4),
+      var(--metro-primary) var(--metro-circle-5),
+      var(--metro-secondary) var(--metro-circle-5),
+      var(--metro-secondary) var(--metro-circle-6),
+      var(--metro-primary) var(--metro-circle-6),
+      var(--metro-primary) var(--metro-circle-7),
+      var(--metro-secondary) var(--metro-circle-7),
+      var(--metro-secondary) var(--metro-circle-8),
+      var(--metro-primary) var(--metro-circle-8));
+  /* 
     -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
     clip-path: polygon(0% 0%, 0% 100%, 100% 50%); */
 }
+
 .art#metro2 div::before,
 .art#metro2 div::after {
-    content: "";
-    position: inherit;
-    background: inherit;
-    height: inherit;
-    width: inherit;
-    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
-    clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+  content: "";
+  position: inherit;
+  background: inherit;
+  height: inherit;
+  width: inherit;
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+  clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
 }
 
 .art#metro2 div::after {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
+
 /* ##### October 24, 2021 - Metro ##### */
 .art#metro {
-    --metro-primary: firebrick;
-    --metro-secondary: white;
+  --metro-primary: firebrick;
+  --metro-secondary: white;
 
-    background: #fff9e7;
+  background: #fff9e7;
 }
+
 .art#metro div {
-    height: 240px;
-    width: 208px;
-    margin-top: -120px;
-    margin-left: -104px;
+  height: 240px;
+  width: 208px;
+  margin-top: -120px;
+  margin-left: -104px;
 
-    --metro-circle-1: 1;
-    --metro-circle-2: calc(var(--metro-circle-1) + 1);
-    --metro-circle-3: calc(var(--metro-circle-2) + 4);
-    --metro-circle-4: calc(var(--metro-circle-3) + 2);
-    --metro-circle-5: calc(var(--metro-circle-4) + 3);
-    --metro-circle-6: calc(var(--metro-circle-5) + 3);
-    --metro-circle-7: calc(var(--metro-circle-6) + 2);
-    --metro-circle-8: calc(var(--metro-circle-7) + 4);
-    --metro-circle-9: calc(var(--metro-circle-8) + 1);
+  --metro-circle-1: 1;
+  --metro-circle-2: calc(var(--metro-circle-1) + 1);
+  --metro-circle-3: calc(var(--metro-circle-2) + 4);
+  --metro-circle-4: calc(var(--metro-circle-3) + 2);
+  --metro-circle-5: calc(var(--metro-circle-4) + 3);
+  --metro-circle-6: calc(var(--metro-circle-5) + 3);
+  --metro-circle-7: calc(var(--metro-circle-6) + 2);
+  --metro-circle-8: calc(var(--metro-circle-7) + 4);
+  --metro-circle-9: calc(var(--metro-circle-8) + 1);
 
-    --metro-tile-h: calc(50/var(--metro-circle-9))%;
-    --metro-tile-d: calc(.866 * var(--metro-tile-h));
+  --metro-tile-h: calc(50 / var(--metro-circle-9)) %;
+  --metro-tile-d: calc(0.866 * var(--metro-tile-h));
 
-    --metro-circle-1-h: calc(var(--metro-circle-1) * var(--metro-tile-h));
-    --metro-circle-2-h: calc(var(--metro-circle-2) * var(--metro-tile-h));
-    --metro-circle-3-h: calc(var(--metro-circle-3) * var(--metro-tile-h));
-    --metro-circle-4-h: calc(var(--metro-circle-4) * var(--metro-tile-h));
-    --metro-circle-5-h: calc(var(--metro-circle-5) * var(--metro-tile-h));
-    --metro-circle-6-h: calc(var(--metro-circle-6) * var(--metro-tile-h));
-    --metro-circle-7-h: calc(var(--metro-circle-7) * var(--metro-tile-h));
-    --metro-circle-8-h: calc(var(--metro-circle-8) * var(--metro-tile-h));
-    --metro-circle-9-h: calc(var(--metro-circle-9) * var(--metro-tile-h));
+  --metro-circle-1-h: calc(var(--metro-circle-1) * var(--metro-tile-h));
+  --metro-circle-2-h: calc(var(--metro-circle-2) * var(--metro-tile-h));
+  --metro-circle-3-h: calc(var(--metro-circle-3) * var(--metro-tile-h));
+  --metro-circle-4-h: calc(var(--metro-circle-4) * var(--metro-tile-h));
+  --metro-circle-5-h: calc(var(--metro-circle-5) * var(--metro-tile-h));
+  --metro-circle-6-h: calc(var(--metro-circle-6) * var(--metro-tile-h));
+  --metro-circle-7-h: calc(var(--metro-circle-7) * var(--metro-tile-h));
+  --metro-circle-8-h: calc(var(--metro-circle-8) * var(--metro-tile-h));
+  --metro-circle-9-h: calc(var(--metro-circle-9) * var(--metro-tile-h));
 
-    --metro-circle-1-d: calc(var(--metro-circle-1) * var(--metro-tile-d));
-    --metro-circle-2-d: calc(var(--metro-circle-2) * var(--metro-tile-d));
-    --metro-circle-3-d: calc(var(--metro-circle-3) * var(--metro-tile-d));
-    --metro-circle-4-d: calc(var(--metro-circle-4) * var(--metro-tile-d));
-    --metro-circle-5-d: calc(var(--metro-circle-5) * var(--metro-tile-d));
-    --metro-circle-6-d: calc(var(--metro-circle-6) * var(--metro-tile-d));
-    --metro-circle-7-d: calc(var(--metro-circle-7) * var(--metro-tile-d));
-    --metro-circle-8-d: calc(var(--metro-circle-8) * var(--metro-tile-d));
-    --metro-circle-9-d: calc(var(--metro-circle-9) * var(--metro-tile-d));
+  --metro-circle-1-d: calc(var(--metro-circle-1) * var(--metro-tile-d));
+  --metro-circle-2-d: calc(var(--metro-circle-2) * var(--metro-tile-d));
+  --metro-circle-3-d: calc(var(--metro-circle-3) * var(--metro-tile-d));
+  --metro-circle-4-d: calc(var(--metro-circle-4) * var(--metro-tile-d));
+  --metro-circle-5-d: calc(var(--metro-circle-5) * var(--metro-tile-d));
+  --metro-circle-6-d: calc(var(--metro-circle-6) * var(--metro-tile-d));
+  --metro-circle-7-d: calc(var(--metro-circle-7) * var(--metro-tile-d));
+  --metro-circle-8-d: calc(var(--metro-circle-8) * var(--metro-tile-d));
+  --metro-circle-9-d: calc(var(--metro-circle-9) * var(--metro-tile-d));
 
-    background:
-        /* linear-gradient(330deg, var(--metro-secondary) 22%, transparent 22%, transparent 78%, var(--metro-secondary) 78%),
+  background:
+    /* linear-gradient(330deg, var(--metro-secondary) 22%, transparent 22%, transparent 78%, var(--metro-secondary) 78%),
         linear-gradient(210deg, var(--metro-secondary) 22%, transparent 22%, transparent 78%, var(--metro-secondary) 78%),
         linear-gradient(90deg, var(--metro-secondary) 10%, transparent 10%, transparent 90%, var(--metro-secondary) 90%), */
+    linear-gradient(330deg,
+      var(--metro-primary) 18%,
+      transparent 16.75%,
+      transparent 83.25%,
+      var(--metro-primary) 83.25%),
+    linear-gradient(210deg,
+      var(--metro-primary) 16.75%,
+      transparent 16.75%,
+      transparent 83.25%,
+      var(--metro-primary) 83.25%),
+    linear-gradient(90deg,
+      var(--metro-primary) 2.5%,
+      transparent 2.5%,
+      transparent 97.5%,
+      var(--metro-primary) 97.5%),
+    linear-gradient(330deg,
+      var(--metro-secondary) 22%,
+      transparent 22%,
+      transparent 78%,
+      var(--metro-secondary) 78%),
+    linear-gradient(210deg,
+      var(--metro-secondary) 22%,
+      transparent 22%,
+      transparent 78%,
+      var(--metro-secondary) 78%),
+    linear-gradient(90deg,
+      var(--metro-secondary) 10%,
+      transparent 10%,
+      transparent 90%,
+      var(--metro-secondary) 90%),
+    linear-gradient(330deg,
+      var(--metro-primary) 25.5%,
+      transparent 25.5%,
+      transparent 74.5%,
+      var(--metro-primary) 74.5%),
+    linear-gradient(210deg,
+      var(--metro-primary) 25.5%,
+      transparent 25.5%,
+      transparent 74.5%,
+      var(--metro-primary) 74.5%),
+    linear-gradient(90deg,
+      var(--metro-primary) 15%,
+      transparent 15%,
+      transparent 85%,
+      var(--metro-primary) 85%),
+    linear-gradient(330deg,
+      var(--metro-secondary) 30.75%,
+      transparent 30.75%,
+      transparent 69.25%,
+      var(--metro-secondary) 69.25%),
+    linear-gradient(210deg,
+      var(--metro-secondary) 30.75%,
+      transparent 30.75%,
+      transparent 69.25%,
+      var(--metro-secondary) 69.25%),
+    linear-gradient(90deg,
+      var(--metro-secondary) 22.5%,
+      transparent 22.5%,
+      transparent 77.5%,
+      var(--metro-secondary) 77.5%),
+    linear-gradient(330deg,
+      var(--metro-primary) 36%,
+      transparent 36%,
+      transparent 64%,
+      var(--metro-primary) 64%),
+    linear-gradient(210deg,
+      var(--metro-primary) 36%,
+      transparent 36%,
+      transparent 64%,
+      var(--metro-primary) 64%),
+    linear-gradient(90deg,
+      var(--metro-primary) 30%,
+      transparent 30%,
+      transparent 70%,
+      var(--metro-primary) 70%),
+    linear-gradient(330deg,
+      var(--metro-secondary) 39.5%,
+      transparent 39.5%,
+      transparent 60.5%,
+      var(--metro-secondary) 60.5%),
+    linear-gradient(210deg,
+      var(--metro-secondary) 39.5%,
+      transparent 39.5%,
+      transparent 60.5%,
+      var(--metro-secondary) 60.5%),
+    linear-gradient(90deg,
+      var(--metro-secondary) 35%,
+      transparent 35%,
+      transparent 65%,
+      var(--metro-secondary) 65%),
+    linear-gradient(330deg,
+      var(--metro-primary) 46.5%,
+      transparent 46.5%,
+      transparent 53.5%,
+      var(--metro-primary) 53.5%),
+    linear-gradient(210deg,
+      var(--metro-primary) 46.5%,
+      transparent 46.5%,
+      transparent 53.5%,
+      var(--metro-primary) 53.5%),
+    linear-gradient(90deg,
+      var(--metro-primary) 45%,
+      transparent 45%,
+      transparent 55%,
+      var(--metro-primary) 55%),
+    linear-gradient(330deg,
+      var(--metro-secondary) 48.25%,
+      transparent 48.25%,
+      transparent 51.75%,
+      var(--metro-secondary) 51.75%),
+    linear-gradient(210deg,
+      var(--metro-secondary) 48.25%,
+      transparent 48.25%,
+      transparent 51.75%,
+      var(--metro-secondary) 51.75%),
+    linear-gradient(90deg,
+      var(--metro-secondary) 47.5%,
+      transparent 47.5%,
+      transparent 52.5%,
+      var(--metro-secondary) 52.5%),
+    var(--metro-primary);
 
-        linear-gradient(330deg, var(--metro-primary) 18%, transparent 16.75%, transparent 83.25%, var(--metro-primary) 83.25%),
-        linear-gradient(210deg, var(--metro-primary) 16.75%, transparent 16.75%, transparent 83.25%, var(--metro-primary) 83.25%),
-        linear-gradient(90deg, var(--metro-primary) 2.5%, transparent 2.5%, transparent 97.5%, var(--metro-primary) 97.5%),
-
-        
-
-        linear-gradient(330deg, var(--metro-secondary) 22%, transparent 22%, transparent 78%, var(--metro-secondary) 78%),
-        linear-gradient(210deg, var(--metro-secondary) 22%, transparent 22%, transparent 78%, var(--metro-secondary) 78%),
-        linear-gradient(90deg, var(--metro-secondary) 10%, transparent 10%, transparent 90%, var(--metro-secondary) 90%),
-
-        linear-gradient(330deg, var(--metro-primary) 25.5%, transparent 25.5%, transparent 74.5%, var(--metro-primary) 74.5%),
-        linear-gradient(210deg, var(--metro-primary) 25.5%, transparent 25.5%, transparent 74.5%, var(--metro-primary) 74.5%),
-        linear-gradient(90deg, var(--metro-primary) 15%, transparent 15%, transparent 85%, var(--metro-primary) 85%),
-
-        linear-gradient(330deg, var(--metro-secondary) 30.75%, transparent 30.75%, transparent 69.25%, var(--metro-secondary) 69.25%),
-        linear-gradient(210deg, var(--metro-secondary) 30.75%, transparent 30.75%, transparent 69.25%, var(--metro-secondary) 69.25%),
-        linear-gradient(90deg, var(--metro-secondary) 22.5%, transparent 22.5%, transparent 77.5%, var(--metro-secondary) 77.5%),
-
-        linear-gradient(330deg, var(--metro-primary) 36%, transparent 36%, transparent 64%, var(--metro-primary) 64%),
-        linear-gradient(210deg, var(--metro-primary) 36%, transparent 36%, transparent 64%, var(--metro-primary) 64%),
-        linear-gradient(90deg, var(--metro-primary) 30%, transparent 30%, transparent 70%, var(--metro-primary) 70%),
-
-        linear-gradient(330deg, var(--metro-secondary) 39.5%, transparent 39.5%, transparent 60.5%, var(--metro-secondary) 60.5%),
-        linear-gradient(210deg, var(--metro-secondary) 39.5%, transparent 39.5%, transparent 60.5%, var(--metro-secondary) 60.5%),
-        linear-gradient(90deg, var(--metro-secondary) 35%, transparent 35%, transparent 65%, var(--metro-secondary) 65%),
-
-        linear-gradient(330deg, var(--metro-primary) 46.5%, transparent 46.5%, transparent 53.5%, var(--metro-primary) 53.5%),
-        linear-gradient(210deg, var(--metro-primary) 46.5%, transparent 46.5%, transparent 53.5%, var(--metro-primary) 53.5%),
-        linear-gradient(90deg, var(--metro-primary) 45%, transparent 45%, transparent 55%, var(--metro-primary) 55%),
-
-        linear-gradient(330deg, var(--metro-secondary) 48.25%, transparent 48.25%, transparent 51.75%, var(--metro-secondary) 51.75%),
-        linear-gradient(210deg, var(--metro-secondary) 48.25%, transparent 48.25%, transparent 51.75%, var(--metro-secondary) 51.75%),
-        linear-gradient(90deg, var(--metro-secondary) 47.5%, transparent 47.5%, transparent 52.5%, var(--metro-secondary) 52.5%),
-        var(--metro-primary);
-
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0% 75%,
+      0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
