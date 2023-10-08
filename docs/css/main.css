@@ -165,6 +165,10 @@ header h1 {
     margin-top: 32px;
 }
 
+#menu a span {
+  text-shadow: 2px 2px #8888;
+}
+
 
 .art {
     text-align: center;
