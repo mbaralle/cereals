@@ -214,9 +214,9 @@
     </main>
     <script src="js/main.js"></script>
     <script>
-      navigator.serviceWorker.getRegistrations().then(function(registrations) {
-        for(let registration of registrations) {
-          registration.unregister()
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
         }
       });
     </script>
