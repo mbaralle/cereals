@@ -62,10 +62,6 @@
       </div>
     </header>
     <main>
-      <div class="wip-banner">
-        Work in progress
-        <a href="/">Go back</a>
-      </div>
       <!-- November 4, 2021 - pi -->
       <div class="art wide" id="pi">
         <div></div>
@@ -122,12 +118,6 @@
     </main>
 
     <script src="js/main.js"></script>
-
-    <script type="text/javascript">
-      const wipBanner = this.document.getElementsByClassName("wip-banner")[0];
-      [].forEach.call(this.document.getElementsByClassName("art"), (art) =>
-        art.after(wipBanner.cloneNode(true))
-      );
-    </script>
+    <script src="js/wip.js"></script>
   </body>
 </html>
